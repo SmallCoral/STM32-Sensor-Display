@@ -50,6 +50,43 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/DEV.elf.dir/Core/Src/gpio.c.obj
  .data          0x00000000        0x0 CMakeFiles/DEV.elf.dir/Core/Src/gpio.c.obj
  .bss           0x00000000        0x0 CMakeFiles/DEV.elf.dir/Core/Src/gpio.c.obj
+ .text          0x00000000        0x0 CMakeFiles/DEV.elf.dir/Core/Src/led.c.obj
+ .data          0x00000000        0x0 CMakeFiles/DEV.elf.dir/Core/Src/led.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/DEV.elf.dir/Core/Src/led.c.obj
+ .text.LED_Display_Init
+                0x00000000       0x88 CMakeFiles/DEV.elf.dir/Core/Src/led.c.obj
+ .text.LED_Display_Update
+                0x00000000       0x9c CMakeFiles/DEV.elf.dir/Core/Src/led.c.obj
+ .text.LED_Display_SetBuffer
+                0x00000000       0x14 CMakeFiles/DEV.elf.dir/Core/Src/led.c.obj
+ .text.LED_Display_SetNumber
+                0x00000000       0x38 CMakeFiles/DEV.elf.dir/Core/Src/led.c.obj
+ .bss.currentColumn
+                0x00000000        0x1 CMakeFiles/DEV.elf.dir/Core/Src/led.c.obj
+ .bss.display_buffer
+                0x00000000        0xc CMakeFiles/DEV.elf.dir/Core/Src/led.c.obj
+ .data.digit_patterns
+                0x00000000       0x14 CMakeFiles/DEV.elf.dir/Core/Src/led.c.obj
+ .rodata.COL_PINS
+                0x00000000        0xc CMakeFiles/DEV.elf.dir/Core/Src/led.c.obj
+ .rodata.COL_PORT
+                0x00000000        0x4 CMakeFiles/DEV.elf.dir/Core/Src/led.c.obj
+ .rodata.ROW_PINS
+                0x00000000       0x14 CMakeFiles/DEV.elf.dir/Core/Src/led.c.obj
+ .rodata.ROW_PORT
+                0x00000000        0x4 CMakeFiles/DEV.elf.dir/Core/Src/led.c.obj
+ .debug_info    0x00000000      0x5d9 CMakeFiles/DEV.elf.dir/Core/Src/led.c.obj
+ .debug_abbrev  0x00000000      0x1c7 CMakeFiles/DEV.elf.dir/Core/Src/led.c.obj
+ .debug_loc     0x00000000       0xef CMakeFiles/DEV.elf.dir/Core/Src/led.c.obj
+ .debug_aranges
+                0x00000000       0x38 CMakeFiles/DEV.elf.dir/Core/Src/led.c.obj
+ .debug_ranges  0x00000000       0x28 CMakeFiles/DEV.elf.dir/Core/Src/led.c.obj
+ .debug_line    0x00000000      0x39f CMakeFiles/DEV.elf.dir/Core/Src/led.c.obj
+ .debug_str     0x00000000      0x352 CMakeFiles/DEV.elf.dir/Core/Src/led.c.obj
+ .comment       0x00000000       0x4a CMakeFiles/DEV.elf.dir/Core/Src/led.c.obj
+ .debug_frame   0x00000000       0x74 CMakeFiles/DEV.elf.dir/Core/Src/led.c.obj
+ .ARM.attributes
+                0x00000000       0x2d CMakeFiles/DEV.elf.dir/Core/Src/led.c.obj
  .text          0x00000000        0x0 CMakeFiles/DEV.elf.dir/Core/Src/main.c.obj
  .data          0x00000000        0x0 CMakeFiles/DEV.elf.dir/Core/Src/main.c.obj
  .bss           0x00000000        0x0 CMakeFiles/DEV.elf.dir/Core/Src/main.c.obj
@@ -989,6 +1026,7 @@ LOAD d:/dev/qrs/gcc-arm-none-eabi-10.3-2021.10-win32/gcc-arm-none-eabi-10.3-2021
 LOAD d:/dev/qrs/gcc-arm-none-eabi-10.3-2021.10-win32/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
 LOAD CMakeFiles/DEV.elf.dir/Core/Src/adc.c.obj
 LOAD CMakeFiles/DEV.elf.dir/Core/Src/gpio.c.obj
+LOAD CMakeFiles/DEV.elf.dir/Core/Src/led.c.obj
 LOAD CMakeFiles/DEV.elf.dir/Core/Src/main.c.obj
 LOAD CMakeFiles/DEV.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
 LOAD CMakeFiles/DEV.elf.dir/Core/Src/stm32f1xx_it.c.obj
