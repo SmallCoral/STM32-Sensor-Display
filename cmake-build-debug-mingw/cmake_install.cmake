@@ -1,4 +1,4 @@
-# Install script for directory: D:/dev/qrs/DEV
+# Install script for directory: C:/Users/Shan_/Documents/obj/STM32-Sensor-Display
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -52,6 +52,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "D:/dev/qrs/DEV/cmake-build-debug-mingw/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "C:/Users/Shan_/Documents/obj/STM32-Sensor-Display/cmake-build-debug-mingw/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

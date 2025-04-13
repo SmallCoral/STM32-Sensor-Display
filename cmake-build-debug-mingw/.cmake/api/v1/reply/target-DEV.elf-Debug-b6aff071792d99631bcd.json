@@ -151,23 +151,23 @@
 			[
 				{
 					"backtrace" : 10,
-					"path" : "D:/dev/qrs/DEV/Core/Inc"
+					"path" : "C:/Users/Shan_/Documents/obj/STM32-Sensor-Display/Core/Inc"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "D:/dev/qrs/DEV/Drivers/STM32F1xx_HAL_Driver/Inc"
+					"path" : "C:/Users/Shan_/Documents/obj/STM32-Sensor-Display/Drivers/STM32F1xx_HAL_Driver/Inc"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "D:/dev/qrs/DEV/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy"
+					"path" : "C:/Users/Shan_/Documents/obj/STM32-Sensor-Display/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "D:/dev/qrs/DEV/Drivers/CMSIS/Device/ST/STM32F1xx/Include"
+					"path" : "C:/Users/Shan_/Documents/obj/STM32-Sensor-Display/Drivers/CMSIS/Device/ST/STM32F1xx/Include"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "D:/dev/qrs/DEV/Drivers/CMSIS/Include"
+					"path" : "C:/Users/Shan_/Documents/obj/STM32-Sensor-Display/Drivers/CMSIS/Include"
 				}
 			],
 			"language" : "C",
@@ -181,7 +181,6 @@
 			},
 			"sourceIndexes" : 
 			[
-				6,
 				7,
 				8,
 				9,
@@ -191,7 +190,7 @@
 				13,
 				14,
 				15,
-				73,
+				16,
 				74,
 				75,
 				76,
@@ -205,7 +204,8 @@
 				84,
 				85,
 				86,
-				87
+				87,
+				88
 			]
 		},
 		{
@@ -278,29 +278,29 @@
 			[
 				{
 					"backtrace" : 10,
-					"path" : "D:/dev/qrs/DEV/Core/Inc"
+					"path" : "C:/Users/Shan_/Documents/obj/STM32-Sensor-Display/Core/Inc"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "D:/dev/qrs/DEV/Drivers/STM32F1xx_HAL_Driver/Inc"
+					"path" : "C:/Users/Shan_/Documents/obj/STM32-Sensor-Display/Drivers/STM32F1xx_HAL_Driver/Inc"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "D:/dev/qrs/DEV/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy"
+					"path" : "C:/Users/Shan_/Documents/obj/STM32-Sensor-Display/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "D:/dev/qrs/DEV/Drivers/CMSIS/Device/ST/STM32F1xx/Include"
+					"path" : "C:/Users/Shan_/Documents/obj/STM32-Sensor-Display/Drivers/CMSIS/Device/ST/STM32F1xx/Include"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "D:/dev/qrs/DEV/Drivers/CMSIS/Include"
+					"path" : "C:/Users/Shan_/Documents/obj/STM32-Sensor-Display/Drivers/CMSIS/Include"
 				}
 			],
 			"language" : "ASM",
 			"sourceIndexes" : 
 			[
-				16
+				17
 			]
 		}
 	],
@@ -319,7 +319,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "-Wl,-gc-sections,--print-memory-usage,-Map=D:/dev/qrs/DEV/cmake-build-debug-mingw/DEV.map",
+				"fragment" : "-Wl,-gc-sections,--print-memory-usage,-Map=C:/Users/Shan_/Documents/obj/STM32-Sensor-Display/cmake-build-debug-mingw/DEV.map",
 				"role" : "flags"
 			},
 			{
@@ -344,7 +344,7 @@
 			},
 			{
 				"backtrace" : 4,
-				"fragment" : "D:/dev/qrs/DEV/STM32F103C8TX_FLASH.ld",
+				"fragment" : "C:/Users/Shan_/Documents/obj/STM32-Sensor-Display/STM32F103C8TX_FLASH.ld",
 				"role" : "flags"
 			}
 		],
@@ -369,10 +369,10 @@
 				3,
 				4,
 				5,
-				17,
+				6,
 				18,
 				19,
-				21,
+				20,
 				22,
 				23,
 				24,
@@ -393,7 +393,7 @@
 				39,
 				40,
 				41,
-				43,
+				42,
 				44,
 				45,
 				46,
@@ -421,14 +421,14 @@
 				68,
 				69,
 				70,
-				71
+				71,
+				72
 			]
 		},
 		{
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				6,
 				7,
 				8,
 				9,
@@ -438,7 +438,7 @@
 				13,
 				14,
 				15,
-				73,
+				16,
 				74,
 				75,
 				76,
@@ -452,18 +452,19 @@
 				84,
 				85,
 				86,
-				87
+				87,
+				88
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				16,
-				20,
-				42,
-				72,
-				88
+				17,
+				21,
+				43,
+				73,
+				89
 			]
 		}
 	],
@@ -477,6 +478,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "Core/Inc/gpio.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Core/Inc/led.h",
 			"sourceGroupIndex" : 0
 		},
 		{

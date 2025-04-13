@@ -1,3 +1,3 @@
-D:/dev/qrs/DEV/cmake-build-debug-mingw/CMakeFiles/DEV.elf.dir
-D:/dev/qrs/DEV/cmake-build-debug-mingw/CMakeFiles/edit_cache.dir
-D:/dev/qrs/DEV/cmake-build-debug-mingw/CMakeFiles/rebuild_cache.dir
+C:/Users/Shan_/Documents/obj/STM32-Sensor-Display/cmake-build-debug-mingw/CMakeFiles/DEV.elf.dir
+C:/Users/Shan_/Documents/obj/STM32-Sensor-Display/cmake-build-debug-mingw/CMakeFiles/edit_cache.dir
+C:/Users/Shan_/Documents/obj/STM32-Sensor-Display/cmake-build-debug-mingw/CMakeFiles/rebuild_cache.dir

@@ -104,11 +104,13 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    temperature = Read_Temperature(); // 读取温度
-    flow = Read_Flow(); // 读取流量
 
-    // 这里可以添加代码显示或处理数据
-    HAL_Delay(1000);  // 延时1秒
+    // temperature = Read_Temperature(); // 读取温度
+    // flow = Read_Flow(); // 读取流量
+    //
+    // // 这里可以添加代码显示或处理数据
+    // HAL_Delay(1000);  // 延时1秒
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
