@@ -1,18 +1,15 @@
-// led_display.h
-
-#ifndef LED_DISPLAY_H
-#define LED_DISPLAY_H
+#ifndef __LED_H
+#define __LED_H
 
 #include "stm32f1xx_hal.h"
 
-// 函数声明
-void LED_Display_Init(void);
-void LED_Display_Update(void);
-void LED_Display_SetBuffer(uint8_t col, uint16_t pattern);
-void LED_Display_SetNumber(uint32_t number);
+// 数码管显示函数：输入范围为 0 ~ 199
+void DisplayNumber(uint16_t num);
 
-// 全局变量声明
-extern volatile uint16_t display_buffer[6];
-extern volatile uint8_t currentColumn;
+// 初始化函数（如需 GPIO 初始化，可选实现）
+void LED_Init(void);
 
-#endif // LED_DISPLAY_H
+// 清除所有段位（可外部调用强制清除）
+void ClearAllSegments(void);
+
+#endif /* __LED_H */

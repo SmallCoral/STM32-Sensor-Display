@@ -111,6 +111,9 @@ int main(void)
     // // 这里可以添加代码显示或处理数据
     // HAL_Delay(1000);  // 延时1秒
 
+    DisplayNumber(46);
+
+    //HAL_Delay(1000);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
