@@ -121,8 +121,10 @@ int main(void)
     // 可选：初始化参数（仅调用一次即可）
     //NTC_Init(4.85f, 50000.0f, 50000.0f, 3950.0f); // Vref, R_fixed, R0, B
 
-    DisplayNumber(23);
-    //HAL_Delay(1000);
+    DisplayNumber(46);
+    HAL_Delay(100);
+    DisplayNumber(82);
+    HAL_Delay(100);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
