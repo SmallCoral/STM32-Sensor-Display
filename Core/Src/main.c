@@ -22,6 +22,7 @@
 #include "tim.h"
 #include "gpio.h"
 #include "led.h"
+#include "ntc.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -59,7 +60,7 @@ void SystemClock_Config(void);
 uint32_t Read_Temperature(void);
 uint32_t Read_Flow(void);
 /* USER CODE END 0 */
-
+extern TIM_HandleTypeDef htim2;
 /**
   * @brief  The application entry point.
   * @retval int
@@ -77,8 +78,12 @@ int main(void)
   HAL_Init();
   MX_ADC2_Init(); // 初始化ADC
   MX_TIM2_Init(); // 初始化定时器
+  LED_Init();
 
-  uint32_t temperature = 0;
+  HAL_TIM_Base_Start_IT(&htim2);
+
+  DisplayNumber(123);
+
   uint32_t flow = 0;
 
   /* USER CODE BEGIN Init */
@@ -111,8 +116,12 @@ int main(void)
     // // 这里可以添加代码显示或处理数据
     // HAL_Delay(1000);  // 延时1秒
 
-    DisplayNumber(46);
+    uint32_t adcValue = Read_Temperature(); // 假设这是您的ADC读取函数
 
+    // 可选：初始化参数（仅调用一次即可）
+    //NTC_Init(4.85f, 50000.0f, 50000.0f, 3950.0f); // Vref, R_fixed, R0, B
+
+    DisplayNumber(23);
     //HAL_Delay(1000);
     /* USER CODE BEGIN 3 */
   }

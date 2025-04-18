@@ -147,4 +147,13 @@ uint32_t Read_Flow(void) {
   return flow;
 }
 
+// 在 tim.c 中添加
+extern void UpdateDisplay(void);
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
+  if(htim->Instance == TIM2) {
+    UpdateDisplay();
+  }
+}
+
 /* USER CODE END 1 */
