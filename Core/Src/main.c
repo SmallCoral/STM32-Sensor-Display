@@ -23,6 +23,7 @@
 #include "gpio.h"
 #include "led.h"
 #include "ntc.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -60,7 +61,7 @@ void SystemClock_Config(void);
 uint32_t Read_Temperature(void);
 uint32_t Read_Flow(void);
 /* USER CODE END 0 */
-extern TIM_HandleTypeDef htim2;
+
 /**
   * @brief  The application entry point.
   * @retval int
@@ -76,13 +77,6 @@ int main(void)
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
-  MX_ADC2_Init(); // 初始化ADC
-  MX_TIM2_Init(); // 初始化定时器
-  LED_Init();
-
-  HAL_TIM_Base_Start_IT(&htim2);
-
-  uint32_t flow = 0;
 
   /* USER CODE BEGIN Init */
 
@@ -97,7 +91,8 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-
+  MX_ADC2_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
 
   uint32_t last_update_time = 0;
@@ -111,25 +106,20 @@ int main(void)
   {
     /* USER CODE END WHILE */
 
-    uint32_t adcValue = Read_Temperature(); // ADC读取函数
+    uint32_t adc = Read_Temperature();
+    uint32_t temp = NTC_ConvertToCelsius(adc);
 
-    uint32_t temp = NTC_ConvertToCelsius(adcValue);
-
-    // 每次循环都刷新显示
+    // 持续刷新显示（轮换）
     LED_Process();
-    // 非阻塞延时切换数字
+
+    // 非阻塞切换状态
     if (HAL_GetTick() - last_update_time > 500) {
       last_update_time = HAL_GetTick();
 
-      if (state == 0) {
-        DisplayNumber(temp);
-        state = 1;
-      } else {
-        //DisplayNumber(46);
-        state = 0;
-      }
+      // 设置数字 + 柱状图
+      DisplayNumber(temp);
+      Set_LevelBar(temp);  // <--- 替代 LED_LevelBar
     }
-
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

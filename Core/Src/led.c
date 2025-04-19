@@ -34,7 +34,7 @@ const uint16_t row_pins[10] = {
     GPIO_PIN_15  // J
 };
 
-// 每个数码位对应的7段LED：使用行号和列号定义
+// 每个数码位对应的7段LED
 typedef struct {
     uint16_t row; // 行引脚
     uint16_t col; // 列引脚
@@ -73,17 +73,30 @@ SegmentPin digit_units[7] = {
     {GPIO_PIN_8,  GPIO_PIN_2}  // G3
 };
 
+// A1 ~ I1 对应的行引脚（PB14~PB6）
+const uint16_t level_bar_rows[9] = {
+    GPIO_PIN_14, // A1
+    GPIO_PIN_13, // B1
+    GPIO_PIN_12, // C1
+    GPIO_PIN_11, // D1
+    GPIO_PIN_10, // E1
+    GPIO_PIN_9,  // F1
+    GPIO_PIN_8,  // G1
+    GPIO_PIN_7,  // H1
+    GPIO_PIN_6   // I1
+};
+
 // 当前显示的数字
 static uint16_t current_number = 0;
 
+// 当前柱状图等级（0~9）
+static uint8_t level_bar_value = 0;
+
 // 清除所有LED
 void ClearAllSegments() {
-    // 所有列置高（关）
     for (int i = 0; i < 6; i++) {
         HAL_GPIO_WritePin(GPIOB, column_pins[i], GPIO_PIN_SET);
     }
-
-    // 所有行置低（关）
     for (int i = 0; i < 10; i++) {
         HAL_GPIO_WritePin(GPIOB, row_pins[i], GPIO_PIN_RESET);
     }
@@ -91,15 +104,14 @@ void ClearAllSegments() {
 
 // 点亮某一段LED
 void LightSegment(SegmentPin pin) {
-    HAL_GPIO_WritePin(GPIOB, pin.col, GPIO_PIN_RESET);  // 列 = 低
-    HAL_GPIO_WritePin(GPIOB, pin.row, GPIO_PIN_SET);    // 行 = 高
+    HAL_GPIO_WritePin(GPIOB, pin.col, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOB, pin.row, GPIO_PIN_SET);
 }
 
 // 显示一个数字（0-9）在指定位置的段数组上
 void DisplayDigit(uint8_t digit, SegmentPin* segment) {
     if (digit > 9) return;
     uint8_t code = segment_table[digit];
-
     for (int i = 0; i < 7; i++) {
         if (code & (1 << (6 - i))) {
             LightSegment(segment[i]);
@@ -107,7 +119,23 @@ void DisplayDigit(uint8_t digit, SegmentPin* segment) {
     }
 }
 
-// 轮流刷新显示每个数码位
+// 设置要显示的数字
+void DisplayNumber(uint16_t num) {
+    if (num > 199) return;
+    current_number = num;
+}
+
+// 设置柱状图等级（通过温度值计算）
+void Set_LevelBar(uint32_t temp) {
+    uint8_t level = 0;
+    if (temp >= 10) {
+        level = (temp - 10) / 10 + 1;
+        if (level > 9) level = 9;
+    }
+    level_bar_value = level;
+}
+
+// 动态刷新显示
 void RefreshDisplay(void) {
     static uint8_t current_digit = 0;
 
@@ -117,7 +145,7 @@ void RefreshDisplay(void) {
     uint8_t tens = (current_number % 100) / 10;
     uint8_t units = current_number % 10;
 
-    switch(current_digit) {
+    switch (current_digit) {
         case 0:
             if (current_number >= 100)
                 DisplayDigit(hundreds, digit_hundreds);
@@ -129,25 +157,36 @@ void RefreshDisplay(void) {
         case 2:
             DisplayDigit(units, digit_units);
             break;
+        case 3:
+            // 显示温度等级柱状图
+            HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET); // 激活列1
+            for (int i = 1; i < 6; i++) {
+                HAL_GPIO_WritePin(GPIOB, column_pins[i], GPIO_PIN_SET);
+            }
+            for (int i = 0; i < 9; i++) {
+                if (i < level_bar_value)
+                    HAL_GPIO_WritePin(GPIOB, level_bar_rows[i], GPIO_PIN_SET);
+                else
+                    HAL_GPIO_WritePin(GPIOB, level_bar_rows[i], GPIO_PIN_RESET);
+            }
+            break;
     }
 
-    current_digit = (current_digit + 1) % 3;
-}
-
-// 设置显示数字
-void DisplayNumber(uint16_t num) {
-    if (num > 199) return;
-    current_number = num;
+    current_digit = (current_digit + 1) % 4; // 四段轮换
 }
 
 // 初始化
 void LED_Init(void) {
     ClearAllSegments();
     current_number = 0;
+    level_bar_value = 0;
 }
 
 // 主循环调用的刷新函数
 void LED_Process(void) {
     RefreshDisplay();
-    HAL_Delay(5); // 控制刷新频率
+}
+
+// 暂未使用的接口
+void LED_Show(void) {
 }

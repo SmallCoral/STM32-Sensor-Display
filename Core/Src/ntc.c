@@ -1,7 +1,7 @@
 #include "ntc.h"
 #include <math.h>
 
-static float NTC_Vref = 5.08f;           // 默认供电电压（建议使用实际测量值）
+static float NTC_Vref = 3.3f;           // 默认供电电压（建议使用实际测量值）
 static float NTC_R_fixed = 50000.0f;    // 默认固定电阻（Ω）
 static float NTC_R0 = 50000.0f;         // 默认热敏电阻在25℃的阻值（Ω）
 static float NTC_B = 3950.0f;           // 默认B值

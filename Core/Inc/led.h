@@ -12,4 +12,8 @@ void DisplayNumber(uint16_t num);
 // 在主循环中调用，用于刷新显示
 void LED_Process(void);
 
+void LED_Show(void);
+void LED_LevelBar(uint32_t temp);
+void Set_LevelBar(uint32_t temp);
+
 #endif // __LED_H__
