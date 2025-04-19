@@ -82,8 +82,6 @@ int main(void)
 
   HAL_TIM_Base_Start_IT(&htim2);
 
-  DisplayNumber(123);
-
   uint32_t flow = 0;
 
   /* USER CODE BEGIN Init */
@@ -102,6 +100,9 @@ int main(void)
 
   /* USER CODE BEGIN 2 */
 
+  uint32_t last_update_time = 0;
+  uint8_t state = 0;
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -110,21 +111,25 @@ int main(void)
   {
     /* USER CODE END WHILE */
 
-    // temperature = Read_Temperature(); // 读取温度
-    // flow = Read_Flow(); // 读取流量
-    //
-    // // 这里可以添加代码显示或处理数据
-    // HAL_Delay(1000);  // 延时1秒
+    uint32_t adcValue = Read_Temperature(); // ADC读取函数
 
-    uint32_t adcValue = Read_Temperature(); // 假设这是您的ADC读取函数
+    uint32_t temp = NTC_ConvertToCelsius(adcValue);
 
-    // 可选：初始化参数（仅调用一次即可）
-    //NTC_Init(4.85f, 50000.0f, 50000.0f, 3950.0f); // Vref, R_fixed, R0, B
+    // 每次循环都刷新显示
+    LED_Process();
+    // 非阻塞延时切换数字
+    if (HAL_GetTick() - last_update_time > 500) {
+      last_update_time = HAL_GetTick();
 
-    DisplayNumber(46);
-    HAL_Delay(100);
-    DisplayNumber(82);
-    HAL_Delay(100);
+      if (state == 0) {
+        DisplayNumber(temp);
+        state = 1;
+      } else {
+        //DisplayNumber(46);
+        state = 0;
+      }
+    }
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
