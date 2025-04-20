@@ -1,19 +1,21 @@
-#ifndef __LED_H__
-#define __LED_H__
+#ifndef __LED_H
+#define __LED_H
 
-#include "stm32f1xx_hal.h"
+#include "stm32f1xx_hal.h"  // 包含 STM32F1 系列的 HAL 库头文件
 
-// 初始化
-void LED_Init(void);
 
-// 设置要显示的数字（0~199）
+// 函数声明
+void ClearAllSegments(void);
 void DisplayNumber(uint16_t num);
-
-// 在主循环中调用，用于刷新显示
-void LED_Process(void);
-
-void LED_Show(void);
-void LED_LevelBar(uint32_t temp);
 void Set_LevelBar(uint32_t temp);
+void RefreshDisplay(void);
+void LED_Init(void);
+void LED_Process(void);
+void LED_Show(void);
+void DisplayHotTemp();
+uint32_t ConvertToFahrenheit(uint32_t celsius);
+void ssd();
 
-#endif // __LED_H__
+extern uint8_t display_celsius;  // 添加这行
+
+#endif // __LED_H

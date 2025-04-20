@@ -14,6 +14,6 @@
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
 -- Minimal optimization, debug info included
--- Configuring done (7.3s)
+-- Configuring done (2.3s)
 -- Generating done (0.1s)
 -- Build files have been written to: C:/Users/Shan_/Documents/obj/STM32-Sensor-Display/cmake-build-debug-mingw

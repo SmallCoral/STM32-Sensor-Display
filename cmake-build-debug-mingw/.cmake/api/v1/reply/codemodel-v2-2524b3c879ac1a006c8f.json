@@ -9,7 +9,7 @@
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.30"
+						"string" : "3.31"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "DEV.elf::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-DEV.elf-Debug-9ae666e7f12e48ecfe92.json",
+					"jsonFile" : "target-DEV.elf-Debug-98c4916685844daed0f8.json",
 					"name" : "DEV.elf",
 					"projectIndex" : 0
 				}

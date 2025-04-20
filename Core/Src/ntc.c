@@ -27,3 +27,4 @@ float NTC_ConvertToCelsius(uint32_t adc_value) {
 
     return tempC;
 }
+

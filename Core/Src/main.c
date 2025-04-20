@@ -1,3 +1,4 @@
+
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
@@ -23,6 +24,7 @@
 #include "gpio.h"
 #include "led.h"
 #include "ntc.h"
+#include "key.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -58,8 +60,7 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-uint32_t Read_Temperature(void);
-uint32_t Read_Flow(void);
+
 /* USER CODE END 0 */
 
 /**
@@ -95,34 +96,15 @@ int main(void)
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
 
-  uint32_t last_update_time = 0;
-  uint8_t state = 0;
-
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    /* USER CODE END WHILE */
+    ssd();
 
-    uint32_t adc = Read_Temperature();
-    uint32_t temp = NTC_ConvertToCelsius(adc);
-
-    // 持续刷新显示（轮换）
-    LED_Process();
-
-    // 非阻塞切换状态
-    if (HAL_GetTick() - last_update_time > 500) {
-      last_update_time = HAL_GetTick();
-
-      // 设置数字 + 柱状图
-      DisplayNumber(temp);
-      Set_LevelBar(temp);  // <--- 替代 LED_LevelBar
-    }
-    /* USER CODE BEGIN 3 */
   }
-  /* USER CODE END 3 */
 }
 
 /**
