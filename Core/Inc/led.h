@@ -14,7 +14,7 @@ void LED_Process(void);
 void LED_Show(void);
 void DisplayHotTemp();
 uint32_t ConvertToFahrenheit(uint32_t celsius);
-void ssd();
+void ntc();
 
 extern uint8_t display_celsius;  // 添加这行
 

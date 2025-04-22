@@ -1290,8 +1290,8 @@ LOAD c:/users/shan_/documents/dev/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi
  .text.LED_Process
                 0x080014c4       0x64 CMakeFiles/DEV.elf.dir/Core/Src/led.c.obj
                 0x080014c4                LED_Process
- .text.ssd      0x08001528       0xb4 CMakeFiles/DEV.elf.dir/Core/Src/led.c.obj
-                0x08001528                ssd
+ .text.ntc      0x08001528       0xb4 CMakeFiles/DEV.elf.dir/Core/Src/led.c.obj
+                0x08001528                ntc
  .text.Error_Handler
                 0x080015dc        0x4 CMakeFiles/DEV.elf.dir/Core/Src/main.c.obj
                 0x080015dc                Error_Handler

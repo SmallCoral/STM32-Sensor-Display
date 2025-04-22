@@ -313,7 +313,7 @@ void LED_Process(void) {
 void LED_Show(void) {
 }
 
-void ssd(void) {
+void ntc(void) {
     // 获取传感器温度值（ADC读取）
     uint32_t adc = Read_Temperature();
     uint32_t temp_celsius = NTC_ConvertToCelsius(adc);  // 转换为摄氏度
