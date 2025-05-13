@@ -154,7 +154,7 @@ void ClearAllSegments() {
 
 // 点亮某一段LED
 void LightSegment(SegmentPin pin) {
-    HAL_GPIO_WritePin(GPIOB, pin.col, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOB, pin.col, GPIO_PIN_SET);
     HAL_GPIO_WritePin(GPIOB, pin.row, GPIO_PIN_SET);
 }
 
