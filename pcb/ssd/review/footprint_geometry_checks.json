@@ -1,0 +1,57 @@
+{
+  "pass": true,
+  "revision": "A2",
+  "mcu_footprint": "SSD:STM32C562CET6_LQFP48_ST",
+  "mcu_source": "DS14927 Rev2 p110 图42；与图5顶视引脚方向一致",
+  "mcu": {
+    "pads": 48,
+    "body_mm": [
+      7,
+      7
+    ],
+    "lead_span_mm": [
+      9,
+      9
+    ],
+    "pitch_mm": 0.5,
+    "pad_mm": [
+      1.2,
+      0.3
+    ],
+    "pad_row_center_distance_mm": 8.5,
+    "copper_outer_span_mm": 9.7,
+    "copper_inner_span_mm": 7.3,
+    "adjacent_pad_gap_mm": 0.2,
+    "exposed_pad": false,
+    "numbering": "顶视：1～12 左侧向下，13～24 下侧向右，25～36 右侧向上，37～48 上侧向左"
+  },
+  "crystal": {
+    "part": "ABM8-24.000MHZ-10-D2Y-T",
+    "source": "Abracon ABM8 Rev20200729 p2",
+    "pad_mm": [
+      1.3,
+      1.05
+    ],
+    "frequency_mhz": 24,
+    "load_pf": 10,
+    "caps_initial_pf": 12,
+    "estimated_stray_pf": 4,
+    "esr_max_ohm": 50,
+    "c0_max_pf": 3,
+    "gmcrit_ma_per_v": 0.7685974166557139,
+    "gmcritmax_ma_per_v": 1.5,
+    "startup_and_drive_test": "最终 PCB 上验证起振、频偏及驱动功率；驱动功率≤100uW"
+  },
+  "display": {
+    "pads": 16,
+    "before_pad_mm": 2,
+    "pad_mm": 1.8,
+    "drill_mm": 1,
+    "nominal_annular_ring_mm": 0.4,
+    "pitch_mm": 2.54,
+    "row_spacing_mm": 35.08
+  },
+  "original_positions_preserved": 57,
+  "tracks_added": 0,
+  "errors": []
+}

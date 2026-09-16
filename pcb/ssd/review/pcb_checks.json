@@ -1,0 +1,8 @@
+{
+  "pass": true,
+  "footprints": 61,
+  "pads": 253,
+  "tracks": 0,
+  "errors": [],
+  "scope": "Pad nets, footprint identities, values, schematic UUIDs and staged geometry. Manufacturing rules are checked separately by KiCad DRC."
+}

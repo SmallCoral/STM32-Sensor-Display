@@ -1,0 +1,2433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/home/smallcoral/Dev/STM32-Sensor-Display/pcb/ssd/ssd.kicad_sch</source>
+    <date>2026-09-16T21:22:14</date>
+    <tool>Eeschema 10.0.6</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>STM32C562 温度与流量显示系统</title>
+        <company>温度与流量显示项目</company>
+        <rev>A2</rev>
+        <date>2026-09-16</date>
+        <source>ssd.kicad_sch</source>
+        <comment number="1" value="STM32C562 最小系统与外围电路；全部电阻、电容采用 0603"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/USB-C 供电、原生 USB 烧录与调试/" tstamps="/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c/">
+      <title_block>
+        <title>USB-C 供电、原生 USB 烧录与调试</title>
+        <company>温度与流量显示项目</company>
+        <rev>A2</rev>
+        <date>2026-09-16</date>
+        <source>usb_power.kicad_sch</source>
+        <comment number="1" value="STM32C562 最小系统与外围电路；全部电阻、电容采用 0603"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/58mm 显示屏与 HT16K33 驱动/" tstamps="/fce32a2b-0192-5769-a779-d47880dd735c/">
+      <title_block>
+        <title>58mm 显示屏与 HT16K33 驱动</title>
+        <company>温度与流量显示项目</company>
+        <rev>A2</rev>
+        <date>2026-09-16</date>
+        <source>display.kicad_sch</source>
+        <comment number="1" value="STM32C562 最小系统与外围电路；全部电阻、电容采用 0603"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/NTC 温度、霍尔流量与用户按键/" tstamps="/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6/">
+      <title_block>
+        <title>NTC 温度、霍尔流量与用户按键</title>
+        <company>温度与流量显示项目</company>
+        <rev>A2</rev>
+        <date>2026-09-16</date>
+        <source>sensors.kicad_sch</source>
+        <comment number="1" value="STM32C562 最小系统与外围电路；全部电阻、电容采用 0603"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="5" name="/STM32C562 最小系统/" tstamps="/005e51cc-8ae2-51a1-89f5-1b9a7e62560b/">
+      <title_block>
+        <title>STM32C562 最小系统</title>
+        <company>温度与流量显示项目</company>
+        <rev>A2</rev>
+        <date>2026-09-16</date>
+        <source>mcu_minimum.kicad_sch</source>
+        <comment number="1" value="STM32C562 最小系统与外围电路；全部电阻、电容采用 0603"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C101">
+      <value>1u / 10V</value>
+      <footprint>SSD:Capacitor_SMD__C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Capacitor_SMD__C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="USB-C 供电、原生 USB 烧录与调试"/>
+      <property name="Sheetfile" value="usb_power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/USB-C 供电、原生 USB 烧录与调试/" tstamps="/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c/"/>
+      <tstamps>afa7f445-e9be-512d-8ed8-13d588bfd750</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C102">
+      <value>1u / 10V</value>
+      <footprint>SSD:Capacitor_SMD__C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Capacitor_SMD__C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="USB-C 供电、原生 USB 烧录与调试"/>
+      <property name="Sheetfile" value="usb_power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/USB-C 供电、原生 USB 烧录与调试/" tstamps="/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c/"/>
+      <tstamps>37699c97-deea-563f-89fb-5b17d124d92b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C103">
+      <value>4.7u / 10V</value>
+      <footprint>SSD:Capacitor_SMD__C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Capacitor_SMD__C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="USB-C 供电、原生 USB 烧录与调试"/>
+      <property name="Sheetfile" value="usb_power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/USB-C 供电、原生 USB 烧录与调试/" tstamps="/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c/"/>
+      <tstamps>67797b35-378b-519f-8606-bb2b48b5e03c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C104">
+      <value>100n</value>
+      <footprint>SSD:Capacitor_SMD__C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Capacitor_SMD__C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="USB-C 供电、原生 USB 烧录与调试"/>
+      <property name="Sheetfile" value="usb_power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/USB-C 供电、原生 USB 烧录与调试/" tstamps="/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c/"/>
+      <tstamps>7ea1c998-d5b3-510e-8d54-b73c708b283d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D101">
+      <value>USBLC6-2SC6</value>
+      <footprint>SSD:Package_TO_SOT_SMD__SOT-23-6</footprint>
+      <datasheet>https://www.st.com/resource/en/datasheet/usblc6-2.pdf</datasheet>
+      <fields>
+        <field name="Footprint">SSD:Package_TO_SOT_SMD__SOT-23-6</field>
+        <field name="Datasheet">https://www.st.com/resource/en/datasheet/usblc6-2.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="USBLC6-2SC6" description="Very low capacitance ESD protection diode, 2 data-line, SOT-23-6"/>
+      <property name="Sheetname" value="USB-C 供电、原生 USB 烧录与调试"/>
+      <property name="Sheetfile" value="usb_power.kicad_sch"/>
+      <property name="ki_keywords" value="usb ethernet video"/>
+      <sheetpath names="/USB-C 供电、原生 USB 烧录与调试/" tstamps="/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c/"/>
+      <tstamps>f3e4d92f-37ac-5349-b91e-4b5f0e98cc72</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="5"/>
+            <pin num="2"/>
+            <pin num="6"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="F101">
+      <value>500mA 保持电流</value>
+      <footprint>SSD:Fuse__Fuse_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Fuse__Fuse_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <property name="Sheetname" value="USB-C 供电、原生 USB 烧录与调试"/>
+      <property name="Sheetfile" value="usb_power.kicad_sch"/>
+      <property name="ki_keywords" value="resettable fuse PTC PPTC polyfuse polyswitch"/>
+      <sheetpath names="/USB-C 供电、原生 USB 烧录与调试/" tstamps="/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c/"/>
+      <tstamps>948e96bd-07c3-5078-b9d6-0d77f713653c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J101">
+      <value>GCT USB4105-GF-A</value>
+      <footprint>SSD:Connector_USB__USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal</footprint>
+      <datasheet>https://www.usb.org/sites/default/files/documents/usb_type-c.zip</datasheet>
+      <fields>
+        <field name="Footprint">SSD:Connector_USB__USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal</field>
+        <field name="Datasheet">https://www.usb.org/sites/default/files/documents/usb_type-c.zip</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="USB_C_Receptacle_USB2.0_16P" description="USB 2.0-only 16P Type-C Receptacle connector"/>
+      <property name="Sheetname" value="USB-C 供电、原生 USB 烧录与调试"/>
+      <property name="Sheetfile" value="usb_power.kicad_sch"/>
+      <property name="ki_keywords" value="usb universal serial bus type-C USB2.0"/>
+      <sheetpath names="/USB-C 供电、原生 USB 烧录与调试/" tstamps="/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c/"/>
+      <tstamps>1a107c6f-d137-5883-97e0-04c53eed6621</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="SH"/>
+            <pin num="B1"/>
+            <pin num="B12"/>
+            <pin num="A1"/>
+            <pin num="A12"/>
+            <pin num="A9"/>
+            <pin num="B4"/>
+            <pin num="B9"/>
+            <pin num="A4"/>
+            <pin num="A5"/>
+            <pin num="B5"/>
+            <pin num="A7"/>
+            <pin num="B7"/>
+            <pin num="A6"/>
+            <pin num="B6"/>
+            <pin num="A8"/>
+            <pin num="B8"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J102">
+      <value>SWD / 电压参考</value>
+      <footprint>SSD:Connector_PinHeader_2.54mm__PinHeader_1x05_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">SSD:Connector_PinHeader_2.54mm__PinHeader_1x05_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="Conn_01x05" description="Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="USB-C 供电、原生 USB 烧录与调试"/>
+      <property name="Sheetfile" value="usb_power.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/USB-C 供电、原生 USB 烧录与调试/" tstamps="/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c/"/>
+      <tstamps>16fba6b9-36aa-5007-a7a8-2c7247bbb313</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R101">
+      <value>5.1k 1%</value>
+      <footprint>SSD:Resistor_SMD__R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Resistor_SMD__R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="R" description="Resistor"/>
+      <property name="Sheetname" value="USB-C 供电、原生 USB 烧录与调试"/>
+      <property name="Sheetfile" value="usb_power.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/USB-C 供电、原生 USB 烧录与调试/" tstamps="/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c/"/>
+      <tstamps>8dcaf921-6da5-5b90-834d-4e0a5527f84a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R102">
+      <value>5.1k 1%</value>
+      <footprint>SSD:Resistor_SMD__R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Resistor_SMD__R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="R" description="Resistor"/>
+      <property name="Sheetname" value="USB-C 供电、原生 USB 烧录与调试"/>
+      <property name="Sheetfile" value="usb_power.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/USB-C 供电、原生 USB 烧录与调试/" tstamps="/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c/"/>
+      <tstamps>ccceff47-a0c5-5a35-9e31-535da6ad74c8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R103">
+      <value>10k</value>
+      <footprint>SSD:Resistor_SMD__R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Resistor_SMD__R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="R" description="Resistor"/>
+      <property name="Sheetname" value="USB-C 供电、原生 USB 烧录与调试"/>
+      <property name="Sheetfile" value="usb_power.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/USB-C 供电、原生 USB 烧录与调试/" tstamps="/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c/"/>
+      <tstamps>ea63154a-fdb4-5836-bd61-b4cc9ed43624</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R104">
+      <value>10k</value>
+      <footprint>SSD:Resistor_SMD__R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Resistor_SMD__R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="R" description="Resistor"/>
+      <property name="Sheetname" value="USB-C 供电、原生 USB 烧录与调试"/>
+      <property name="Sheetfile" value="usb_power.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/USB-C 供电、原生 USB 烧录与调试/" tstamps="/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c/"/>
+      <tstamps>a2d1d42a-4316-5c33-913a-e533204a15b2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW101">
+      <value>启动（BOOT）</value>
+      <footprint>SSD:Button_Switch_SMD__SW_SPST_TL3342</footprint>
+      <fields>
+        <field name="Footprint">SSD:Button_Switch_SMD__SW_SPST_TL3342</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value="USB-C 供电、原生 USB 烧录与调试"/>
+      <property name="Sheetfile" value="usb_power.kicad_sch"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/USB-C 供电、原生 USB 烧录与调试/" tstamps="/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c/"/>
+      <tstamps>acfecba5-41dd-5814-b686-a738dcdb8888</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW102">
+      <value>复位（RESET）</value>
+      <footprint>SSD:Button_Switch_SMD__SW_SPST_TL3342</footprint>
+      <fields>
+        <field name="Footprint">SSD:Button_Switch_SMD__SW_SPST_TL3342</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value="USB-C 供电、原生 USB 烧录与调试"/>
+      <property name="Sheetfile" value="usb_power.kicad_sch"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/USB-C 供电、原生 USB 烧录与调试/" tstamps="/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c/"/>
+      <tstamps>2967ebb6-0f15-5a97-a012-d296d7afc854</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U101">
+      <value>AP2112K-3.3TRG1</value>
+      <footprint>SSD:Package_TO_SOT_SMD__SOT-23-5</footprint>
+      <datasheet>https://www.diodes.com/assets/Datasheets/AP2112.pdf</datasheet>
+      <fields>
+        <field name="Footprint">SSD:Package_TO_SOT_SMD__SOT-23-5</field>
+        <field name="Datasheet">https://www.diodes.com/assets/Datasheets/AP2112.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="AP2112K-3.3" description="600mA low dropout linear regulator, with enable pin, 3.8V-6V input voltage range, 3.3V fixed positive output, SOT-23-5"/>
+      <property name="Sheetname" value="USB-C 供电、原生 USB 烧录与调试"/>
+      <property name="Sheetfile" value="usb_power.kicad_sch"/>
+      <property name="ki_keywords" value="linear regulator ldo fixed positive"/>
+      <sheetpath names="/USB-C 供电、原生 USB 烧录与调试/" tstamps="/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c/"/>
+      <tstamps>fcc3e6c5-0030-5129-9bcc-3db940ea779e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+            <pin num="4"/>
+            <pin num="5"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C201">
+      <value>100n</value>
+      <footprint>SSD:Capacitor_SMD__C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Capacitor_SMD__C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="58mm 显示屏与 HT16K33 驱动"/>
+      <property name="Sheetfile" value="display.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/58mm 显示屏与 HT16K33 驱动/" tstamps="/fce32a2b-0192-5769-a779-d47880dd735c/"/>
+      <tstamps>53d68e38-c8b3-5649-b729-6acebeb1e646</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C202">
+      <value>2.2u / 10V</value>
+      <footprint>SSD:Capacitor_SMD__C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Capacitor_SMD__C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="58mm 显示屏与 HT16K33 驱动"/>
+      <property name="Sheetfile" value="display.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/58mm 显示屏与 HT16K33 驱动/" tstamps="/fce32a2b-0192-5769-a779-d47880dd735c/"/>
+      <tstamps>ca525b2b-4cc7-5c39-a653-ad50cccef045</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="DS201">
+      <value>5858-1DRWB-10</value>
+      <footprint>SSD:ALS5858_1DRWB_10</footprint>
+      <datasheet>../../docs/20250303远帆5858-1DRWB-10(1).pdf</datasheet>
+      <fields>
+        <field name="Footprint">SSD:ALS5858_1DRWB_10</field>
+        <field name="Datasheet">../../docs/20250303远帆5858-1DRWB-10(1).pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="ALS5858_1DRWB_10" description="5858-1DRWB-10 58mm display, six common cathodes and ten segment anodes"/>
+      <property name="Sheetname" value="58mm 显示屏与 HT16K33 驱动"/>
+      <property name="Sheetfile" value="display.kicad_sch"/>
+      <sheetpath names="/58mm 显示屏与 HT16K33 驱动/" tstamps="/fce32a2b-0192-5769-a779-d47880dd735c/"/>
+      <tstamps>ce042024-914a-53ea-87f8-401160c8b98e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="15"/>
+            <pin num="14"/>
+            <pin num="13"/>
+            <pin num="12"/>
+            <pin num="11"/>
+            <pin num="10"/>
+            <pin num="9"/>
+            <pin num="8"/>
+            <pin num="7"/>
+            <pin num="16"/>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q201">
+      <value>BSS138</value>
+      <footprint>SSD:Package_TO_SOT_SMD__SOT-23</footprint>
+      <datasheet>https://www.onsemi.com/pub/Collateral/BSS138-D.PDF</datasheet>
+      <fields>
+        <field name="Footprint">SSD:Package_TO_SOT_SMD__SOT-23</field>
+        <field name="Datasheet">https://www.onsemi.com/pub/Collateral/BSS138-D.PDF</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="BSS138" description="50V Vds, 0.22A Id, N-Channel MOSFET, SOT-23"/>
+      <property name="Sheetname" value="58mm 显示屏与 HT16K33 驱动"/>
+      <property name="Sheetfile" value="display.kicad_sch"/>
+      <property name="ki_keywords" value="N-Channel MOSFET"/>
+      <sheetpath names="/58mm 显示屏与 HT16K33 驱动/" tstamps="/fce32a2b-0192-5769-a779-d47880dd735c/"/>
+      <tstamps>b42ee070-8980-5e8e-a6f5-0320ec665e51</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q202">
+      <value>BSS138</value>
+      <footprint>SSD:Package_TO_SOT_SMD__SOT-23</footprint>
+      <datasheet>https://www.onsemi.com/pub/Collateral/BSS138-D.PDF</datasheet>
+      <fields>
+        <field name="Footprint">SSD:Package_TO_SOT_SMD__SOT-23</field>
+        <field name="Datasheet">https://www.onsemi.com/pub/Collateral/BSS138-D.PDF</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="BSS138" description="50V Vds, 0.22A Id, N-Channel MOSFET, SOT-23"/>
+      <property name="Sheetname" value="58mm 显示屏与 HT16K33 驱动"/>
+      <property name="Sheetfile" value="display.kicad_sch"/>
+      <property name="ki_keywords" value="N-Channel MOSFET"/>
+      <sheetpath names="/58mm 显示屏与 HT16K33 驱动/" tstamps="/fce32a2b-0192-5769-a779-d47880dd735c/"/>
+      <tstamps>4e491ace-2cac-589e-a206-33467af71f56</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R201">
+      <value>330R</value>
+      <footprint>SSD:Resistor_SMD__R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Resistor_SMD__R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="R" description="Resistor"/>
+      <property name="Sheetname" value="58mm 显示屏与 HT16K33 驱动"/>
+      <property name="Sheetfile" value="display.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/58mm 显示屏与 HT16K33 驱动/" tstamps="/fce32a2b-0192-5769-a779-d47880dd735c/"/>
+      <tstamps>d4d9dd81-143e-57a5-a8ff-da6297963522</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R202">
+      <value>330R</value>
+      <footprint>SSD:Resistor_SMD__R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Resistor_SMD__R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="R" description="Resistor"/>
+      <property name="Sheetname" value="58mm 显示屏与 HT16K33 驱动"/>
+      <property name="Sheetfile" value="display.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/58mm 显示屏与 HT16K33 驱动/" tstamps="/fce32a2b-0192-5769-a779-d47880dd735c/"/>
+      <tstamps>5ad50d7f-e142-57df-a55e-b0384f1ae852</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R203">
+      <value>330R</value>
+      <footprint>SSD:Resistor_SMD__R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Resistor_SMD__R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="R" description="Resistor"/>
+      <property name="Sheetname" value="58mm 显示屏与 HT16K33 驱动"/>
+      <property name="Sheetfile" value="display.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/58mm 显示屏与 HT16K33 驱动/" tstamps="/fce32a2b-0192-5769-a779-d47880dd735c/"/>
+      <tstamps>549a30e3-7f31-5a48-889b-a8197ef992d2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R204">
+      <value>330R</value>
+      <footprint>SSD:Resistor_SMD__R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Resistor_SMD__R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="R" description="Resistor"/>
+      <property name="Sheetname" value="58mm 显示屏与 HT16K33 驱动"/>
+      <property name="Sheetfile" value="display.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/58mm 显示屏与 HT16K33 驱动/" tstamps="/fce32a2b-0192-5769-a779-d47880dd735c/"/>
+      <tstamps>104af7b6-f85a-5fcf-818c-22815c1362c5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R205">
+      <value>330R</value>
+      <footprint>SSD:Resistor_SMD__R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Resistor_SMD__R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="R" description="Resistor"/>
+      <property name="Sheetname" value="58mm 显示屏与 HT16K33 驱动"/>
+      <property name="Sheetfile" value="display.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/58mm 显示屏与 HT16K33 驱动/" tstamps="/fce32a2b-0192-5769-a779-d47880dd735c/"/>
+      <tstamps>e45a4b5e-e53f-5224-bec9-18e0c44dd6ac</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R206">
+      <value>330R</value>
+      <footprint>SSD:Resistor_SMD__R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Resistor_SMD__R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="R" description="Resistor"/>
+      <property name="Sheetname" value="58mm 显示屏与 HT16K33 驱动"/>
+      <property name="Sheetfile" value="display.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/58mm 显示屏与 HT16K33 驱动/" tstamps="/fce32a2b-0192-5769-a779-d47880dd735c/"/>
+      <tstamps>985c5e9f-ae46-5b33-bc9f-e73cd3818ab2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R207">
+      <value>330R</value>
+      <footprint>SSD:Resistor_SMD__R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Resistor_SMD__R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="R" description="Resistor"/>
+      <property name="Sheetname" value="58mm 显示屏与 HT16K33 驱动"/>
+      <property name="Sheetfile" value="display.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/58mm 显示屏与 HT16K33 驱动/" tstamps="/fce32a2b-0192-5769-a779-d47880dd735c/"/>
+      <tstamps>11a3c73d-004a-51bf-9921-58a18f0ef1fc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R208">
+      <value>330R</value>
+      <footprint>SSD:Resistor_SMD__R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Resistor_SMD__R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="R" description="Resistor"/>
+      <property name="Sheetname" value="58mm 显示屏与 HT16K33 驱动"/>
+      <property name="Sheetfile" value="display.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/58mm 显示屏与 HT16K33 驱动/" tstamps="/fce32a2b-0192-5769-a779-d47880dd735c/"/>
+      <tstamps>2c09df5c-1d69-5939-982d-214d178d2c39</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R209">
+      <value>330R</value>
+      <footprint>SSD:Resistor_SMD__R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Resistor_SMD__R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="R" description="Resistor"/>
+      <property name="Sheetname" value="58mm 显示屏与 HT16K33 驱动"/>
+      <property name="Sheetfile" value="display.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/58mm 显示屏与 HT16K33 驱动/" tstamps="/fce32a2b-0192-5769-a779-d47880dd735c/"/>
+      <tstamps>beabd70b-e0d5-5c04-92bb-07785b73e454</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R210">
+      <value>330R</value>
+      <footprint>SSD:Resistor_SMD__R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Resistor_SMD__R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="R" description="Resistor"/>
+      <property name="Sheetname" value="58mm 显示屏与 HT16K33 驱动"/>
+      <property name="Sheetfile" value="display.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/58mm 显示屏与 HT16K33 驱动/" tstamps="/fce32a2b-0192-5769-a779-d47880dd735c/"/>
+      <tstamps>8f8982be-14b7-5872-b4dc-5a711de2394c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R211">
+      <value>4.7k</value>
+      <footprint>SSD:Resistor_SMD__R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Resistor_SMD__R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="R" description="Resistor"/>
+      <property name="Sheetname" value="58mm 显示屏与 HT16K33 驱动"/>
+      <property name="Sheetfile" value="display.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/58mm 显示屏与 HT16K33 驱动/" tstamps="/fce32a2b-0192-5769-a779-d47880dd735c/"/>
+      <tstamps>b8b327f1-9221-582a-99dc-c867de3352ff</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R212">
+      <value>4.7k</value>
+      <footprint>SSD:Resistor_SMD__R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Resistor_SMD__R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="R" description="Resistor"/>
+      <property name="Sheetname" value="58mm 显示屏与 HT16K33 驱动"/>
+      <property name="Sheetfile" value="display.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/58mm 显示屏与 HT16K33 驱动/" tstamps="/fce32a2b-0192-5769-a779-d47880dd735c/"/>
+      <tstamps>653fa4ec-31eb-5a1d-99ec-e3dc8e182cf4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R213">
+      <value>4.7k</value>
+      <footprint>SSD:Resistor_SMD__R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Resistor_SMD__R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="R" description="Resistor"/>
+      <property name="Sheetname" value="58mm 显示屏与 HT16K33 驱动"/>
+      <property name="Sheetfile" value="display.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/58mm 显示屏与 HT16K33 驱动/" tstamps="/fce32a2b-0192-5769-a779-d47880dd735c/"/>
+      <tstamps>32c6643c-ccea-5ec8-af9a-6e09e37d5943</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R214">
+      <value>4.7k</value>
+      <footprint>SSD:Resistor_SMD__R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Resistor_SMD__R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="R" description="Resistor"/>
+      <property name="Sheetname" value="58mm 显示屏与 HT16K33 驱动"/>
+      <property name="Sheetfile" value="display.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/58mm 显示屏与 HT16K33 驱动/" tstamps="/fce32a2b-0192-5769-a779-d47880dd735c/"/>
+      <tstamps>2b4918d8-98c6-52a2-8f9b-36e998435d59</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U201">
+      <value>HT16K33 / SOP28</value>
+      <footprint>SSD:Package_SO__SOIC-28W_7.5x17.9mm_P1.27mm</footprint>
+      <datasheet>docs/reference/HT16K33_Rev110.pdf</datasheet>
+      <fields>
+        <field name="Footprint">SSD:Package_SO__SOIC-28W_7.5x17.9mm_P1.27mm</field>
+        <field name="Datasheet">docs/reference/HT16K33_Rev110.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="HT16K33_28SOP" description="Holtek HT16K33, 16 anodes x 8 common cathodes, I2C 0x70, 28-pin SOP"/>
+      <property name="Sheetname" value="58mm 显示屏与 HT16K33 驱动"/>
+      <property name="Sheetfile" value="display.kicad_sch"/>
+      <sheetpath names="/58mm 显示屏与 HT16K33 驱动/" tstamps="/fce32a2b-0192-5769-a779-d47880dd735c/"/>
+      <tstamps>1e863c57-f3c9-51b0-9d56-0a8fa696228a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="26"/>
+            <pin num="27"/>
+            <pin num="15"/>
+            <pin num="14"/>
+            <pin num="13"/>
+            <pin num="12"/>
+            <pin num="11"/>
+            <pin num="10"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="28"/>
+            <pin num="1"/>
+            <pin num="25"/>
+            <pin num="24"/>
+            <pin num="23"/>
+            <pin num="22"/>
+            <pin num="21"/>
+            <pin num="20"/>
+            <pin num="19"/>
+            <pin num="18"/>
+            <pin num="17"/>
+            <pin num="16"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C301">
+      <value>100n</value>
+      <footprint>SSD:Capacitor_SMD__C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Capacitor_SMD__C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="NTC 温度、霍尔流量与用户按键"/>
+      <property name="Sheetfile" value="sensors.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/NTC 温度、霍尔流量与用户按键/" tstamps="/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6/"/>
+      <tstamps>3bbe89f6-fe0d-5a7e-98c5-55b5e537702e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C302">
+      <value>1n</value>
+      <footprint>SSD:Capacitor_SMD__C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Capacitor_SMD__C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="NTC 温度、霍尔流量与用户按键"/>
+      <property name="Sheetfile" value="sensors.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/NTC 温度、霍尔流量与用户按键/" tstamps="/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6/"/>
+      <tstamps>9fc9f6b8-1426-5771-a29d-fbdb4f2ca5f7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C303">
+      <value>100n</value>
+      <footprint>SSD:Capacitor_SMD__C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Capacitor_SMD__C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="NTC 温度、霍尔流量与用户按键"/>
+      <property name="Sheetfile" value="sensors.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/NTC 温度、霍尔流量与用户按键/" tstamps="/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6/"/>
+      <tstamps>238ba2da-5cbc-58c6-8d3c-9e402df3e16c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C304">
+      <value>100n</value>
+      <footprint>SSD:Capacitor_SMD__C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Capacitor_SMD__C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="NTC 温度、霍尔流量与用户按键"/>
+      <property name="Sheetfile" value="sensors.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/NTC 温度、霍尔流量与用户按键/" tstamps="/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6/"/>
+      <tstamps>7bbd77cb-a015-5152-82b9-12bc1c1f4c9f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C305">
+      <value>100n</value>
+      <footprint>SSD:Capacitor_SMD__C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Capacitor_SMD__C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="NTC 温度、霍尔流量与用户按键"/>
+      <property name="Sheetfile" value="sensors.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/NTC 温度、霍尔流量与用户按键/" tstamps="/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6/"/>
+      <tstamps>092bc88d-84c7-538e-9196-66c7520a97ab</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D301">
+      <value>BAV199</value>
+      <footprint>SSD:Package_TO_SOT_SMD__SOT-23</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/BAV199.pdf</datasheet>
+      <fields>
+        <field name="Footprint">SSD:Package_TO_SOT_SMD__SOT-23</field>
+        <field name="Datasheet">https://assets.nexperia.com/documents/data-sheet/BAV199.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="BAV199" description="BAV199 low-leakage series dual diode; 1=A1, 2=K2, 3=K1/A2"/>
+      <property name="Sheetname" value="NTC 温度、霍尔流量与用户按键"/>
+      <property name="Sheetfile" value="sensors.kicad_sch"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/NTC 温度、霍尔流量与用户按键/" tstamps="/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6/"/>
+      <tstamps>69ed6e04-c9eb-55d6-8014-098772419d7b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J301">
+      <value>NTC 接口 / XH 2.50mm</value>
+      <footprint>SSD:Connector_JST__JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">SSD:Connector_JST__JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="NTC_Connector" description=""/>
+      <property name="Sheetname" value="NTC 温度、霍尔流量与用户按键"/>
+      <property name="Sheetfile" value="sensors.kicad_sch"/>
+      <sheetpath names="/NTC 温度、霍尔流量与用户按键/" tstamps="/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6/"/>
+      <tstamps>41a9e6b2-1293-5cb0-af27-924526ba4d18</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J302">
+      <value>BTL-004A / XH 2.50mm</value>
+      <footprint>SSD:Connector_JST__JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">SSD:Connector_JST__JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="Flow_Connector" description=""/>
+      <property name="Sheetname" value="NTC 温度、霍尔流量与用户按键"/>
+      <property name="Sheetfile" value="sensors.kicad_sch"/>
+      <sheetpath names="/NTC 温度、霍尔流量与用户按键/" tstamps="/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6/"/>
+      <tstamps>2398bbfd-2cdf-58be-8750-9dc872500a60</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R301">
+      <value>49.9k 0.1%</value>
+      <footprint>SSD:Resistor_SMD__R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Resistor_SMD__R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="R" description="Resistor"/>
+      <property name="Sheetname" value="NTC 温度、霍尔流量与用户按键"/>
+      <property name="Sheetfile" value="sensors.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/NTC 温度、霍尔流量与用户按键/" tstamps="/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6/"/>
+      <tstamps>e52c16a9-9aae-572d-a9ea-434a657eec1b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R302">
+      <value>1k</value>
+      <footprint>SSD:Resistor_SMD__R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Resistor_SMD__R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="R" description="Resistor"/>
+      <property name="Sheetname" value="NTC 温度、霍尔流量与用户按键"/>
+      <property name="Sheetfile" value="sensors.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/NTC 温度、霍尔流量与用户按键/" tstamps="/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6/"/>
+      <tstamps>b7e4e625-458a-5c1c-8b85-93af3023af2d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R303">
+      <value>10k</value>
+      <footprint>SSD:Resistor_SMD__R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Resistor_SMD__R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="R" description="Resistor"/>
+      <property name="Sheetname" value="NTC 温度、霍尔流量与用户按键"/>
+      <property name="Sheetfile" value="sensors.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/NTC 温度、霍尔流量与用户按键/" tstamps="/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6/"/>
+      <tstamps>3eb9c832-4eb0-57fc-a97f-5439cba8135d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R304">
+      <value>4.7k</value>
+      <footprint>SSD:Resistor_SMD__R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Resistor_SMD__R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="R" description="Resistor"/>
+      <property name="Sheetname" value="NTC 温度、霍尔流量与用户按键"/>
+      <property name="Sheetfile" value="sensors.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/NTC 温度、霍尔流量与用户按键/" tstamps="/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6/"/>
+      <tstamps>383823b6-85ce-59f1-a55b-574dea34edfe</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R305">
+      <value>10k</value>
+      <footprint>SSD:Resistor_SMD__R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Resistor_SMD__R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="R" description="Resistor"/>
+      <property name="Sheetname" value="NTC 温度、霍尔流量与用户按键"/>
+      <property name="Sheetfile" value="sensors.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/NTC 温度、霍尔流量与用户按键/" tstamps="/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6/"/>
+      <tstamps>3c80d392-ce9b-556a-a5de-dc5d077e67a6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW301">
+      <value>单位切换</value>
+      <footprint>SSD:Button_Switch_SMD__SW_SPST_TL3342</footprint>
+      <fields>
+        <field name="Footprint">SSD:Button_Switch_SMD__SW_SPST_TL3342</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value="NTC 温度、霍尔流量与用户按键"/>
+      <property name="Sheetfile" value="sensors.kicad_sch"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/NTC 温度、霍尔流量与用户按键/" tstamps="/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6/"/>
+      <tstamps>b45a2040-834b-5c43-bda5-020cc3e64727</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U301">
+      <value>SN74LVC1G17DCKR</value>
+      <footprint>SSD:Package_TO_SOT_SMD__SOT-353_SC-70-5</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf</datasheet>
+      <fields>
+        <field name="Footprint">SSD:Package_TO_SOT_SMD__SOT-353_SC-70-5</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="74LVC1G17" description="Single Schmitt Buffer Gate, Low-Voltage CMOS"/>
+      <property name="Sheetname" value="NTC 温度、霍尔流量与用户按键"/>
+      <property name="Sheetfile" value="sensors.kicad_sch"/>
+      <property name="ki_keywords" value="Single Gate Buff Schmitt LVC CMOS"/>
+      <sheetpath names="/NTC 温度、霍尔流量与用户按键/" tstamps="/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6/"/>
+      <tstamps>340edf57-9677-50dc-b859-4c22f28d70a5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+            <pin num="5"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C401">
+      <value>100n</value>
+      <footprint>SSD:Capacitor_SMD__C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Capacitor_SMD__C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="STM32C562 最小系统"/>
+      <property name="Sheetfile" value="mcu_minimum.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/STM32C562 最小系统/" tstamps="/005e51cc-8ae2-51a1-89f5-1b9a7e62560b/"/>
+      <tstamps>ed531cd6-c019-5023-a4f1-cf6608d9f8f9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C402">
+      <value>100n</value>
+      <footprint>SSD:Capacitor_SMD__C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Capacitor_SMD__C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="STM32C562 最小系统"/>
+      <property name="Sheetfile" value="mcu_minimum.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/STM32C562 最小系统/" tstamps="/005e51cc-8ae2-51a1-89f5-1b9a7e62560b/"/>
+      <tstamps>f5aa69df-78fa-5ab8-9677-4e44e819d01c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C403">
+      <value>100n</value>
+      <footprint>SSD:Capacitor_SMD__C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Capacitor_SMD__C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="STM32C562 最小系统"/>
+      <property name="Sheetfile" value="mcu_minimum.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/STM32C562 最小系统/" tstamps="/005e51cc-8ae2-51a1-89f5-1b9a7e62560b/"/>
+      <tstamps>e40a3747-bda7-533d-8d64-ae7cb381a8c7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C404">
+      <value>4.7u / 10V</value>
+      <footprint>SSD:Capacitor_SMD__C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Capacitor_SMD__C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="STM32C562 最小系统"/>
+      <property name="Sheetfile" value="mcu_minimum.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/STM32C562 最小系统/" tstamps="/005e51cc-8ae2-51a1-89f5-1b9a7e62560b/"/>
+      <tstamps>5f3c88f3-8dd8-5558-96a4-647e00553f97</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C405">
+      <value>2.2u / 10V</value>
+      <footprint>SSD:Capacitor_SMD__C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Capacitor_SMD__C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="STM32C562 最小系统"/>
+      <property name="Sheetfile" value="mcu_minimum.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/STM32C562 最小系统/" tstamps="/005e51cc-8ae2-51a1-89f5-1b9a7e62560b/"/>
+      <tstamps>d0a9e06b-b59b-5ece-a767-0c4dc6efbe7f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C406">
+      <value>100n</value>
+      <footprint>SSD:Capacitor_SMD__C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Capacitor_SMD__C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="STM32C562 最小系统"/>
+      <property name="Sheetfile" value="mcu_minimum.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/STM32C562 最小系统/" tstamps="/005e51cc-8ae2-51a1-89f5-1b9a7e62560b/"/>
+      <tstamps>5f2e932f-e8c8-530b-8842-ccba90b8bfbb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C407">
+      <value>12p / C0G</value>
+      <footprint>SSD:Capacitor_SMD__C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Capacitor_SMD__C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="STM32C562 最小系统"/>
+      <property name="Sheetfile" value="mcu_minimum.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/STM32C562 最小系统/" tstamps="/005e51cc-8ae2-51a1-89f5-1b9a7e62560b/"/>
+      <tstamps>a97cd3ae-8cd2-5335-930e-91b440a2707a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C408">
+      <value>12p / C0G</value>
+      <footprint>SSD:Capacitor_SMD__C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Capacitor_SMD__C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="STM32C562 最小系统"/>
+      <property name="Sheetfile" value="mcu_minimum.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/STM32C562 最小系统/" tstamps="/005e51cc-8ae2-51a1-89f5-1b9a7e62560b/"/>
+      <tstamps>0bc42d5b-4a54-5c5a-a7eb-6e3cb3c85356</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R401">
+      <value>0R</value>
+      <footprint>SSD:Resistor_SMD__R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">SSD:Resistor_SMD__R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="R" description="Resistor"/>
+      <property name="Sheetname" value="STM32C562 最小系统"/>
+      <property name="Sheetfile" value="mcu_minimum.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/STM32C562 最小系统/" tstamps="/005e51cc-8ae2-51a1-89f5-1b9a7e62560b/"/>
+      <tstamps>0ae3b4b7-a49e-5263-a712-6469d0664c16</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U401">
+      <value>STM32C562CET6</value>
+      <footprint>SSD:STM32C562CET6_LQFP48_ST</footprint>
+      <datasheet>docs/reference/STM32C562xx_DS14927_Rev2.pdf</datasheet>
+      <fields>
+        <field name="Footprint">SSD:STM32C562CET6_LQFP48_ST</field>
+        <field name="Datasheet">docs/reference/STM32C562xx_DS14927_Rev2.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="STM32C562CET6" description="STM32C562CET6，512KB 闪存、128KB SRAM，LQFP48；按 DS14927 Rev2 图5及表14核对。"/>
+      <property name="Sheetname" value="STM32C562 最小系统"/>
+      <property name="Sheetfile" value="mcu_minimum.kicad_sch"/>
+      <sheetpath names="/STM32C562 最小系统/" tstamps="/005e51cc-8ae2-51a1-89f5-1b9a7e62560b/"/>
+      <tstamps>22a51aed-2554-5cff-9202-90e08c7cec40</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="9"/>
+            <pin num="8"/>
+            <pin num="22"/>
+            <pin num="7"/>
+            <pin num="44"/>
+            <pin num="2"/>
+            <pin num="1"/>
+            <pin num="21"/>
+            <pin num="24"/>
+            <pin num="23"/>
+            <pin num="36"/>
+            <pin num="35"/>
+            <pin num="48"/>
+            <pin num="47"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="15"/>
+            <pin num="16"/>
+            <pin num="17"/>
+            <pin num="29"/>
+            <pin num="30"/>
+            <pin num="31"/>
+            <pin num="32"/>
+            <pin num="33"/>
+            <pin num="34"/>
+            <pin num="37"/>
+            <pin num="38"/>
+            <pin num="18"/>
+            <pin num="19"/>
+            <pin num="20"/>
+            <pin num="39"/>
+            <pin num="40"/>
+            <pin num="41"/>
+            <pin num="42"/>
+            <pin num="43"/>
+            <pin num="45"/>
+            <pin num="46"/>
+            <pin num="25"/>
+            <pin num="26"/>
+            <pin num="27"/>
+            <pin num="28"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Y401">
+      <value>24MHz / CL=10pF</value>
+      <footprint>SSD:Abracon_ABM8_3.2x2.5mm</footprint>
+      <datasheet>docs/reference/Abracon_ABM8_Rev20200729.pdf</datasheet>
+      <fields>
+        <field name="制造商型号">ABM8-24.000MHZ-10-D2Y-T</field>
+        <field name="Footprint">SSD:Abracon_ABM8_3.2x2.5mm</field>
+        <field name="Datasheet">docs/reference/Abracon_ABM8_Rev20200729.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SSD" part="Crystal_GND24" description="四脚无源晶振；1、3为晶体端，2、4为接地外壳。"/>
+      <property name="制造商型号" value="ABM8-24.000MHZ-10-D2Y-T"/>
+      <property name="Sheetname" value="STM32C562 最小系统"/>
+      <property name="Sheetfile" value="mcu_minimum.kicad_sch"/>
+      <property name="ki_keywords" value="quartz ceramic resonator oscillator"/>
+      <sheetpath names="/STM32C562 最小系统/" tstamps="/005e51cc-8ae2-51a1-89f5-1b9a7e62560b/"/>
+      <tstamps>bc6d16dc-7aae-55f9-84d5-e68d5c1cd161</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="4"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="SSD" part="74LVC1G17">
+      <description>Single Schmitt Buffer Gate, Low-Voltage CMOS</description>
+      <docs>https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74LVC1G17</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf</field>
+        <field name="Description">Single Schmitt Buffer Gate, Low-Voltage CMOS</field>
+      </fields>
+      <pins>
+        <pin num="1" name="NC" type="no_connect"/>
+        <pin num="2" name="" type="input"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="" type="output"/>
+        <pin num="5" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="SSD" part="ALS5858_1DRWB_10">
+      <description>5858-1DRWB-10 58mm display, six common cathodes and ten segment anodes</description>
+      <docs>../../docs/20250303远帆5858-1DRWB-10(1).pdf</docs>
+      <fields>
+        <field name="Reference">DS</field>
+        <field name="Value">ALS5858_1DRWB_10</field>
+        <field name="Footprint">SSD:ALS5858_1DRWB_10</field>
+        <field name="Datasheet">../../docs/20250303远帆5858-1DRWB-10(1).pdf</field>
+        <field name="Description">5858-1DRWB-10 58mm display, six common cathodes and ten segment anodes</field>
+      </fields>
+      <pins>
+        <pin num="1" name="COM1" type="passive"/>
+        <pin num="2" name="COM2" type="passive"/>
+        <pin num="3" name="COM3" type="passive"/>
+        <pin num="4" name="COM4" type="passive"/>
+        <pin num="5" name="COM5" type="passive"/>
+        <pin num="6" name="COM6" type="passive"/>
+        <pin num="7" name="I" type="passive"/>
+        <pin num="8" name="H" type="passive"/>
+        <pin num="9" name="G" type="passive"/>
+        <pin num="10" name="F" type="passive"/>
+        <pin num="11" name="E" type="passive"/>
+        <pin num="12" name="D" type="passive"/>
+        <pin num="13" name="C" type="passive"/>
+        <pin num="14" name="B" type="passive"/>
+        <pin num="15" name="A" type="passive"/>
+        <pin num="16" name="J" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SSD" part="AP2112K-3.3">
+      <description>600mA low dropout linear regulator, with enable pin, 3.8V-6V input voltage range, 3.3V fixed positive output, SOT-23-5</description>
+      <docs>https://www.diodes.com/assets/Datasheets/AP2112.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AP2112K-3.3</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
+        <field name="Datasheet">https://www.diodes.com/assets/Datasheets/AP2112.pdf</field>
+        <field name="Description">600mA low dropout linear regulator, with enable pin, 3.8V-6V input voltage range, 3.3V fixed positive output, SOT-23-5</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VIN" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="EN" type="input"/>
+        <pin num="4" name="NC" type="no_connect"/>
+        <pin num="5" name="VOUT" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="SSD" part="BAV199">
+      <description>BAV199 low-leakage series dual diode; 1=A1, 2=K2, 3=K1/A2</description>
+      <docs>https://assets.nexperia.com/documents/data-sheet/BAV199.pdf</docs>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">BAV199</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet">https://assets.nexperia.com/documents/data-sheet/BAV199.pdf</field>
+        <field name="Description">BAV199 low-leakage series dual diode; 1=A1, 2=K2, 3=K1/A2</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A1" type="passive"/>
+        <pin num="2" name="K2" type="passive"/>
+        <pin num="3" name="K1/A2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SSD" part="BSS138">
+      <description>50V Vds, 0.22A Id, N-Channel MOSFET, SOT-23</description>
+      <docs>https://www.onsemi.com/pub/Collateral/BSS138-D.PDF</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">BSS138</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet">https://www.onsemi.com/pub/Collateral/BSS138-D.PDF</field>
+        <field name="Description">50V Vds, 0.22A Id, N-Channel MOSFET, SOT-23</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SSD" part="C">
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SSD" part="Conn_01x05">
+      <description>Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x05</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SSD" part="Crystal_GND24">
+      <description>四脚无源晶振；1、3为晶体端，2、4为接地外壳。</description>
+      <docs>docs/reference/Abracon_ABM8_Rev20200729.pdf</docs>
+      <fields>
+        <field name="Reference">Y</field>
+        <field name="Value">Crystal_GND24</field>
+        <field name="Footprint">SSD:Abracon_ABM8_3.2x2.5mm</field>
+        <field name="Datasheet">docs/reference/Abracon_ABM8_Rev20200729.pdf</field>
+        <field name="Description">四脚无源晶振；1、3为晶体端，2、4为接地外壳。</field>
+        <field name="KLC_S3.3">The rectangle is not a symbol body but a graphical element</field>
+        <field name="KLC_S4.1">Some pins are on 50mil grid to make the symbol small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="G" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="G" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SSD" part="Flow_Connector">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Flow_Connector</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="红线+5V" type="passive"/>
+        <pin num="2" name="黄线" type="passive"/>
+        <pin num="3" name="白线GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SSD" part="HT16K33_28SOP">
+      <description>Holtek HT16K33, 16 anodes x 8 common cathodes, I2C 0x70, 28-pin SOP</description>
+      <docs>docs/reference/HT16K33_Rev110.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">HT16K33_28SOP</field>
+        <field name="Footprint">SSD:Package_SO__SOIC-28W_7.5x17.9mm_P1.27mm</field>
+        <field name="Datasheet">docs/reference/HT16K33_Rev110.pdf</field>
+        <field name="Description">Holtek HT16K33, 16 anodes x 8 common cathodes, I2C 0x70, 28-pin SOP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VSS" type="power_in"/>
+        <pin num="2" name="COM0" type="output"/>
+        <pin num="3" name="COM1" type="output"/>
+        <pin num="4" name="COM2" type="output"/>
+        <pin num="5" name="COM3" type="output"/>
+        <pin num="6" name="COM4" type="output"/>
+        <pin num="7" name="COM5" type="output"/>
+        <pin num="8" name="COM6" type="output"/>
+        <pin num="9" name="COM7" type="output"/>
+        <pin num="10" name="ROW15" type="bidirectional"/>
+        <pin num="11" name="ROW14" type="bidirectional"/>
+        <pin num="12" name="ROW13" type="bidirectional"/>
+        <pin num="13" name="ROW12" type="bidirectional"/>
+        <pin num="14" name="ROW11" type="bidirectional"/>
+        <pin num="15" name="ROW10" type="bidirectional"/>
+        <pin num="16" name="ROW9" type="bidirectional"/>
+        <pin num="17" name="ROW8" type="bidirectional"/>
+        <pin num="18" name="ROW7" type="bidirectional"/>
+        <pin num="19" name="ROW6" type="bidirectional"/>
+        <pin num="20" name="ROW5" type="bidirectional"/>
+        <pin num="21" name="ROW4" type="bidirectional"/>
+        <pin num="22" name="ROW3" type="bidirectional"/>
+        <pin num="23" name="ROW2" type="bidirectional"/>
+        <pin num="24" name="ROW1" type="bidirectional"/>
+        <pin num="25" name="ROW0" type="bidirectional"/>
+        <pin num="26" name="SCL" type="input"/>
+        <pin num="27" name="SDA" type="bidirectional"/>
+        <pin num="28" name="VDD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="SSD" part="NTC_Connector">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">NTC_Connector</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="+3V3" type="passive"/>
+        <pin num="2" name="信号" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SSD" part="Polyfuse">
+      <description>Resettable fuse, polymeric positive temperature coefficient</description>
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">Polyfuse</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resettable fuse, polymeric positive temperature coefficient</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SSD" part="R">
+      <description>Resistor</description>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SSD" part="STM32C562CET6">
+      <description>STM32C562CET6，512KB 闪存、128KB SRAM，LQFP48；按 DS14927 Rev2 图5及表14核对。</description>
+      <docs>docs/reference/STM32C562xx_DS14927_Rev2.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">STM32C562CET6</field>
+        <field name="Footprint">SSD:STM32C562CET6_LQFP48_ST</field>
+        <field name="Datasheet">docs/reference/STM32C562xx_DS14927_Rev2.pdf</field>
+        <field name="Description">STM32C562CET6，512KB 闪存、128KB SRAM，LQFP48；按 DS14927 Rev2 图5及表14核对。</field>
+      </fields>
+      <pins>
+        <pin num="1" name="PE2" type="bidirectional"/>
+        <pin num="2" name="PC13" type="bidirectional"/>
+        <pin num="3" name="PC14-OSC32_IN" type="bidirectional"/>
+        <pin num="4" name="PC15-OSC32_OUT" type="bidirectional"/>
+        <pin num="5" name="PH0-OSC_IN" type="bidirectional"/>
+        <pin num="6" name="PH1-OSC_OUT" type="bidirectional"/>
+        <pin num="7" name="NRST" type="input"/>
+        <pin num="8" name="VREF-" type="power_in"/>
+        <pin num="9" name="VREF+" type="power_in"/>
+        <pin num="10" name="PA0" type="bidirectional"/>
+        <pin num="11" name="PA1" type="bidirectional"/>
+        <pin num="12" name="PA2" type="bidirectional"/>
+        <pin num="13" name="PA3" type="bidirectional"/>
+        <pin num="14" name="PA4" type="bidirectional"/>
+        <pin num="15" name="PA5" type="bidirectional"/>
+        <pin num="16" name="PA6" type="bidirectional"/>
+        <pin num="17" name="PA7" type="bidirectional"/>
+        <pin num="18" name="PB0" type="bidirectional"/>
+        <pin num="19" name="PB1" type="bidirectional"/>
+        <pin num="20" name="PB2" type="bidirectional"/>
+        <pin num="21" name="PB10" type="bidirectional"/>
+        <pin num="22" name="VCAP" type="power_out"/>
+        <pin num="23" name="VSS" type="power_in"/>
+        <pin num="24" name="VDD" type="power_in"/>
+        <pin num="25" name="PB12" type="bidirectional"/>
+        <pin num="26" name="PB13" type="bidirectional"/>
+        <pin num="27" name="PB14" type="bidirectional"/>
+        <pin num="28" name="PB15" type="bidirectional"/>
+        <pin num="29" name="PA8" type="bidirectional"/>
+        <pin num="30" name="PA9" type="bidirectional"/>
+        <pin num="31" name="PA10" type="bidirectional"/>
+        <pin num="32" name="PA11" type="bidirectional"/>
+        <pin num="33" name="PA12" type="bidirectional"/>
+        <pin num="34" name="PA13" type="bidirectional"/>
+        <pin num="35" name="VSS" type="power_in"/>
+        <pin num="36" name="VDD" type="power_in"/>
+        <pin num="37" name="PA14" type="bidirectional"/>
+        <pin num="38" name="PA15" type="bidirectional"/>
+        <pin num="39" name="PB3" type="bidirectional"/>
+        <pin num="40" name="PB4" type="bidirectional"/>
+        <pin num="41" name="PB5" type="bidirectional"/>
+        <pin num="42" name="PB6" type="bidirectional"/>
+        <pin num="43" name="PB7" type="bidirectional"/>
+        <pin num="44" name="PH2-BOOT0" type="bidirectional"/>
+        <pin num="45" name="PB8" type="bidirectional"/>
+        <pin num="46" name="PB9" type="bidirectional"/>
+        <pin num="47" name="VSS" type="power_in"/>
+        <pin num="48" name="VDD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="SSD" part="SW_Push">
+      <description>Push button switch, generic, two pins</description>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_Push</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Push button switch, generic, two pins</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SSD" part="USBLC6-2SC6">
+      <description>Very low capacitance ESD protection diode, 2 data-line, SOT-23-6</description>
+      <docs>https://www.st.com/resource/en/datasheet/usblc6-2.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">USBLC6-2SC6</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
+        <field name="Datasheet">https://www.st.com/resource/en/datasheet/usblc6-2.pdf</field>
+        <field name="Description">Very low capacitance ESD protection diode, 2 data-line, SOT-23-6</field>
+      </fields>
+      <pins>
+        <pin num="1" name="I/O1" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+        <pin num="3" name="I/O2" type="passive"/>
+        <pin num="4" name="I/O2" type="passive"/>
+        <pin num="5" name="VBUS" type="passive"/>
+        <pin num="6" name="I/O1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SSD" part="USB_C_Receptacle_USB2.0_16P">
+      <description>USB 2.0-only 16P Type-C Receptacle connector</description>
+      <docs>https://www.usb.org/sites/default/files/documents/usb_type-c.zip</docs>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">USB_C_Receptacle_USB2.0_16P</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.usb.org/sites/default/files/documents/usb_type-c.zip</field>
+        <field name="Description">USB 2.0-only 16P Type-C Receptacle connector</field>
+      </fields>
+      <pins>
+        <pin num="A1" name="GND" type="passive"/>
+        <pin num="A4" name="VBUS" type="passive"/>
+        <pin num="A5" name="CC1" type="bidirectional"/>
+        <pin num="A6" name="D+" type="bidirectional"/>
+        <pin num="A7" name="D-" type="bidirectional"/>
+        <pin num="A8" name="SBU1" type="bidirectional"/>
+        <pin num="A9" name="VBUS" type="passive"/>
+        <pin num="A12" name="GND" type="passive"/>
+        <pin num="B1" name="GND" type="passive"/>
+        <pin num="B4" name="VBUS" type="passive"/>
+        <pin num="B5" name="CC2" type="bidirectional"/>
+        <pin num="B6" name="D+" type="bidirectional"/>
+        <pin num="B7" name="D-" type="bidirectional"/>
+        <pin num="B8" name="SBU2" type="bidirectional"/>
+        <pin num="B9" name="VBUS" type="passive"/>
+        <pin num="B12" name="GND" type="passive"/>
+        <pin num="SH" name="SHIELD" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="SSD">
+      <uri>${KIPRJMOD}/libraries/SSD.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+3V3" class="Default">
+      <node ref="C103" pin="1" pintype="passive"/>
+      <node ref="C303" pin="1" pintype="passive"/>
+      <node ref="C401" pin="1" pintype="passive"/>
+      <node ref="C402" pin="1" pintype="passive"/>
+      <node ref="C403" pin="1" pintype="passive"/>
+      <node ref="C404" pin="1" pintype="passive"/>
+      <node ref="C406" pin="1" pintype="passive"/>
+      <node ref="D301" pin="2" pinfunction="K2_2" pintype="passive"/>
+      <node ref="J102" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J301" pin="1" pinfunction="+3V3_1" pintype="passive"/>
+      <node ref="Q201" pin="1" pinfunction="G_1" pintype="input"/>
+      <node ref="Q202" pin="1" pinfunction="G_1" pintype="input"/>
+      <node ref="R104" pin="1" pintype="passive"/>
+      <node ref="R211" pin="1" pintype="passive"/>
+      <node ref="R213" pin="1" pintype="passive"/>
+      <node ref="R305" pin="1" pintype="passive"/>
+      <node ref="SW101" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U101" pin="5" pinfunction="VOUT_5" pintype="power_out"/>
+      <node ref="U301" pin="5" pinfunction="VCC_5" pintype="power_in"/>
+      <node ref="U401" pin="24" pinfunction="VDD_24" pintype="power_in"/>
+      <node ref="U401" pin="36" pinfunction="VDD_36" pintype="power_in"/>
+      <node ref="U401" pin="48" pinfunction="VDD_48" pintype="power_in"/>
+      <node ref="U401" pin="9" pinfunction="VREF+_9" pintype="power_in"/>
+    </net>
+    <net code="2" name="+5V" class="Default">
+      <node ref="C101" pin="1" pintype="passive"/>
+      <node ref="C102" pin="1" pintype="passive"/>
+      <node ref="C201" pin="1" pintype="passive"/>
+      <node ref="C202" pin="1" pintype="passive"/>
+      <node ref="C304" pin="1" pintype="passive"/>
+      <node ref="F101" pin="2" pintype="passive"/>
+      <node ref="J302" pin="1" pinfunction="红线+5V_1" pintype="passive"/>
+      <node ref="R212" pin="1" pintype="passive"/>
+      <node ref="R214" pin="1" pintype="passive"/>
+      <node ref="R303" pin="1" pintype="passive"/>
+      <node ref="U101" pin="1" pinfunction="VIN_1" pintype="power_in"/>
+      <node ref="U101" pin="3" pinfunction="EN_3" pintype="input"/>
+      <node ref="U201" pin="28" pinfunction="VDD_28" pintype="power_in"/>
+    </net>
+    <net code="3" name="/STM32C562 最小系统/HSE_IN" class="Default">
+      <node ref="C408" pin="1" pintype="passive"/>
+      <node ref="U401" pin="5" pinfunction="PH0-OSC_IN_5" pintype="bidirectional"/>
+      <node ref="Y401" pin="3" pinfunction="3_3" pintype="passive"/>
+    </net>
+    <net code="4" name="/STM32C562 最小系统/HSE_OUT" class="Default">
+      <node ref="R401" pin="1" pintype="passive"/>
+      <node ref="U401" pin="6" pinfunction="PH1-OSC_OUT_6" pintype="bidirectional"/>
+    </net>
+    <net code="5" name="/STM32C562 最小系统/HSE_X" class="Default">
+      <node ref="C407" pin="1" pintype="passive"/>
+      <node ref="R401" pin="2" pintype="passive"/>
+      <node ref="Y401" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="6" name="/STM32C562 最小系统/MCU_VCAP" class="Default">
+      <node ref="C405" pin="1" pintype="passive"/>
+      <node ref="U401" pin="22" pinfunction="VCAP_22" pintype="power_out"/>
+    </net>
+    <net code="7" name="FLOW_PULSE" class="Default">
+      <node ref="U301" pin="4" pintype="output"/>
+      <node ref="U401" pin="11" pinfunction="PA1_11" pintype="bidirectional"/>
+    </net>
+    <net code="8" name="GND" class="Default">
+      <node ref="C101" pin="2" pintype="passive"/>
+      <node ref="C102" pin="2" pintype="passive"/>
+      <node ref="C103" pin="2" pintype="passive"/>
+      <node ref="C104" pin="2" pintype="passive"/>
+      <node ref="C201" pin="2" pintype="passive"/>
+      <node ref="C202" pin="2" pintype="passive"/>
+      <node ref="C301" pin="2" pintype="passive"/>
+      <node ref="C302" pin="2" pintype="passive"/>
+      <node ref="C303" pin="2" pintype="passive"/>
+      <node ref="C304" pin="2" pintype="passive"/>
+      <node ref="C305" pin="2" pintype="passive"/>
+      <node ref="C401" pin="2" pintype="passive"/>
+      <node ref="C402" pin="2" pintype="passive"/>
+      <node ref="C403" pin="2" pintype="passive"/>
+      <node ref="C404" pin="2" pintype="passive"/>
+      <node ref="C405" pin="2" pintype="passive"/>
+      <node ref="C406" pin="2" pintype="passive"/>
+      <node ref="C407" pin="2" pintype="passive"/>
+      <node ref="C408" pin="2" pintype="passive"/>
+      <node ref="D101" pin="2" pinfunction="GND_2" pintype="passive"/>
+      <node ref="D301" pin="1" pinfunction="A1_1" pintype="passive"/>
+      <node ref="J101" pin="A1" pinfunction="GND_A1" pintype="passive"/>
+      <node ref="J101" pin="A12" pinfunction="GND_A12" pintype="passive"/>
+      <node ref="J101" pin="B1" pinfunction="GND_B1" pintype="passive"/>
+      <node ref="J101" pin="B12" pinfunction="GND_B12" pintype="passive"/>
+      <node ref="J101" pin="SH" pinfunction="SHIELD_SH" pintype="passive"/>
+      <node ref="J102" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="J302" pin="3" pinfunction="白线GND_3" pintype="passive"/>
+      <node ref="R101" pin="2" pintype="passive"/>
+      <node ref="R102" pin="2" pintype="passive"/>
+      <node ref="R103" pin="2" pintype="passive"/>
+      <node ref="R301" pin="2" pintype="passive"/>
+      <node ref="SW102" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="SW301" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U101" pin="2" pinfunction="GND_2" pintype="power_in"/>
+      <node ref="U201" pin="1" pinfunction="VSS_1" pintype="power_in"/>
+      <node ref="U301" pin="3" pinfunction="GND_3" pintype="power_in"/>
+      <node ref="U401" pin="23" pinfunction="VSS_23" pintype="power_in"/>
+      <node ref="U401" pin="35" pinfunction="VSS_35" pintype="power_in"/>
+      <node ref="U401" pin="47" pinfunction="VSS_47" pintype="power_in"/>
+      <node ref="U401" pin="8" pinfunction="VREF-_8" pintype="power_in"/>
+      <node ref="Y401" pin="2" pinfunction="G_2" pintype="passive"/>
+      <node ref="Y401" pin="4" pinfunction="G_4" pintype="passive"/>
+    </net>
+    <net code="9" name="I2C_SCL" class="Default">
+      <node ref="Q201" pin="2" pinfunction="S_2" pintype="passive"/>
+      <node ref="R211" pin="2" pintype="passive"/>
+      <node ref="U401" pin="42" pinfunction="PB6_42" pintype="bidirectional"/>
+    </net>
+    <net code="10" name="I2C_SDA" class="Default">
+      <node ref="Q202" pin="2" pinfunction="S_2" pintype="passive"/>
+      <node ref="R213" pin="2" pintype="passive"/>
+      <node ref="U401" pin="43" pinfunction="PB7_43" pintype="bidirectional"/>
+    </net>
+    <net code="11" name="MCU_BOOT0" class="Default">
+      <node ref="R103" pin="1" pintype="passive"/>
+      <node ref="SW101" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U401" pin="44" pinfunction="PH2-BOOT0_44" pintype="bidirectional"/>
+    </net>
+    <net code="12" name="MCU_NRST" class="Default">
+      <node ref="C104" pin="1" pintype="passive"/>
+      <node ref="J102" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+      <node ref="R104" pin="2" pintype="passive"/>
+      <node ref="SW102" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U401" pin="7" pinfunction="NRST_7" pintype="input"/>
+    </net>
+    <net code="13" name="NTC_ADC" class="Default">
+      <node ref="C301" pin="1" pintype="passive"/>
+      <node ref="D301" pin="3" pinfunction="K1/A2_3" pintype="passive"/>
+      <node ref="R302" pin="2" pintype="passive"/>
+      <node ref="U401" pin="10" pinfunction="PA0_10" pintype="bidirectional"/>
+    </net>
+    <net code="14" name="Net-(C302-Pad1)" class="Default">
+      <node ref="C302" pin="1" pintype="passive"/>
+      <node ref="R304" pin="2" pintype="passive"/>
+      <node ref="U301" pin="2" pintype="input"/>
+    </net>
+    <net code="15" name="Net-(D101-I/O1-Pad1)" class="Default">
+      <node ref="D101" pin="1" pinfunction="I/O1_1" pintype="passive"/>
+      <node ref="J101" pin="A7" pinfunction="D-_A7" pintype="bidirectional"/>
+      <node ref="J101" pin="B7" pinfunction="D-_B7" pintype="bidirectional"/>
+    </net>
+    <net code="16" name="Net-(D101-I/O2-Pad3)" class="Default">
+      <node ref="D101" pin="3" pinfunction="I/O2_3" pintype="passive"/>
+      <node ref="J101" pin="A6" pinfunction="D+_A6" pintype="bidirectional"/>
+      <node ref="J101" pin="B6" pinfunction="D+_B6" pintype="bidirectional"/>
+    </net>
+    <net code="17" name="Net-(D101-VBUS)" class="Default">
+      <node ref="D101" pin="5" pinfunction="VBUS_5" pintype="passive"/>
+      <node ref="F101" pin="1" pintype="passive"/>
+      <node ref="J101" pin="A4" pinfunction="VBUS_A4" pintype="passive"/>
+      <node ref="J101" pin="A9" pinfunction="VBUS_A9" pintype="passive"/>
+      <node ref="J101" pin="B4" pinfunction="VBUS_B4" pintype="passive"/>
+      <node ref="J101" pin="B9" pinfunction="VBUS_B9" pintype="passive"/>
+    </net>
+    <net code="18" name="Net-(DS201-A)" class="Default">
+      <node ref="DS201" pin="15" pinfunction="A_15" pintype="passive"/>
+      <node ref="R201" pin="2" pintype="passive"/>
+    </net>
+    <net code="19" name="Net-(DS201-B)" class="Default">
+      <node ref="DS201" pin="14" pinfunction="B_14" pintype="passive"/>
+      <node ref="R202" pin="2" pintype="passive"/>
+    </net>
+    <net code="20" name="Net-(DS201-C)" class="Default">
+      <node ref="DS201" pin="13" pinfunction="C_13" pintype="passive"/>
+      <node ref="R203" pin="2" pintype="passive"/>
+    </net>
+    <net code="21" name="Net-(DS201-COM1)" class="Default">
+      <node ref="DS201" pin="1" pinfunction="COM1_1" pintype="passive"/>
+      <node ref="U201" pin="2" pinfunction="COM0_2" pintype="output"/>
+    </net>
+    <net code="22" name="Net-(DS201-COM2)" class="Default">
+      <node ref="DS201" pin="2" pinfunction="COM2_2" pintype="passive"/>
+      <node ref="U201" pin="3" pinfunction="COM1_3" pintype="output"/>
+    </net>
+    <net code="23" name="Net-(DS201-COM3)" class="Default">
+      <node ref="DS201" pin="3" pinfunction="COM3_3" pintype="passive"/>
+      <node ref="U201" pin="4" pinfunction="COM2_4" pintype="output"/>
+    </net>
+    <net code="24" name="Net-(DS201-COM4)" class="Default">
+      <node ref="DS201" pin="4" pinfunction="COM4_4" pintype="passive"/>
+      <node ref="U201" pin="5" pinfunction="COM3_5" pintype="output"/>
+    </net>
+    <net code="25" name="Net-(DS201-COM5)" class="Default">
+      <node ref="DS201" pin="5" pinfunction="COM5_5" pintype="passive"/>
+      <node ref="U201" pin="6" pinfunction="COM4_6" pintype="output"/>
+    </net>
+    <net code="26" name="Net-(DS201-COM6)" class="Default">
+      <node ref="DS201" pin="6" pinfunction="COM6_6" pintype="passive"/>
+      <node ref="U201" pin="7" pinfunction="COM5_7" pintype="output"/>
+    </net>
+    <net code="27" name="Net-(DS201-D)" class="Default">
+      <node ref="DS201" pin="12" pinfunction="D_12" pintype="passive"/>
+      <node ref="R204" pin="2" pintype="passive"/>
+    </net>
+    <net code="28" name="Net-(DS201-E)" class="Default">
+      <node ref="DS201" pin="11" pinfunction="E_11" pintype="passive"/>
+      <node ref="R205" pin="2" pintype="passive"/>
+    </net>
+    <net code="29" name="Net-(DS201-F)" class="Default">
+      <node ref="DS201" pin="10" pinfunction="F_10" pintype="passive"/>
+      <node ref="R206" pin="2" pintype="passive"/>
+    </net>
+    <net code="30" name="Net-(DS201-G)" class="Default">
+      <node ref="DS201" pin="9" pinfunction="G_9" pintype="passive"/>
+      <node ref="R207" pin="2" pintype="passive"/>
+    </net>
+    <net code="31" name="Net-(DS201-H)" class="Default">
+      <node ref="DS201" pin="8" pinfunction="H_8" pintype="passive"/>
+      <node ref="R208" pin="2" pintype="passive"/>
+    </net>
+    <net code="32" name="Net-(DS201-I)" class="Default">
+      <node ref="DS201" pin="7" pinfunction="I_7" pintype="passive"/>
+      <node ref="R209" pin="2" pintype="passive"/>
+    </net>
+    <net code="33" name="Net-(DS201-J)" class="Default">
+      <node ref="DS201" pin="16" pinfunction="J_16" pintype="passive"/>
+      <node ref="R210" pin="2" pintype="passive"/>
+    </net>
+    <net code="34" name="Net-(J101-CC1)" class="Default">
+      <node ref="J101" pin="A5" pinfunction="CC1_A5" pintype="bidirectional"/>
+      <node ref="R101" pin="1" pintype="passive"/>
+    </net>
+    <net code="35" name="Net-(J101-CC2)" class="Default">
+      <node ref="J101" pin="B5" pinfunction="CC2_B5" pintype="bidirectional"/>
+      <node ref="R102" pin="1" pintype="passive"/>
+    </net>
+    <net code="36" name="Net-(J301-信号)" class="Default">
+      <node ref="J301" pin="2" pinfunction="信号_2" pintype="passive"/>
+      <node ref="R301" pin="1" pintype="passive"/>
+      <node ref="R302" pin="1" pintype="passive"/>
+    </net>
+    <net code="37" name="Net-(J302-黄线)" class="Default">
+      <node ref="J302" pin="2" pinfunction="黄线_2" pintype="passive"/>
+      <node ref="R303" pin="2" pintype="passive"/>
+      <node ref="R304" pin="1" pintype="passive"/>
+    </net>
+    <net code="38" name="Net-(Q201-D)" class="Default">
+      <node ref="Q201" pin="3" pinfunction="D_3" pintype="passive"/>
+      <node ref="R212" pin="2" pintype="passive"/>
+      <node ref="U201" pin="26" pinfunction="SCL_26" pintype="input"/>
+    </net>
+    <net code="39" name="Net-(Q202-D)" class="Default">
+      <node ref="Q202" pin="3" pinfunction="D_3" pintype="passive"/>
+      <node ref="R214" pin="2" pintype="passive"/>
+      <node ref="U201" pin="27" pinfunction="SDA_27" pintype="bidirectional"/>
+    </net>
+    <net code="40" name="Net-(U201-ROW0)" class="Default">
+      <node ref="R201" pin="1" pintype="passive"/>
+      <node ref="U201" pin="25" pinfunction="ROW0_25" pintype="bidirectional"/>
+    </net>
+    <net code="41" name="Net-(U201-ROW1)" class="Default">
+      <node ref="R202" pin="1" pintype="passive"/>
+      <node ref="U201" pin="24" pinfunction="ROW1_24" pintype="bidirectional"/>
+    </net>
+    <net code="42" name="Net-(U201-ROW2)" class="Default">
+      <node ref="R203" pin="1" pintype="passive"/>
+      <node ref="U201" pin="23" pinfunction="ROW2_23" pintype="bidirectional"/>
+    </net>
+    <net code="43" name="Net-(U201-ROW3)" class="Default">
+      <node ref="R204" pin="1" pintype="passive"/>
+      <node ref="U201" pin="22" pinfunction="ROW3_22" pintype="bidirectional"/>
+    </net>
+    <net code="44" name="Net-(U201-ROW4)" class="Default">
+      <node ref="R205" pin="1" pintype="passive"/>
+      <node ref="U201" pin="21" pinfunction="ROW4_21" pintype="bidirectional"/>
+    </net>
+    <net code="45" name="Net-(U201-ROW5)" class="Default">
+      <node ref="R206" pin="1" pintype="passive"/>
+      <node ref="U201" pin="20" pinfunction="ROW5_20" pintype="bidirectional"/>
+    </net>
+    <net code="46" name="Net-(U201-ROW6)" class="Default">
+      <node ref="R207" pin="1" pintype="passive"/>
+      <node ref="U201" pin="19" pinfunction="ROW6_19" pintype="bidirectional"/>
+    </net>
+    <net code="47" name="Net-(U201-ROW7)" class="Default">
+      <node ref="R208" pin="1" pintype="passive"/>
+      <node ref="U201" pin="18" pinfunction="ROW7_18" pintype="bidirectional"/>
+    </net>
+    <net code="48" name="Net-(U201-ROW8)" class="Default">
+      <node ref="R209" pin="1" pintype="passive"/>
+      <node ref="U201" pin="17" pinfunction="ROW8_17" pintype="bidirectional"/>
+    </net>
+    <net code="49" name="Net-(U201-ROW9)" class="Default">
+      <node ref="R210" pin="1" pintype="passive"/>
+      <node ref="U201" pin="16" pinfunction="ROW9_16" pintype="bidirectional"/>
+    </net>
+    <net code="50" name="SWCLK" class="Default">
+      <node ref="J102" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="U401" pin="37" pinfunction="PA14_37" pintype="bidirectional"/>
+    </net>
+    <net code="51" name="SWDIO" class="Default">
+      <node ref="J102" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="U401" pin="34" pinfunction="PA13_34" pintype="bidirectional"/>
+    </net>
+    <net code="52" name="USB_DM" class="Default">
+      <node ref="D101" pin="6" pinfunction="I/O1_6" pintype="passive"/>
+      <node ref="U401" pin="32" pinfunction="PA11_32" pintype="bidirectional"/>
+    </net>
+    <net code="53" name="USB_DP" class="Default">
+      <node ref="D101" pin="4" pinfunction="I/O2_4" pintype="passive"/>
+      <node ref="U401" pin="33" pinfunction="PA12_33" pintype="bidirectional"/>
+    </net>
+    <net code="54" name="USER_KEY" class="Default">
+      <node ref="C305" pin="1" pintype="passive"/>
+      <node ref="R305" pin="2" pintype="passive"/>
+      <node ref="SW301" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U401" pin="2" pinfunction="PC13_2" pintype="bidirectional"/>
+    </net>
+    <net code="55" name="unconnected-(J101-SBU1-PadA8)" class="Default">
+      <node ref="J101" pin="A8" pinfunction="SBU1_A8" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="56" name="unconnected-(J101-SBU2-PadB8)" class="Default">
+      <node ref="J101" pin="B8" pinfunction="SBU2_B8" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="57" name="unconnected-(U101-NC-Pad4)" class="Default">
+      <node ref="U101" pin="4" pinfunction="NC_4" pintype="no_connect"/>
+    </net>
+    <net code="58" name="unconnected-(U201-COM6-Pad8)" class="Default">
+      <node ref="U201" pin="8" pinfunction="COM6_8" pintype="output+no_connect"/>
+    </net>
+    <net code="59" name="unconnected-(U201-COM7-Pad9)" class="Default">
+      <node ref="U201" pin="9" pinfunction="COM7_9" pintype="output+no_connect"/>
+    </net>
+    <net code="60" name="unconnected-(U201-ROW10-Pad15)" class="Default">
+      <node ref="U201" pin="15" pinfunction="ROW10_15" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="61" name="unconnected-(U201-ROW11-Pad14)" class="Default">
+      <node ref="U201" pin="14" pinfunction="ROW11_14" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="62" name="unconnected-(U201-ROW12-Pad13)" class="Default">
+      <node ref="U201" pin="13" pinfunction="ROW12_13" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="63" name="unconnected-(U201-ROW13-Pad12)" class="Default">
+      <node ref="U201" pin="12" pinfunction="ROW13_12" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="64" name="unconnected-(U201-ROW14-Pad11)" class="Default">
+      <node ref="U201" pin="11" pinfunction="ROW14_11" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="65" name="unconnected-(U201-ROW15-Pad10)" class="Default">
+      <node ref="U201" pin="10" pinfunction="ROW15_10" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="66" name="unconnected-(U301-NC-Pad1)" class="Default">
+      <node ref="U301" pin="1" pinfunction="NC_1" pintype="no_connect"/>
+    </net>
+    <net code="67" name="unconnected-(U401-PA2-Pad12)" class="Default">
+      <node ref="U401" pin="12" pinfunction="PA2_12" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="68" name="unconnected-(U401-PA3-Pad13)" class="Default">
+      <node ref="U401" pin="13" pinfunction="PA3_13" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="69" name="unconnected-(U401-PA4-Pad14)" class="Default">
+      <node ref="U401" pin="14" pinfunction="PA4_14" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="70" name="unconnected-(U401-PA5-Pad15)" class="Default">
+      <node ref="U401" pin="15" pinfunction="PA5_15" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="71" name="unconnected-(U401-PA6-Pad16)" class="Default">
+      <node ref="U401" pin="16" pinfunction="PA6_16" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="72" name="unconnected-(U401-PA7-Pad17)" class="Default">
+      <node ref="U401" pin="17" pinfunction="PA7_17" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="73" name="unconnected-(U401-PA8-Pad29)" class="Default">
+      <node ref="U401" pin="29" pinfunction="PA8_29" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="74" name="unconnected-(U401-PA9-Pad30)" class="Default">
+      <node ref="U401" pin="30" pinfunction="PA9_30" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="75" name="unconnected-(U401-PA10-Pad31)" class="Default">
+      <node ref="U401" pin="31" pinfunction="PA10_31" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="76" name="unconnected-(U401-PA15-Pad38)" class="Default">
+      <node ref="U401" pin="38" pinfunction="PA15_38" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="77" name="unconnected-(U401-PB0-Pad18)" class="Default">
+      <node ref="U401" pin="18" pinfunction="PB0_18" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="78" name="unconnected-(U401-PB1-Pad19)" class="Default">
+      <node ref="U401" pin="19" pinfunction="PB1_19" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="79" name="unconnected-(U401-PB2-Pad20)" class="Default">
+      <node ref="U401" pin="20" pinfunction="PB2_20" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="80" name="unconnected-(U401-PB3-Pad39)" class="Default">
+      <node ref="U401" pin="39" pinfunction="PB3_39" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="81" name="unconnected-(U401-PB4-Pad40)" class="Default">
+      <node ref="U401" pin="40" pinfunction="PB4_40" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="82" name="unconnected-(U401-PB5-Pad41)" class="Default">
+      <node ref="U401" pin="41" pinfunction="PB5_41" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="83" name="unconnected-(U401-PB8-Pad45)" class="Default">
+      <node ref="U401" pin="45" pinfunction="PB8_45" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="84" name="unconnected-(U401-PB9-Pad46)" class="Default">
+      <node ref="U401" pin="46" pinfunction="PB9_46" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="85" name="unconnected-(U401-PB10-Pad21)" class="Default">
+      <node ref="U401" pin="21" pinfunction="PB10_21" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="86" name="unconnected-(U401-PB12-Pad25)" class="Default">
+      <node ref="U401" pin="25" pinfunction="PB12_25" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="87" name="unconnected-(U401-PB13-Pad26)" class="Default">
+      <node ref="U401" pin="26" pinfunction="PB13_26" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="88" name="unconnected-(U401-PB14-Pad27)" class="Default">
+      <node ref="U401" pin="27" pinfunction="PB14_27" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="89" name="unconnected-(U401-PB15-Pad28)" class="Default">
+      <node ref="U401" pin="28" pinfunction="PB15_28" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="90" name="unconnected-(U401-PC14-OSC32_IN-Pad3)" class="Default">
+      <node ref="U401" pin="3" pinfunction="PC14-OSC32_IN_3" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="91" name="unconnected-(U401-PC15-OSC32_OUT-Pad4)" class="Default">
+      <node ref="U401" pin="4" pinfunction="PC15-OSC32_OUT_4" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="92" name="unconnected-(U401-PE2-Pad1)" class="Default">
+      <node ref="U401" pin="1" pinfunction="PE2_1" pintype="bidirectional+no_connect"/>
+    </net>
+  </nets>
+</export>

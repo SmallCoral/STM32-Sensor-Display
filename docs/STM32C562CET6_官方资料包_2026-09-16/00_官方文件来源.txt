@@ -1,0 +1,29 @@
+STM32C562CE 产品页
+https://www.st.com/en/microcontrollers-microprocessors/stm32c562ce.html
+
+DS14927 STM32C562xx Datasheet
+https://www.st.com/resource/en/datasheet/stm32c562ce.pdf
+
+RM0522 STM32C5 Reference Manual
+https://www.st.com/resource/en/reference_manual/rm0522-stm32c5-series-armbased-32bit-mcus-stmicroelectronics.pdf
+
+PM0264 Cortex-M33 Programming Manual
+https://www.st.com/resource/en/programming_manual/pm0264-stm32-cortexm33-mcus-and-mpus-programming-manual-stmicroelectronics.pdf
+
+AN6274 STM32C5 Hardware Development
+https://www.st.com/resource/en/application_note/an6274-getting-started-with-stm32c5-mcu-hardware-development-stmicroelectronics.pdf
+
+AN2606 System Memory Boot Mode
+https://www.st.com/resource/en/application_note/an2606-introduction-to-system-memory-boot-mode-on-stm32-mcus-stmicroelectronics.pdf
+
+ES0661 STM32C551xx/552xx/562xx Errata
+https://www.st.com/resource/en/errata_sheet/es0661-stm32c551xx-stm32c552xx-and-stm32c562xx-device-errata-stmicroelectronics.pdf
+
+NUCLEO-C562RE 产品页
+https://www.st.com/en/evaluation-tools/nucleo-c562re.html
+
+MB2213-C562RE-B02 官方原理图
+https://www.st.com/resource/en/schematic_pack/mb2213-c562re-b02-schematic.pdf
+
+NUCLEO-C562RE Data Brief
+https://www.st.com/resource/en/data_brief/nucleo-c562re.pdf

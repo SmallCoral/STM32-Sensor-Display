@@ -1,0 +1,508 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "705b2912-fdff-4251-818e-e4be0e7e0a1c")
+	(paper "A4")
+	(title_block
+		(title "STM32C562 温度与流量显示系统")
+		(date "2026-09-16")
+		(rev "A2")
+		(company "温度与流量显示项目")
+		(comment 1 "STM32C562 最小系统与外围电路；全部电阻、电容采用 0603")
+	)
+	(lib_symbols)
+	(polyline
+		(pts
+			(xy 101.6 63.5) (xy 101.6 46.99) (xy 279.4 46.99) (xy 279.4 147.32) (xy 266.7 147.32)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+			(color 0 105 55 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "67aff043-ab58-551c-94bc-f83247b19eff")
+	)
+	(polyline
+		(pts
+			(xy 163.1 89.32) (xy 165.1 90.17) (xy 163.1 91.02)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+			(color 0 105 55 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "6d4ad065-483d-5a96-a934-d00836eaf021")
+	)
+	(polyline
+		(pts
+			(xy 116.3 79.59) (xy 114.3 78.74) (xy 116.3 77.89)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+			(color 0 105 55 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "8338b3e0-5927-578d-97d4-4c647406f417")
+	)
+	(polyline
+		(pts
+			(xy 114.3 147.32) (xy 135.89 147.32) (xy 135.89 102.87) (xy 135.89 102.87) (xy 135.89 90.17) (xy 165.1 90.17)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+			(color 0 105 55 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "98d856c4-9907-54f8-8812-fc67d292c49c")
+	)
+	(polyline
+		(pts
+			(xy 268.7 148.17) (xy 266.7 147.32) (xy 268.7 146.47)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+			(color 0 105 55 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "a118e074-8160-5489-bdd6-4ce781f26304")
+	)
+	(polyline
+		(pts
+			(xy 214.21 130.08) (xy 213.36 132.08) (xy 212.51 130.08)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+			(color 0 105 55 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "a15d348b-9544-5182-9938-976269269ba4")
+	)
+	(polyline
+		(pts
+			(xy 212.51 95.98) (xy 213.36 93.98) (xy 214.21 95.98)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+			(color 0 105 55 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "a85f2e6f-8dcb-5a77-84b2-a7203912435e")
+	)
+	(polyline
+		(pts
+			(xy 163.1 77.89) (xy 165.1 78.74) (xy 163.1 79.59)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+			(color 0 105 55 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "b4d0bc14-ed2b-5d52-a62d-d5cb044366bd")
+	)
+	(polyline
+		(pts
+			(xy 66.89 130.08) (xy 66.04 132.08) (xy 65.19 130.08)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+			(color 0 105 55 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "e889b503-c174-5ddc-a800-6b55ae5a6e43")
+	)
+	(text "3.3V 供电、USB 烧录"
+		(exclude_from_sim no)
+		(at 117.475 74.295 0)
+		(effects
+			(font
+				(face "Noto Sans CJK SC")
+				(size 2.54 2.54)
+			)
+			(justify left)
+		)
+		(uuid "1c6abac7-0f7f-5f04-a889-7a26a6ff2cef")
+	)
+	(text "SWD 调试、启动与复位"
+		(exclude_from_sim no)
+		(at 117.475 83.82 0)
+		(effects
+			(font
+				(face "Noto Sans CJK SC")
+				(size 2.54 2.54)
+			)
+			(justify left)
+		)
+		(uuid "1d972b95-8a6b-5c3a-abc1-a23606ca1c12")
+	)
+	(text "NTC 温度、霍尔流量\n用户按键与信号调理"
+		(exclude_from_sim no)
+		(at 31.75 147.32 0)
+		(effects
+			(font
+				(face "Noto Sans CJK SC")
+				(size 2.54 2.54)
+			)
+			(justify left)
+		)
+		(uuid "36587dca-9d1d-5e1f-aa1f-f784ecac5bc8")
+	)
+	(text "I²C 显示控制\nPB6：时钟\nPB7：数据"
+		(exclude_from_sim no)
+		(at 216.916 112.522 0)
+		(effects
+			(font
+				(face "Noto Sans CJK SC")
+				(size 2.54 2.54)
+			)
+			(justify left)
+		)
+		(uuid "500033e1-7b75-58af-9a63-bed134f84c3f")
+	)
+	(text "主控：STM32C562CET6，LQFP48，512KB 闪存 / 128KB 运行内存。\nUSB-C 同时用于 5V 供电和出厂引导程序 USB DFU 烧录。"
+		(exclude_from_sim no)
+		(at 20 33 0)
+		(effects
+			(font
+				(face "Noto Sans CJK SC")
+				(size 2.54 2.54)
+			)
+			(justify left)
+		)
+		(uuid "51f50bd9-2fdf-5dbc-880f-9084c5a35e95")
+	)
+	(text "温度采样：PA0\n流量脉冲：PA1\n用户按键：PC13"
+		(exclude_from_sim no)
+		(at 143.51 116.84 0)
+		(effects
+			(font
+				(face "Noto Sans CJK SC")
+				(size 2.54 2.54)
+			)
+			(justify left)
+		)
+		(uuid "5da4eefd-7eca-5d5c-88a4-ef2e61c44dd3")
+	)
+	(text "温度与流量显示系统 · 模块关系导航"
+		(exclude_from_sim no)
+		(at 20 20 0)
+		(effects
+			(font
+				(face "Noto Sans CJK SC")
+				(size 2.54 2.54)
+			)
+			(justify left)
+		)
+		(uuid "65c28ae8-1574-5fae-bec7-36582094ea97")
+	)
+	(text "5V 显示供电"
+		(exclude_from_sim no)
+		(at 193.04 43.18 0)
+		(effects
+			(font
+				(face "Noto Sans CJK SC")
+				(size 2.54 2.54)
+			)
+			(justify left)
+		)
+		(uuid "a7ae4665-a90e-5cdf-a2b7-8eade4814f56")
+	)
+	(text "5V / 3.3V\n传感器供电"
+		(exclude_from_sim no)
+		(at 72.39 113.03 0)
+		(effects
+			(font
+				(face "Noto Sans CJK SC")
+				(size 2.54 2.54)
+			)
+			(justify left)
+		)
+		(uuid "b83e6c21-2f8b-5d33-af48-c3329abb85b3")
+	)
+	(text "STM32C562CET6\n最小系统与供电去耦"
+		(exclude_from_sim no)
+		(at 172.72 78.74 0)
+		(effects
+			(font
+				(face "Noto Sans CJK SC")
+				(size 2.54 2.54)
+			)
+			(justify left)
+		)
+		(uuid "d01acd53-9178-5976-a914-48742f15e134")
+	)
+	(text "USB-C 接口与电源\n5V 输入、3.3V 稳压"
+		(exclude_from_sim no)
+		(at 31.75 78.74 0)
+		(effects
+			(font
+				(face "Noto Sans CJK SC")
+				(size 2.54 2.54)
+			)
+			(justify left)
+		)
+		(uuid "d137ace8-bb7a-58fb-92d8-2f4111c36490")
+	)
+	(text "HT16K33 显示驱动\n58mm 共阴 LED 屏"
+		(exclude_from_sim no)
+		(at 172.72 147.32 0)
+		(effects
+			(font
+				(face "Noto Sans CJK SC")
+				(size 2.54 2.54)
+			)
+			(justify left)
+		)
+		(uuid "db2bdc99-e246-586e-a76f-5066be25b3cb")
+	)
+	(polyline
+		(pts
+			(xy 66.04 93.98) (xy 66.04 132.08)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+			(color 0 105 55 1)
+		)
+		(uuid "0cb16438-4592-5a85-b54b-31c0e06bb919")
+	)
+	(polyline
+		(pts
+			(xy 213.36 93.98) (xy 213.36 132.08)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+			(color 0 105 55 1)
+		)
+		(uuid "7f50c3a0-f727-51c8-af6e-71082517df2d")
+	)
+	(polyline
+		(pts
+			(xy 114.3 78.74) (xy 165.1 78.74)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+			(color 0 105 55 1)
+		)
+		(uuid "eeb1e9cc-0eca-5b29-a51e-2afc3527c744")
+	)
+	(sheet
+		(at 165.1 63.5)
+		(size 101.6 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "005e51cc-8ae2-51a1-89f5-1b9a7e62560b")
+		(property "Sheetname" "STM32C562 最小系统"
+			(at 167.64 59.69 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Noto Sans CJK SC")
+					(size 2.54 2.54)
+				)
+				(justify left)
+			)
+		)
+		(property "Sheetfile" "mcu_minimum.kicad_sch"
+			(at 167.64 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 2.54 2.54)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "ssd"
+				(path "/705b2912-fdff-4251-818e-e4be0e7e0a1c"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 25.4 63.5)
+		(size 88.9 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "13ed9c95-4fee-5d34-9d3a-b307ed0bc91c")
+		(property "Sheetname" "USB-C 供电、原生 USB 烧录与调试"
+			(at 27.94 59.69 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Noto Sans CJK SC")
+					(size 2.54 2.54)
+				)
+				(justify left)
+			)
+		)
+		(property "Sheetfile" "usb_power.kicad_sch"
+			(at 27.94 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 2.54 2.54)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "ssd"
+				(path "/705b2912-fdff-4251-818e-e4be0e7e0a1c"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 25.4 132.08)
+		(size 88.9 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6")
+		(property "Sheetname" "NTC 温度、霍尔流量与用户按键"
+			(at 27.94 128.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Noto Sans CJK SC")
+					(size 2.54 2.54)
+				)
+				(justify left)
+			)
+		)
+		(property "Sheetfile" "sensors.kicad_sch"
+			(at 27.94 159.385 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 2.54 2.54)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "ssd"
+				(path "/705b2912-fdff-4251-818e-e4be0e7e0a1c"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 165.1 132.08)
+		(size 101.6 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "fce32a2b-0192-5769-a779-d47880dd735c")
+		(property "Sheetname" "58mm 显示屏与 HT16K33 驱动"
+			(at 167.64 128.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Noto Sans CJK SC")
+					(size 2.54 2.54)
+				)
+				(justify left)
+			)
+		)
+		(property "Sheetfile" "display.kicad_sch"
+			(at 167.64 159.385 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 2.54 2.54)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "ssd"
+				(path "/705b2912-fdff-4251-818e-e4be0e7e0a1c"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

@@ -1,0 +1,19 @@
+类别,位号建议,器件/参数,数量,必要性,说明
+MCU,U1,STM32C562CET6 LQFP48,1,必需,3.3V供电
+去耦,C_VDD1~C_VDD3,100nF X7R,3,必需,每个VDD引脚各一个且紧贴引脚
+总去耦,C_BULK,4.7uF或更大 X7R,1,必需,放在MCU电源入口附近
+内核稳压,C_VCAP,2.2uF低ESR 额定电压>=10V,1,必需,紧贴VCAP；3MHz时ESR<20mΩ
+模拟参考,C_VREF,100nF X7R,1,必需,VREF+到GND
+复位,C_NRST,100nF,1,建议,NRST到GND
+复位,SW_RESET,轻触按键,1,建议,NRST到GND
+启动,R_BOOT,10k,1,建议,PH2-BOOT0下拉到GND
+启动,SW_BOOT,轻触按键或跳帽,1,建议,PH2-BOOT0拉到3V3
+调试,J_SWD,1x5测试点或1.27mm Cortex Debug,1,强烈建议,3V3/GND/SWDIO/SWCLK/NRST
+USB,J_USB,USB Type-C USB2.0,1,按需,设备端/UFP
+USB,R_CC1~R_CC2,5.1k,2,使用USB-C时必需,CC1和CC2分别到GND
+USB,D_ESD,USB2.0低电容ESD阵列,1,正式板建议,紧靠USB接口
+USB供电,U_REG,3.3V稳压器,1,USB供电时必需,5V VBUS不得直连VDD
+高速晶振,X_HSE及负载电容,4~50MHz,0,可选/DNP,USB DFU不强制需要
+低速晶振,X_LSE及负载电容,32.768kHz,0,可选/DNP,高精度RTC需要
+FDCAN,U_CAN,3.3V FDCAN收发器,0,按需,MCU不能直连CANH/CANL
+FDCAN,R_TERM,120R可跳接,0,按需,仅总线端点启用

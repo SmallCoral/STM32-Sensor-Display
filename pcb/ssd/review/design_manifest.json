@@ -1,0 +1,982 @@
+{
+  "parts": [
+    {
+      "ref": "J101",
+      "value": "GCT USB4105-GF-A",
+      "footprint": "SSD:Connector_USB__USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal",
+      "uuid": "1a107c6f-d137-5883-97e0-04c53eed6621",
+      "sheet": "usb_power",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c",
+      "nets": {
+        "A1": "GND",
+        "A12": "GND",
+        "B1": "GND",
+        "B12": "GND",
+        "SH": "GND",
+        "A4": "VBUS_RAW",
+        "A9": "VBUS_RAW",
+        "B4": "VBUS_RAW",
+        "B9": "VBUS_RAW",
+        "A5": "CC1",
+        "B5": "CC2",
+        "A6": "USB_DP_CONN",
+        "B6": "USB_DP_CONN",
+        "A7": "USB_DM_CONN",
+        "B7": "USB_DM_CONN"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "F101",
+      "value": "500mA 保持电流",
+      "footprint": "SSD:Fuse__Fuse_1206_3216Metric",
+      "uuid": "948e96bd-07c3-5078-b9d6-0d77f713653c",
+      "sheet": "usb_power",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c",
+      "nets": {
+        "1": "VBUS_RAW",
+        "2": "+5V"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "U101",
+      "value": "AP2112K-3.3TRG1",
+      "footprint": "SSD:Package_TO_SOT_SMD__SOT-23-5",
+      "uuid": "fcc3e6c5-0030-5129-9bcc-3db940ea779e",
+      "sheet": "usb_power",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c",
+      "nets": {
+        "1": "+5V",
+        "2": "GND",
+        "3": "+5V",
+        "5": "+3V3"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "C101",
+      "value": "1u / 10V",
+      "footprint": "SSD:Capacitor_SMD__C_0603_1608Metric",
+      "uuid": "afa7f445-e9be-512d-8ed8-13d588bfd750",
+      "sheet": "usb_power",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c",
+      "nets": {
+        "1": "+5V",
+        "2": "GND"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "C102",
+      "value": "1u / 10V",
+      "footprint": "SSD:Capacitor_SMD__C_0603_1608Metric",
+      "uuid": "37699c97-deea-563f-89fb-5b17d124d92b",
+      "sheet": "usb_power",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c",
+      "nets": {
+        "1": "+5V",
+        "2": "GND"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "C103",
+      "value": "4.7u / 10V",
+      "footprint": "SSD:Capacitor_SMD__C_0603_1608Metric",
+      "uuid": "67797b35-378b-519f-8606-bb2b48b5e03c",
+      "sheet": "usb_power",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c",
+      "nets": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "D101",
+      "value": "USBLC6-2SC6",
+      "footprint": "SSD:Package_TO_SOT_SMD__SOT-23-6",
+      "uuid": "f3e4d92f-37ac-5349-b91e-4b5f0e98cc72",
+      "sheet": "usb_power",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c",
+      "nets": {
+        "1": "USB_DM_CONN",
+        "6": "USB_DM",
+        "3": "USB_DP_CONN",
+        "4": "USB_DP",
+        "2": "GND",
+        "5": "VBUS_RAW"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "R101",
+      "value": "5.1k 1%",
+      "footprint": "SSD:Resistor_SMD__R_0603_1608Metric",
+      "uuid": "8dcaf921-6da5-5b90-834d-4e0a5527f84a",
+      "sheet": "usb_power",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c",
+      "nets": {
+        "1": "CC1",
+        "2": "GND"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "R102",
+      "value": "5.1k 1%",
+      "footprint": "SSD:Resistor_SMD__R_0603_1608Metric",
+      "uuid": "ccceff47-a0c5-5a35-9e31-535da6ad74c8",
+      "sheet": "usb_power",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c",
+      "nets": {
+        "1": "CC2",
+        "2": "GND"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "SW101",
+      "value": "启动（BOOT）",
+      "footprint": "SSD:Button_Switch_SMD__SW_SPST_TL3342",
+      "uuid": "acfecba5-41dd-5814-b686-a738dcdb8888",
+      "sheet": "usb_power",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c",
+      "nets": {
+        "1": "+3V3",
+        "2": "MCU_BOOT0"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "R103",
+      "value": "10k",
+      "footprint": "SSD:Resistor_SMD__R_0603_1608Metric",
+      "uuid": "ea63154a-fdb4-5836-bd61-b4cc9ed43624",
+      "sheet": "usb_power",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c",
+      "nets": {
+        "1": "MCU_BOOT0",
+        "2": "GND"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "SW102",
+      "value": "复位（RESET）",
+      "footprint": "SSD:Button_Switch_SMD__SW_SPST_TL3342",
+      "uuid": "2967ebb6-0f15-5a97-a012-d296d7afc854",
+      "sheet": "usb_power",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c",
+      "nets": {
+        "1": "MCU_NRST",
+        "2": "GND"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "R104",
+      "value": "10k",
+      "footprint": "SSD:Resistor_SMD__R_0603_1608Metric",
+      "uuid": "a2d1d42a-4316-5c33-913a-e533204a15b2",
+      "sheet": "usb_power",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c",
+      "nets": {
+        "1": "+3V3",
+        "2": "MCU_NRST"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "C104",
+      "value": "100n",
+      "footprint": "SSD:Capacitor_SMD__C_0603_1608Metric",
+      "uuid": "7ea1c998-d5b3-510e-8d54-b73c708b283d",
+      "sheet": "usb_power",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c",
+      "nets": {
+        "1": "MCU_NRST",
+        "2": "GND"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "J102",
+      "value": "SWD / 电压参考",
+      "footprint": "SSD:Connector_PinHeader_2.54mm__PinHeader_1x05_P2.54mm_Vertical",
+      "uuid": "16fba6b9-36aa-5007-a7a8-2c7247bbb313",
+      "sheet": "usb_power",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c",
+      "nets": {
+        "1": "+3V3",
+        "2": "SWDIO",
+        "3": "GND",
+        "4": "SWCLK",
+        "5": "MCU_NRST"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "U201",
+      "value": "HT16K33 / SOP28",
+      "footprint": "SSD:Package_SO__SOIC-28W_7.5x17.9mm_P1.27mm",
+      "uuid": "1e863c57-f3c9-51b0-9d56-0a8fa696228a",
+      "sheet": "display",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/fce32a2b-0192-5769-a779-d47880dd735c",
+      "nets": {
+        "1": "GND",
+        "28": "+5V",
+        "26": "SCL_5V",
+        "27": "SDA_5V",
+        "2": "LED_COM1",
+        "3": "LED_COM2",
+        "4": "LED_COM3",
+        "5": "LED_COM4",
+        "6": "LED_COM5",
+        "7": "LED_COM6",
+        "25": "DRV_A",
+        "24": "DRV_B",
+        "23": "DRV_C",
+        "22": "DRV_D",
+        "21": "DRV_E",
+        "20": "DRV_F",
+        "19": "DRV_G",
+        "18": "DRV_H",
+        "17": "DRV_I",
+        "16": "DRV_J"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "DS201",
+      "value": "5858-1DRWB-10",
+      "footprint": "SSD:ALS5858_1DRWB_10",
+      "uuid": "ce042024-914a-53ea-87f8-401160c8b98e",
+      "sheet": "display",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/fce32a2b-0192-5769-a779-d47880dd735c",
+      "nets": {
+        "1": "LED_COM1",
+        "2": "LED_COM2",
+        "3": "LED_COM3",
+        "4": "LED_COM4",
+        "5": "LED_COM5",
+        "6": "LED_COM6",
+        "15": "LED_A",
+        "14": "LED_B",
+        "13": "LED_C",
+        "12": "LED_D",
+        "11": "LED_E",
+        "10": "LED_F",
+        "9": "LED_G",
+        "8": "LED_H",
+        "7": "LED_I",
+        "16": "LED_J"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "R201",
+      "value": "330R",
+      "footprint": "SSD:Resistor_SMD__R_0603_1608Metric",
+      "uuid": "d4d9dd81-143e-57a5-a8ff-da6297963522",
+      "sheet": "display",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/fce32a2b-0192-5769-a779-d47880dd735c",
+      "nets": {
+        "1": "DRV_A",
+        "2": "LED_A"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "R202",
+      "value": "330R",
+      "footprint": "SSD:Resistor_SMD__R_0603_1608Metric",
+      "uuid": "5ad50d7f-e142-57df-a55e-b0384f1ae852",
+      "sheet": "display",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/fce32a2b-0192-5769-a779-d47880dd735c",
+      "nets": {
+        "1": "DRV_B",
+        "2": "LED_B"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "R203",
+      "value": "330R",
+      "footprint": "SSD:Resistor_SMD__R_0603_1608Metric",
+      "uuid": "549a30e3-7f31-5a48-889b-a8197ef992d2",
+      "sheet": "display",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/fce32a2b-0192-5769-a779-d47880dd735c",
+      "nets": {
+        "1": "DRV_C",
+        "2": "LED_C"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "R204",
+      "value": "330R",
+      "footprint": "SSD:Resistor_SMD__R_0603_1608Metric",
+      "uuid": "104af7b6-f85a-5fcf-818c-22815c1362c5",
+      "sheet": "display",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/fce32a2b-0192-5769-a779-d47880dd735c",
+      "nets": {
+        "1": "DRV_D",
+        "2": "LED_D"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "R205",
+      "value": "330R",
+      "footprint": "SSD:Resistor_SMD__R_0603_1608Metric",
+      "uuid": "e45a4b5e-e53f-5224-bec9-18e0c44dd6ac",
+      "sheet": "display",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/fce32a2b-0192-5769-a779-d47880dd735c",
+      "nets": {
+        "1": "DRV_E",
+        "2": "LED_E"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "R206",
+      "value": "330R",
+      "footprint": "SSD:Resistor_SMD__R_0603_1608Metric",
+      "uuid": "985c5e9f-ae46-5b33-bc9f-e73cd3818ab2",
+      "sheet": "display",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/fce32a2b-0192-5769-a779-d47880dd735c",
+      "nets": {
+        "1": "DRV_F",
+        "2": "LED_F"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "R207",
+      "value": "330R",
+      "footprint": "SSD:Resistor_SMD__R_0603_1608Metric",
+      "uuid": "11a3c73d-004a-51bf-9921-58a18f0ef1fc",
+      "sheet": "display",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/fce32a2b-0192-5769-a779-d47880dd735c",
+      "nets": {
+        "1": "DRV_G",
+        "2": "LED_G"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "R208",
+      "value": "330R",
+      "footprint": "SSD:Resistor_SMD__R_0603_1608Metric",
+      "uuid": "2c09df5c-1d69-5939-982d-214d178d2c39",
+      "sheet": "display",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/fce32a2b-0192-5769-a779-d47880dd735c",
+      "nets": {
+        "1": "DRV_H",
+        "2": "LED_H"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "R209",
+      "value": "330R",
+      "footprint": "SSD:Resistor_SMD__R_0603_1608Metric",
+      "uuid": "beabd70b-e0d5-5c04-92bb-07785b73e454",
+      "sheet": "display",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/fce32a2b-0192-5769-a779-d47880dd735c",
+      "nets": {
+        "1": "DRV_I",
+        "2": "LED_I"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "R210",
+      "value": "330R",
+      "footprint": "SSD:Resistor_SMD__R_0603_1608Metric",
+      "uuid": "8f8982be-14b7-5872-b4dc-5a711de2394c",
+      "sheet": "display",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/fce32a2b-0192-5769-a779-d47880dd735c",
+      "nets": {
+        "1": "DRV_J",
+        "2": "LED_J"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "Q201",
+      "value": "BSS138",
+      "footprint": "SSD:Package_TO_SOT_SMD__SOT-23",
+      "uuid": "b42ee070-8980-5e8e-a6f5-0320ec665e51",
+      "sheet": "display",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/fce32a2b-0192-5769-a779-d47880dd735c",
+      "nets": {
+        "1": "+3V3",
+        "2": "I2C_SCL",
+        "3": "SCL_5V"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "R211",
+      "value": "4.7k",
+      "footprint": "SSD:Resistor_SMD__R_0603_1608Metric",
+      "uuid": "b8b327f1-9221-582a-99dc-c867de3352ff",
+      "sheet": "display",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/fce32a2b-0192-5769-a779-d47880dd735c",
+      "nets": {
+        "1": "+3V3",
+        "2": "I2C_SCL"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "R212",
+      "value": "4.7k",
+      "footprint": "SSD:Resistor_SMD__R_0603_1608Metric",
+      "uuid": "653fa4ec-31eb-5a1d-99ec-e3dc8e182cf4",
+      "sheet": "display",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/fce32a2b-0192-5769-a779-d47880dd735c",
+      "nets": {
+        "1": "+5V",
+        "2": "SCL_5V"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "Q202",
+      "value": "BSS138",
+      "footprint": "SSD:Package_TO_SOT_SMD__SOT-23",
+      "uuid": "4e491ace-2cac-589e-a206-33467af71f56",
+      "sheet": "display",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/fce32a2b-0192-5769-a779-d47880dd735c",
+      "nets": {
+        "1": "+3V3",
+        "2": "I2C_SDA",
+        "3": "SDA_5V"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "R213",
+      "value": "4.7k",
+      "footprint": "SSD:Resistor_SMD__R_0603_1608Metric",
+      "uuid": "32c6643c-ccea-5ec8-af9a-6e09e37d5943",
+      "sheet": "display",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/fce32a2b-0192-5769-a779-d47880dd735c",
+      "nets": {
+        "1": "+3V3",
+        "2": "I2C_SDA"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "R214",
+      "value": "4.7k",
+      "footprint": "SSD:Resistor_SMD__R_0603_1608Metric",
+      "uuid": "2b4918d8-98c6-52a2-8f9b-36e998435d59",
+      "sheet": "display",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/fce32a2b-0192-5769-a779-d47880dd735c",
+      "nets": {
+        "1": "+5V",
+        "2": "SDA_5V"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "C201",
+      "value": "100n",
+      "footprint": "SSD:Capacitor_SMD__C_0603_1608Metric",
+      "uuid": "53d68e38-c8b3-5649-b729-6acebeb1e646",
+      "sheet": "display",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/fce32a2b-0192-5769-a779-d47880dd735c",
+      "nets": {
+        "1": "+5V",
+        "2": "GND"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "C202",
+      "value": "2.2u / 10V",
+      "footprint": "SSD:Capacitor_SMD__C_0603_1608Metric",
+      "uuid": "ca525b2b-4cc7-5c39-a653-ad50cccef045",
+      "sheet": "display",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/fce32a2b-0192-5769-a779-d47880dd735c",
+      "nets": {
+        "1": "+5V",
+        "2": "GND"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "J301",
+      "value": "NTC 接口 / XH 2.50mm",
+      "footprint": "SSD:Connector_JST__JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+      "uuid": "41a9e6b2-1293-5cb0-af27-924526ba4d18",
+      "sheet": "sensors",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6",
+      "nets": {
+        "1": "+3V3",
+        "2": "NTC_RAW"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "R301",
+      "value": "49.9k 0.1%",
+      "footprint": "SSD:Resistor_SMD__R_0603_1608Metric",
+      "uuid": "e52c16a9-9aae-572d-a9ea-434a657eec1b",
+      "sheet": "sensors",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6",
+      "nets": {
+        "1": "NTC_RAW",
+        "2": "GND"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "R302",
+      "value": "1k",
+      "footprint": "SSD:Resistor_SMD__R_0603_1608Metric",
+      "uuid": "b7e4e625-458a-5c1c-8b85-93af3023af2d",
+      "sheet": "sensors",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6",
+      "nets": {
+        "1": "NTC_RAW",
+        "2": "NTC_ADC"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "C301",
+      "value": "100n",
+      "footprint": "SSD:Capacitor_SMD__C_0603_1608Metric",
+      "uuid": "3bbe89f6-fe0d-5a7e-98c5-55b5e537702e",
+      "sheet": "sensors",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6",
+      "nets": {
+        "1": "NTC_ADC",
+        "2": "GND"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "D301",
+      "value": "BAV199",
+      "footprint": "SSD:Package_TO_SOT_SMD__SOT-23",
+      "uuid": "69ed6e04-c9eb-55d6-8014-098772419d7b",
+      "sheet": "sensors",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6",
+      "nets": {
+        "1": "GND",
+        "2": "+3V3",
+        "3": "NTC_ADC"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "J302",
+      "value": "BTL-004A / XH 2.50mm",
+      "footprint": "SSD:Connector_JST__JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+      "uuid": "2398bbfd-2cdf-58be-8750-9dc872500a60",
+      "sheet": "sensors",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6",
+      "nets": {
+        "1": "+5V",
+        "2": "FLOW_RAW",
+        "3": "GND"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "R303",
+      "value": "10k",
+      "footprint": "SSD:Resistor_SMD__R_0603_1608Metric",
+      "uuid": "3eb9c832-4eb0-57fc-a97f-5439cba8135d",
+      "sheet": "sensors",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6",
+      "nets": {
+        "1": "+5V",
+        "2": "FLOW_RAW"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "R304",
+      "value": "4.7k",
+      "footprint": "SSD:Resistor_SMD__R_0603_1608Metric",
+      "uuid": "383823b6-85ce-59f1-a55b-574dea34edfe",
+      "sheet": "sensors",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6",
+      "nets": {
+        "1": "FLOW_RAW",
+        "2": "FLOW_FILTER"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "C302",
+      "value": "1n",
+      "footprint": "SSD:Capacitor_SMD__C_0603_1608Metric",
+      "uuid": "9fc9f6b8-1426-5771-a29d-fbdb4f2ca5f7",
+      "sheet": "sensors",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6",
+      "nets": {
+        "1": "FLOW_FILTER",
+        "2": "GND"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "U301",
+      "value": "SN74LVC1G17DCKR",
+      "footprint": "SSD:Package_TO_SOT_SMD__SOT-353_SC-70-5",
+      "uuid": "340edf57-9677-50dc-b859-4c22f28d70a5",
+      "sheet": "sensors",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6",
+      "nets": {
+        "2": "FLOW_FILTER",
+        "3": "GND",
+        "4": "FLOW_PULSE",
+        "5": "+3V3"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "C303",
+      "value": "100n",
+      "footprint": "SSD:Capacitor_SMD__C_0603_1608Metric",
+      "uuid": "238ba2da-5cbc-58c6-8d3c-9e402df3e16c",
+      "sheet": "sensors",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6",
+      "nets": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "C304",
+      "value": "100n",
+      "footprint": "SSD:Capacitor_SMD__C_0603_1608Metric",
+      "uuid": "7bbd77cb-a015-5152-82b9-12bc1c1f4c9f",
+      "sheet": "sensors",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6",
+      "nets": {
+        "1": "+5V",
+        "2": "GND"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "SW301",
+      "value": "单位切换",
+      "footprint": "SSD:Button_Switch_SMD__SW_SPST_TL3342",
+      "uuid": "b45a2040-834b-5c43-bda5-020cc3e64727",
+      "sheet": "sensors",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6",
+      "nets": {
+        "1": "GND",
+        "2": "USER_KEY"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "R305",
+      "value": "10k",
+      "footprint": "SSD:Resistor_SMD__R_0603_1608Metric",
+      "uuid": "3c80d392-ce9b-556a-a5de-dc5d077e67a6",
+      "sheet": "sensors",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6",
+      "nets": {
+        "1": "+3V3",
+        "2": "USER_KEY"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "C305",
+      "value": "100n",
+      "footprint": "SSD:Capacitor_SMD__C_0603_1608Metric",
+      "uuid": "092bc88d-84c7-538e-9196-66c7520a97ab",
+      "sheet": "sensors",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6",
+      "nets": {
+        "1": "USER_KEY",
+        "2": "GND"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "U401",
+      "value": "STM32C562CET6",
+      "footprint": "SSD:STM32C562CET6_LQFP48_ST",
+      "uuid": "22a51aed-2554-5cff-9202-90e08c7cec40",
+      "sheet": "mcu_minimum",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/005e51cc-8ae2-51a1-89f5-1b9a7e62560b",
+      "nets": {
+        "10": "NTC_ADC",
+        "11": "FLOW_PULSE",
+        "32": "USB_DM",
+        "33": "USB_DP",
+        "42": "I2C_SCL",
+        "43": "I2C_SDA",
+        "2": "USER_KEY",
+        "34": "SWDIO",
+        "37": "SWCLK",
+        "44": "MCU_BOOT0",
+        "7": "MCU_NRST",
+        "9": "+3V3",
+        "24": "+3V3",
+        "36": "+3V3",
+        "48": "+3V3",
+        "8": "GND",
+        "23": "GND",
+        "35": "GND",
+        "47": "GND",
+        "22": "MCU_VCAP",
+        "5": "HSE_IN",
+        "6": "HSE_OUT"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "C401",
+      "value": "100n",
+      "footprint": "SSD:Capacitor_SMD__C_0603_1608Metric",
+      "uuid": "ed531cd6-c019-5023-a4f1-cf6608d9f8f9",
+      "sheet": "mcu_minimum",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/005e51cc-8ae2-51a1-89f5-1b9a7e62560b",
+      "nets": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "C402",
+      "value": "100n",
+      "footprint": "SSD:Capacitor_SMD__C_0603_1608Metric",
+      "uuid": "f5aa69df-78fa-5ab8-9677-4e44e819d01c",
+      "sheet": "mcu_minimum",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/005e51cc-8ae2-51a1-89f5-1b9a7e62560b",
+      "nets": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "C403",
+      "value": "100n",
+      "footprint": "SSD:Capacitor_SMD__C_0603_1608Metric",
+      "uuid": "e40a3747-bda7-533d-8d64-ae7cb381a8c7",
+      "sheet": "mcu_minimum",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/005e51cc-8ae2-51a1-89f5-1b9a7e62560b",
+      "nets": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "C404",
+      "value": "4.7u / 10V",
+      "footprint": "SSD:Capacitor_SMD__C_0603_1608Metric",
+      "uuid": "5f3c88f3-8dd8-5558-96a4-647e00553f97",
+      "sheet": "mcu_minimum",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/005e51cc-8ae2-51a1-89f5-1b9a7e62560b",
+      "nets": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "C406",
+      "value": "100n",
+      "footprint": "SSD:Capacitor_SMD__C_0603_1608Metric",
+      "uuid": "5f2e932f-e8c8-530b-8842-ccba90b8bfbb",
+      "sheet": "mcu_minimum",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/005e51cc-8ae2-51a1-89f5-1b9a7e62560b",
+      "nets": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "C405",
+      "value": "2.2u / 10V",
+      "footprint": "SSD:Capacitor_SMD__C_0603_1608Metric",
+      "uuid": "d0a9e06b-b59b-5ece-a767-0c4dc6efbe7f",
+      "sheet": "mcu_minimum",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/005e51cc-8ae2-51a1-89f5-1b9a7e62560b",
+      "nets": {
+        "1": "MCU_VCAP",
+        "2": "GND"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "Y401",
+      "value": "24MHz / CL=10pF",
+      "footprint": "SSD:Abracon_ABM8_3.2x2.5mm",
+      "uuid": "bc6d16dc-7aae-55f9-84d5-e68d5c1cd161",
+      "sheet": "mcu_minimum",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/005e51cc-8ae2-51a1-89f5-1b9a7e62560b",
+      "nets": {
+        "1": "HSE_X",
+        "2": "GND",
+        "3": "HSE_IN",
+        "4": "GND"
+      },
+      "fields": {
+        "制造商型号": "ABM8-24.000MHZ-10-D2Y-T"
+      }
+    },
+    {
+      "ref": "R401",
+      "value": "0R",
+      "footprint": "SSD:Resistor_SMD__R_0603_1608Metric",
+      "uuid": "0ae3b4b7-a49e-5263-a712-6469d0664c16",
+      "sheet": "mcu_minimum",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/005e51cc-8ae2-51a1-89f5-1b9a7e62560b",
+      "nets": {
+        "1": "HSE_OUT",
+        "2": "HSE_X"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "C407",
+      "value": "12p / C0G",
+      "footprint": "SSD:Capacitor_SMD__C_0603_1608Metric",
+      "uuid": "a97cd3ae-8cd2-5335-930e-91b440a2707a",
+      "sheet": "mcu_minimum",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/005e51cc-8ae2-51a1-89f5-1b9a7e62560b",
+      "nets": {
+        "1": "HSE_X",
+        "2": "GND"
+      },
+      "fields": {}
+    },
+    {
+      "ref": "C408",
+      "value": "12p / C0G",
+      "footprint": "SSD:Capacitor_SMD__C_0603_1608Metric",
+      "uuid": "0bc42d5b-4a54-5c5a-a7eb-6e3cb3c85356",
+      "sheet": "mcu_minimum",
+      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/005e51cc-8ae2-51a1-89f5-1b9a7e62560b",
+      "nets": {
+        "1": "HSE_IN",
+        "2": "GND"
+      },
+      "fields": {}
+    }
+  ],
+  "mcu_mapping": [
+    [
+      "NTC_ADC",
+      "PA0",
+      10,
+      "ADC1_IN0"
+    ],
+    [
+      "FLOW_PULSE",
+      "PA1",
+      11,
+      "TIM2_CH2 / EXTI"
+    ],
+    [
+      "USB_DM",
+      "PA11",
+      32,
+      "USB D-"
+    ],
+    [
+      "USB_DP",
+      "PA12",
+      33,
+      "USB D+"
+    ],
+    [
+      "I2C_SCL",
+      "PB6",
+      42,
+      "I2C1_SCL AF4"
+    ],
+    [
+      "I2C_SDA",
+      "PB7",
+      43,
+      "I2C1_SDA AF4"
+    ],
+    [
+      "USER_KEY",
+      "PC13",
+      2,
+      "GPIO input"
+    ],
+    [
+      "SWDIO",
+      "PA13",
+      34,
+      "SWD"
+    ],
+    [
+      "SWCLK",
+      "PA14",
+      37,
+      "SWD"
+    ],
+    [
+      "MCU_BOOT0",
+      "PH2-BOOT0",
+      44,
+      "BOOT0"
+    ],
+    [
+      "MCU_NRST",
+      "NRST",
+      7,
+      "Reset"
+    ]
+  ],
+  "footprints": {
+    "Package_QFP__LQFP-48_7x7mm_P0.5mm": "Package_QFP:LQFP-48_7x7mm_P0.5mm",
+    "Package_SO__SOIC-28W_7.5x17.9mm_P1.27mm": "Package_SO:SOIC-28W_7.5x17.9mm_P1.27mm",
+    "Connector_USB__USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal": "Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal",
+    "Fuse__Fuse_1206_3216Metric": "Fuse:Fuse_1206_3216Metric",
+    "Package_TO_SOT_SMD__SOT-23-5": "Package_TO_SOT_SMD:SOT-23-5",
+    "Capacitor_SMD__C_0603_1608Metric": "Capacitor_SMD:C_0603_1608Metric",
+    "Package_TO_SOT_SMD__SOT-23-6": "Package_TO_SOT_SMD:SOT-23-6",
+    "Resistor_SMD__R_0603_1608Metric": "Resistor_SMD:R_0603_1608Metric",
+    "Button_Switch_SMD__SW_SPST_TL3342": "Button_Switch_SMD:SW_SPST_TL3342",
+    "Connector_PinHeader_2.54mm__PinHeader_1x05_P2.54mm_Vertical": "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical",
+    "Package_TO_SOT_SMD__SOT-23": "Package_TO_SOT_SMD:SOT-23",
+    "Connector_JST__JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical": "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+    "Connector_JST__JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical": "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+    "Package_TO_SOT_SMD__SOT-353_SC-70-5": "Package_TO_SOT_SMD:SOT-353_SC-70-5",
+    "STM32C562CET6_LQFP48_ST": "DS14927 Rev2 p110 图42；基于 KiCad LQFP48 图形，按 ST 焊盘尺寸重建",
+    "Abracon_ABM8_3.2x2.5mm": "Abracon ABM8 Rev20200729 p2 推荐焊盘；基于 KiCad 3225 图形重建"
+  },
+  "mcu": {
+    "part": "STM32C562CET6",
+    "reference": "U401",
+    "flash_kib": 512,
+    "sram_kib": 128,
+    "footprint": "SSD:STM32C562CET6_LQFP48_ST",
+    "datasheet": "DS14927 Rev2",
+    "pinout_figure": 5,
+    "pinout_page": 37,
+    "power_figure": 13,
+    "power_page": 55,
+    "usb_bootloader": "AN2606 Rev70 chapter 11 table 23",
+    "application_clock": "24MHz HSE；ABM8-24.000MHZ-10-D2Y-T；C407/C408 初值12pF C0G"
+  },
+  "revision": "A2"
+}

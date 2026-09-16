@@ -1,0 +1,193 @@
+(footprint
+  "ALS5858_1DRWB_10"
+  (version 2.02602e+07)
+  (generator "pcbnew")
+  (layer "F.Cu")
+  (descr "5858-1DRWB-10; front-view pin numbering; D58; row spacing35.08; pitch2.54; drill1.0 VERIFY WITH SAMPLE")
+  (tags "LED display 58mm 16pin")
+  (attr through_hole)
+  (property
+    "Reference"
+    "REF**"
+    (at 0 -31 0)
+    (layer "F.SilkS")
+    (effects
+      (font
+        (size 1.2 1.2))))
+  (property
+    "Value"
+    "5858-1DRWB-10"
+    (at 0 31 0)
+    (layer "F.Fab")
+    (effects
+      (font
+        (size 1.2 1.2))))
+  (fp_circle
+    (center 0 0)
+    (end 29 0)
+    (stroke
+      (width 0.1)
+      (type solid))
+    (fill none)
+    (layer "F.Fab"))
+  (fp_circle
+    (center 0 0)
+    (end 29.2 0)
+    (stroke
+      (width 0.15)
+      (type solid))
+    (fill none)
+    (layer "F.SilkS"))
+  (fp_circle
+    (center 0 0)
+    (end 29.5 0)
+    (stroke
+      (width 0.05)
+      (type solid))
+    (fill none)
+    (layer "F.CrtYd"))
+  (pad
+    "1"
+    thru_hole
+    rect
+    (at -17.54 -8.89)
+    (size 1.8 1.8)
+    (drill 1)
+    (layers "*.Cu" "*.Mask"))
+  (pad
+    "2"
+    thru_hole
+    circle
+    (at -17.54 -6.35)
+    (size 1.8 1.8)
+    (drill 1)
+    (layers "*.Cu" "*.Mask"))
+  (pad
+    "3"
+    thru_hole
+    circle
+    (at -17.54 -3.81)
+    (size 1.8 1.8)
+    (drill 1)
+    (layers "*.Cu" "*.Mask"))
+  (pad
+    "4"
+    thru_hole
+    circle
+    (at -17.54 -1.27)
+    (size 1.8 1.8)
+    (drill 1)
+    (layers "*.Cu" "*.Mask"))
+  (pad
+    "5"
+    thru_hole
+    circle
+    (at -17.54 1.27)
+    (size 1.8 1.8)
+    (drill 1)
+    (layers "*.Cu" "*.Mask"))
+  (pad
+    "6"
+    thru_hole
+    circle
+    (at -17.54 3.81)
+    (size 1.8 1.8)
+    (drill 1)
+    (layers "*.Cu" "*.Mask"))
+  (pad
+    "7"
+    thru_hole
+    circle
+    (at -17.54 6.35)
+    (size 1.8 1.8)
+    (drill 1)
+    (layers "*.Cu" "*.Mask"))
+  (pad
+    "8"
+    thru_hole
+    circle
+    (at -17.54 8.89)
+    (size 1.8 1.8)
+    (drill 1)
+    (layers "*.Cu" "*.Mask"))
+  (pad
+    "9"
+    thru_hole
+    circle
+    (at 17.54 8.89)
+    (size 1.8 1.8)
+    (drill 1)
+    (layers "*.Cu" "*.Mask"))
+  (pad
+    "10"
+    thru_hole
+    circle
+    (at 17.54 6.35)
+    (size 1.8 1.8)
+    (drill 1)
+    (layers "*.Cu" "*.Mask"))
+  (pad
+    "11"
+    thru_hole
+    circle
+    (at 17.54 3.81)
+    (size 1.8 1.8)
+    (drill 1)
+    (layers "*.Cu" "*.Mask"))
+  (pad
+    "12"
+    thru_hole
+    circle
+    (at 17.54 1.27)
+    (size 1.8 1.8)
+    (drill 1)
+    (layers "*.Cu" "*.Mask"))
+  (pad
+    "13"
+    thru_hole
+    circle
+    (at 17.54 -1.27)
+    (size 1.8 1.8)
+    (drill 1)
+    (layers "*.Cu" "*.Mask"))
+  (pad
+    "14"
+    thru_hole
+    circle
+    (at 17.54 -3.81)
+    (size 1.8 1.8)
+    (drill 1)
+    (layers "*.Cu" "*.Mask"))
+  (pad
+    "15"
+    thru_hole
+    circle
+    (at 17.54 -6.35)
+    (size 1.8 1.8)
+    (drill 1)
+    (layers "*.Cu" "*.Mask"))
+  (pad
+    "16"
+    thru_hole
+    circle
+    (at 17.54 -8.89)
+    (size 1.8 1.8)
+    (drill 1)
+    (layers "*.Cu" "*.Mask"))
+  (fp_text
+    user
+    "1"
+    (at -20.32 -8.89 0)
+    (layer "F.SilkS")
+    (effects
+      (font
+        (size 1 1))))
+  (fp_text
+    user
+    "显示正面 / 直径58mm"
+    (at 0 -23 0)
+    (layer "F.Fab")
+    (effects
+      (font
+        (face "Noto Sans CJK SC")
+        (size 1.2 1.2)))))

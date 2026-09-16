@@ -1,0 +1,328 @@
+Title: Low-leakage double diode
+
+URL Source: https://assets.nexperia.com/documents/data-sheet/BAV199.pdf
+
+Published Time: Fri, 18 Oct 2024 07:43:47 GMT
+
+Number of Pages: 9
+
+Markdown Content:
+# BAV199 
+
+# Low-leakage double diode 
+
+## 1 April 2023 Product data sheet 
+
+# 1. General description 
+
+Epitaxial, medium-speed switching, double diode in a small SOT23 Surface-Mounted Device (SMD) plastic package. The diodes are connected in series. 
+
+# 2. Features and benefits 
+
+• Plastic SMD package • Low leakage current: typ. 3 pA • Switching time: typ. 0.8 us • Continuous reverse voltage: max. 75 V • Repetitive peak reverse voltage: max. 85 V • Repetitive peak forward current: max. 500 mA. 
+
+# 3. Applications 
+
+• Low-leakage current applications in surface mounted circuits. 
+
+# 4. Quick reference data 
+
+Table 1. Quick reference data Symbol Parameter Conditions Min Typ Max Unit Per diode 
+
+VR reverse voltage - - 75 VIR reverse current VR = 75 V; T j = 150 °C - 3 80 nA 
+
+# 5. Pinning information 
+
+Table 2. Pinning information Pin Symbol Description Simplified outline Graphic symbol 
+
+1 A1 anode (diode 1) 2 K2 cathode (diode 2) 3 K1, A2 cathode (diode 1) and anode (diode 2)  
+
+> 123
+
+SOT23 006aaa763  
+
+> A1 K2 K1, A2
+
+## Nexperia BAV199 
+
+Low-leakage double diode 
+
+# 6. Ordering information 
+
+Table 3. Ordering information Package Type number Name Description Version 
+
+BAV199 SOT23 plastic, surface-mounted package; 3 terminals; 1.9 mm pitch; 2.9 mm x 1.3 mm x 1 mm body SOT23 
+
+# 7. Marking 
+
+Table 4. Marking codes Type number Marking code[1] 
+
+BAV199 JY% 
+
+[1] % = placeholder for manufacturing site code 
+
+# 8. Limiting values 
+
+Table 5. Limiting values 
+
+In accordance with the Absolute Maximum Rating System (IEC 60134). 
+
+Symbol Parameter Conditions Min Max Unit Per diode 
+
+VR reverse voltage - 75 VVRRM repetitive peak reverse voltage - 85 Vsingle diode loaded - 160 mA IF forward current double diode loaded - 140 mA IFRM repetitive peak forward current - 500 mA tp = 1 μs; square wave; T j(init) = 25 °C - 4 Atp = 1 ms; square wave; T j(init) = 25 °C - 1 AIFSM non-repetitive peak forward current tp = 1 s; square wave; T j(init) = 25 °C - 0.5 A
+
+Per device; one diode loaded 
+
+Ptot total power dissipation Tamb ≤ 25 °C [1] - 250 mW Tj junction temperature - 150 °C Tamb ambient temperature -65 150 °C Tstg storage temperature -65 150 °C 
+
+[1] Device mounted on an FR4 Printed-Circuit Board (PCB), single-sided copper, tin-plated and standard footprint.    
+
+> BAV199 All information provided in this document is subject to legal disclaimers. ©Nexperia B.V. 2023. All rights reserved
+
+Product data sheet 1 April 2023 2 / 9 Nexperia BAV199 
+
+Low-leakage double diode 
+
+# 9. Thermal characteristics 
+
+Table 6. Thermal characteristics Symbol Parameter Conditions Min Typ Max Unit 
+
+Rth(j-a) thermal resistance from junction to ambient single diode loaded; in free air [1] - - 500 K/W Rth(j-sp) thermal resistance from junction to solder point - - 360 K/W 
+
+[1] Device mounted on an FR4 PCB, single-sided copper, tin-plated and standard footprint. 
+
+# 10. Characteristics 
+
+Table 7. Characteristics Symbol Parameter Conditions Min Typ Max Unit Per diode 
+
+IF = 1 mA; T j = 25 °C - - 900 mV IF = 10 mA; T j = 25 °C - - 1 VIF = 50 mA; T j = 25 °C - - 1.1 VVF forward voltage IF = 150 mA; T j = 25 °C - - 1.25 VVR = 75 V; T j = 25 °C - 0.003 5 nA IR reverse current VR = 75 V; T j = 150 °C - 3 80 nA Cd diode capacitance VR = 0 V; f = 1 MHz; T j = 25 °C - 2 - pF trr reverse recovery time IF = 10 mA; I R = 10 mA; I R(meas) = 1 mA; RL = 100 Ω; T amb = 25 °C - 0.8 3 μs VFRM peak forward recovery voltage IF = 10 mA; t r = 20 ns; T amb = 25 °C - - 1.75 V
+
+0 200 300 0100 200 
+
+> mlb756
+
+100 Tamb (°C) IF
+
+(mA) single diode loaded double diode loaded 
+
+Device mounted on an FR4 printed-circuit board. 
+
+Fig. 1. Maximum permissible continuous forward current as a function of ambient temperature. 
+
+> mlb752
+
+300 0100 200 IF
+
+(mA) 0 1.6 0.8 1.2 0.4 VF (V)   
+
+> (1) (2) (3)
+
+(1) T amb = 150 °C; typical values (2) T amb = 25 °C; typical values (3) T amb = 25 °C; maximum values 
+
+Fig. 2. Forward current as a function of forward voltage; per diode    
+
+> BAV199 All information provided in this document is subject to legal disclaimers. ©Nexperia B.V. 2023. All rights reserved
+
+Product data sheet 1 April 2023 3 / 9 Nexperia BAV199 
+
+Low-leakage double diode 
+
+mbg704 
+
+10 110 2
+
+IFSM 
+
+(A) 10 -1 
+
+tp (μs) 1 10 410 310 10 2
+
+Based on square wave currents. Tj(init) = 25 °C 
+
+Fig. 3. Non-repetitive peak forward current as a function of pulse duration; typical values 
+
+10 2
+
+150 200 50 0
+
+> mlb754
+
+100 10 110 - 1 
+
+10 - 2 
+
+10 - 3 
+
+IR
+
+(nA) Tj (°C) 
+
+(1) (2) 
+
+VR = 75 V (1) Maximum values (2) Typical values 
+
+Fig. 4. Reverse current as a function of junction temperature 
+
+mbg526 
+
+0 10 20 15 5 VR (V) 201Cd
+
+(pF) 
+
+f = 1 MHz; T amb = 25 °C 
+
+Fig. 5. Diode capacitance as a function of reverse voltage; typical values    
+
+> BAV199 All information provided in this document is subject to legal disclaimers. ©Nexperia B.V. 2023. All rights reserved
+
+Product data sheet 1 April 2023 4 / 9 Nexperia BAV199 
+
+Low-leakage double diode 
+
+# 11. Test information 
+
+trr (1) + I F
+
+toutput signal tr tp
+
+t10 % 90 % VR
+
+input signal V = V R + IF × RS
+
+RS = 50 Ω IF
+
+D.U.T. Ri = 50 Ω
+
+SAMPLING OSCILLOSCOPE 
+
+> mga881
+
+(1) I R = 1 mA Input signal: reverse pulse rise time t r = 0.6 ns; reverse voltage pulse duration t p = 100 ns; duty cycle δ = 0.05 Oscilloscope: rise time t r = 0.35 ns 
+
+Fig. 6. Reverse recovery time test circuit and waveforms 
+
+tr
+
+ttp
+
+10 % 90 % Iinput signal RS = 50 Ω IRi = 50 Ω OSCILLOSCOPE 1 kΩ 450 Ω D.U.T. 
+
+> mga882
+
+VFR toutput signal V
+
+Input signal: forward pulse rise time t r = 20 ns; forward current pulse duration t p ≥ 100 ns; duty cycle δ ≤ 0.005 
+
+Fig. 7. Forward recovery voltage test circuit and waveforms 
+
+# 12. Package outline 
+
+18-03-12 Dimensions in mm 0.45 0.15 1.9 1.1 0.9 3.0 2.8 2.5 2.1 1.4 1.2 0.48 0.38 0.15 0.09 1 23
+
+Fig. 8. Package outline SOT23    
+
+> BAV199 All information provided in this document is subject to legal disclaimers. ©Nexperia B.V. 2023. All rights reserved
+
+Product data sheet 1 April 2023 5 / 9 Nexperia BAV199 
+
+Low-leakage double diode 
+
+# 13. Soldering 
+
+solder lands solder resist occupied area solder paste 
+
+sot023_fr 
+
+0.5 (3×) 0.6 (3×) 0.6 (3×) 0.7 (3×) 313.3 2.9 1.7 1.9 2Dimensions in mm 
+
+Fig. 9. Reflow soldering footprint for SOT23 
+
+solder lands solder resist occupied area preferred transport direction during soldering 
+
+sot023_fw 
+
+2.8 4.5 1.4 4.6 1.4 (2×) 1.2 (2×) 2.2 2.6 Dimensions in mm 
+
+Fig. 10. Wave soldering footprint for SOT23    
+
+> BAV199 All information provided in this document is subject to legal disclaimers. ©Nexperia B.V. 2023. All rights reserved
+
+Product data sheet 1 April 2023 6 / 9 Nexperia BAV199 
+
+Low-leakage double diode 
+
+# 14. Revision history 
+
+Table 8. Revision history Data sheet ID Release date Data sheet status Change notice Supersedes 
+
+BAV199 v.4 20230401 Product data sheet - BAV199 v.3 Modifications: • Product changed to non automotive. Please refer to the automotive product(s) with -Q. BAV199 v.3 20200901 Product data sheet - BAV199 v.2 BAV199 v.2 20011012 Product data sheet - BAV199 v.1 BAV199 v.1 19990511 Product data sheet - -   
+
+> BAV199 All information provided in this document is subject to legal disclaimers. ©Nexperia B.V. 2023. All rights reserved
+
+Product data sheet 1 April 2023 7 / 9 Nexperia BAV199 
+
+Low-leakage double diode 
+
+# 15. Legal information 
+
+Data sheet status 
+
+Document status [1][2] Product status [3] Definition 
+
+Objective [short] data sheet Development This document contains data from the objective specification for product development. Preliminary [short] data sheet Qualification This document contains data from the preliminary specification. Product [short] data sheet Production This document contains the product specification. [1] Please consult the most recently issued document before initiating or completing a design. [2] The term 'short data sheet' is explained in section "Definitions". [3] The product status of device(s) described in this document may have changed since this document was published and may differ in case of multiple devices. The latest product status information is available on the internet at https://www.nexperia.com. 
+
+Definitions 
+
+Draft — The document is a draft version only. The content is still under internal review and subject to formal approval, which may result in modifications or additions. Nexperia does not give any representations or warranties as to the accuracy or completeness of information included herein and shall have no liability for the consequences of use of such information. 
+
+Short data sheet — A short data sheet is an extract from a full data sheet with the same product type number(s) and title. A short data sheet is intended for quick reference only and should not be relied upon to contain detailed and full information. For detailed and full information see the relevant full data sheet, which is available on request via the local Nexperia sales office. In case of any inconsistency or conflict with the short data sheet, the full data sheet shall prevail. 
+
+Product specification — The information and data provided in a Product data sheet shall define the specification of the product as agreed between Nexperia and its customer, unless Nexperia and customer have explicitly agreed otherwise in writing. In no event however, shall an agreement be valid in which the Nexperia product is deemed to offer functions and qualities beyond those described in the Product data sheet. 
+
+Disclaimers 
+
+Limited warranty and liability — Information in this document is believed to be accurate and reliable. However, Nexperia does not give any representations or warranties, expressed or implied, as to the accuracy or completeness of such information and shall have no liability for the consequences of use of such information. Nexperia takes no responsibility for the content in this document if provided by an information source outside of Nexperia. In no event shall Nexperia be liable for any indirect, incidental, punitive, special or consequential damages (including - without limitation - lost profits, lost savings, business interruption, costs related to the removal or replacement of any products or rework charges) whether or not such damages are based on tort (including negligence), warranty, breach of contract or any other legal theory. Notwithstanding any damages that customer might incur for any reason whatsoever, Nexperia’s aggregate and cumulative liability towards customer for the products described herein shall be limited in accordance with the Terms and conditions of commercial sale of Nexperia. 
+
+Right to make changes — Nexperia reserves the right to make changes to information published in this document, including without limitation specifications and product descriptions, at any time and without notice. This document supersedes and replaces all information supplied prior to the publication hereof. 
+
+Suitability for use — Nexperia products are not designed, authorized or warranted to be suitable for use in life support, life-critical or safety-critical systems or equipment, nor in applications where failure or malfunction of an Nexperia product can reasonably be expected to result in personal injury, death or severe property or environmental damage. Nexperia and its suppliers accept no liability for inclusion and/or use of Nexperia products in such equipment or applications and therefore such inclusion and/or use is at the customer’s own risk. 
+
+Quick reference data — The Quick reference data is an extract of the product data given in the Limiting values and Characteristics sections of this document, and as such is not complete, exhaustive or legally binding. 
+
+Applications — Applications that are described herein for any of these products are for illustrative purposes only. Nexperia makes no representation or warranty that such applications will be suitable for the specified use without further testing or modification. Customers are responsible for the design and operation of their applications and products using Nexperia products, and Nexperia accepts no liability for any assistance with applications or customer product design. It is customer’s sole responsibility to determine whether the Nexperia product is suitable and fit for the customer’s applications and products planned, as well as for the planned application and use of customer’s third party customer(s). Customers should provide appropriate design and operating safeguards to minimize the risks associated with their applications and products. Nexperia does not accept any liability related to any default, damage, costs or problem which is based on any weakness or default in the customer’s applications or products, or the application or use by customer’s third party customer(s). Customer is responsible for doing all necessary testing for the customer’s applications and products using Nexperia products in order to avoid a default of the applications and the products or of the application or use by customer’s third party customer(s). Nexperia does not accept any liability in this respect. 
+
+Limiting values — Stress above one or more limiting values (as defined in the Absolute Maximum Ratings System of IEC 60134) will cause permanent damage to the device. Limiting values are stress ratings only and (proper) operation of the device at these or any other conditions above those given in the Recommended operating conditions section (if present) or the Characteristics sections of this document is not warranted. Constant or repeated exposure to limiting values will permanently and irreversibly affect the quality and reliability of the device. 
+
+Terms and conditions of commercial sale — Nexperia products are sold subject to the general terms and conditions of commercial sale, as published at http://www.nexperia.com/profile/terms, unless otherwise agreed in a valid written individual agreement. In case an individual agreement is concluded only the terms and conditions of the respective agreement shall apply. Nexperia hereby expressly objects to applying the customer’s general terms and conditions with regard to the purchase of Nexperia products by customer. 
+
+No offer to sell or license — Nothing in this document may be interpreted or construed as an offer to sell products that is open for acceptance or the grant, conveyance or implication of any license under any copyrights, patents or other industrial or intellectual property rights. 
+
+Export control — This document as well as the item(s) described herein may be subject to export control regulations. Export might require a prior authorization from competent authorities. 
+
+Non-automotive qualified products — Unless this data sheet expressly states that this specific Nexperia product is automotive qualified, the product is not suitable for automotive use. It is neither qualified nor tested in accordance with automotive testing or application requirements. Nexperia accepts no liability for inclusion and/or use of non-automotive qualified products in automotive equipment or applications. In the event that customer uses the product for design-in and use in automotive applications to automotive specifications and standards, customer (a) shall use the product without Nexperia’s warranty of the product for such automotive applications, use and specifications, and (b) whenever customer uses the product for automotive applications beyond Nexperia’s specifications such use shall be solely at customer’s own risk, and (c) customer fully indemnifies Nexperia for any liability, damages or failed product claims resulting from customer design and use of the product for automotive applications beyond Nexperia’s standard warranty and Nexperia’s product specifications. 
+
+Translations — A non-English (translated) version of a document is for reference only. The English version shall prevail in case of any discrepancy between the translated and English versions. 
+
+Trademarks 
+
+Notice: All referenced brands, product names, service names and trademarks are the property of their respective owners.    
+
+> BAV199 All information provided in this document is subject to legal disclaimers. ©Nexperia B.V. 2023. All rights reserved
+
+Product data sheet 1 April 2023 8 / 9 Nexperia BAV199 
+
+Low-leakage double diode 
+
+# Contents 
+
+1. General description...................................................... 1 2. Features and benefits.................................................. 1 3. Applications.................................................................. 1 4. Quick reference data....................................................1 5. Pinning information......................................................1 6. Ordering information....................................................2 7. Marking.......................................................................... 2 8. Limiting values............................................................. 2 9. Thermal characteristics............................................... 3 10. Characteristics............................................................ 3 11. Test information.......................................................... 5 12. Package outline.......................................................... 5 13. Soldering..................................................................... 6 14. Revision history..........................................................7 15. Legal information........................................................8  
+
+> ©
+
+Nexperia B.V. 2023. All rights reserved     
+
+> For more information, please visit: http://www.nexperia.com For sales office addresses, please send an email to: salesaddresses@nexperia.com
+> Date of release: 1 April 2023
+> BAV199 All information provided in this document is subject to legal disclaimers. ©Nexperia B.V. 2023. All rights reserved
+
+Product data sheet 1 April 2023 9 / 9

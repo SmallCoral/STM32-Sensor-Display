@@ -1,0 +1,62 @@
+{
+  "pass": true,
+  "mcu": "STM32C562CET6",
+  "reference": "U401",
+  "pinout_source": "docs/reference/STM32C562CET6_LQFP48引脚表.csv",
+  "pinout_csv_sha256": "daa21994dffdbc20d87c88e3cee07dfad720836d775384cfdea672bf51da3fee",
+  "datasheet": "DS14927 Rev2 图5 p37、表14 p51、图13 p55",
+  "symbol_pins_verified": 48,
+  "sources_compared": [
+    "项目符号库",
+    "原理图内嵌符号",
+    "导出网表",
+    "本地封装",
+    "PCB 实际焊盘"
+  ],
+  "footprint": "SSD:STM32C562CET6_LQFP48_ST",
+  "footprint_pads_verified": 48,
+  "unused_pins_marked_no_connect": 26,
+  "key_pin_nets": {
+    "2": "USER_KEY",
+    "5": "/STM32C562 最小系统/HSE_IN",
+    "6": "/STM32C562 最小系统/HSE_OUT",
+    "7": "MCU_NRST",
+    "8": "GND",
+    "9": "+3V3",
+    "10": "NTC_ADC",
+    "11": "FLOW_PULSE",
+    "22": "/STM32C562 最小系统/MCU_VCAP",
+    "23": "GND",
+    "24": "+3V3",
+    "32": "USB_DM",
+    "33": "USB_DP",
+    "34": "SWDIO",
+    "35": "GND",
+    "36": "+3V3",
+    "37": "SWCLK",
+    "42": "I2C_SCL",
+    "43": "I2C_SDA",
+    "44": "MCU_BOOT0",
+    "47": "GND",
+    "48": "+3V3"
+  },
+  "vcap_nodes": [
+    [
+      "C405",
+      "1"
+    ],
+    [
+      "U401",
+      "22"
+    ]
+  ],
+  "minimum_system_capacitors": [
+    "C401",
+    "C402",
+    "C403",
+    "C404",
+    "C405",
+    "C406"
+  ],
+  "errors": []
+}

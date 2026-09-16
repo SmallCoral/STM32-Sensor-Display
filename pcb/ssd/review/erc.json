@@ -1,0 +1,52 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-16T21:29:47",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.6",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c",
+            "violations": []
+        },
+        {
+            "path": "/USB-C 供电、原生 USB 烧录与调试/",
+            "uuid_path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c",
+            "violations": []
+        },
+        {
+            "path": "/58mm 显示屏与 HT16K33 驱动/",
+            "uuid_path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/fce32a2b-0192-5769-a779-d47880dd735c",
+            "violations": []
+        },
+        {
+            "path": "/NTC 温度、霍尔流量与用户按键/",
+            "uuid_path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6",
+            "violations": []
+        },
+        {
+            "path": "/STM32C562 最小系统/",
+            "uuid_path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/005e51cc-8ae2-51a1-89f5-1b9a7e62560b",
+            "violations": []
+        }
+    ],
+    "source": "ssd.kicad_sch"
+}
