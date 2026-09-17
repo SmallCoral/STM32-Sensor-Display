@@ -296,6 +296,9 @@
 			(embedded_fonts no)
 		)
 		(symbol "SSD:Crystal_GND24"
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -306,28 +309,26 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "Y"
-				(at 3.175 5.08 0)
+				(at 0 3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
 			(property "Value" "Crystal_GND24"
-				(at 3.175 3.175 0)
+				(at 0 -3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Footprint" "SSD:Abracon_ABM8_3.2x2.5mm"
+			(property "Footprint" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -338,7 +339,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "docs/reference/Abracon_ABM8_Rev20200729.pdf"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -349,31 +350,9 @@
 					)
 				)
 			)
-			(property "Description" "四脚无源晶振；1、3为晶体端，2、4为接地外壳。"
+			(property "Description" "Four pin crystal; crystal terminals on pins 1 and 3, grounded case on pins 2 and 4"
 				(at 0 0 0)
 				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property private "KLC_S3.3" "The rectangle is not a symbol body but a graphical element"
-				(at 0 -12.7 0)
-				(show_name yes)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property private "KLC_S4.1" "Some pins are on 50mil grid to make the symbol small"
-				(at 0 -15.24 0)
-				(show_name yes)
 				(do_not_autoplace no)
 				(hide yes)
 				(effects
@@ -383,6 +362,17 @@
 				)
 			)
 			(property "ki_keywords" "quartz ceramic resonator oscillator"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Crystal*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -408,7 +398,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.54 0) (xy -2.032 0)
+						(xy -2.54 0) (xy -1.905 0)
 					)
 					(stroke
 						(width 0)
@@ -432,7 +422,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.032 -1.27) (xy -2.032 1.27)
+						(xy -1.905 -1.27) (xy -1.905 1.27)
 					)
 					(stroke
 						(width 0.508)
@@ -467,10 +457,10 @@
 				)
 				(polyline
 					(pts
-						(xy 2.032 0) (xy 2.54 0)
+						(xy 1.905 -1.27) (xy 1.905 1.27)
 					)
 					(stroke
-						(width 0)
+						(width 0.508)
 						(type default)
 					)
 					(fill
@@ -479,10 +469,10 @@
 				)
 				(polyline
 					(pts
-						(xy 2.032 -1.27) (xy 2.032 1.27)
+						(xy 2.54 0) (xy 1.905 0)
 					)
 					(stroke
-						(width 0.508)
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -672,135 +662,6 @@
 						)
 					)
 					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "SSD:R"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "R"
-				(at 2.032 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "R"
-				(at 0 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at -1.778 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Resistor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "R res resistor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "R_0_1"
-				(rectangle
-					(start -1.016 -2.54)
-					(end 1.016 2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "R_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1864,22 +1725,16 @@
 		(uuid "394cd432-2a87-5211-b5e7-e86cb4fe0e01")
 	)
 	(junction
-		(at 35.56 40.64)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3c5ab5ad-3894-5a60-bb62-603949c291cf")
-	)
-	(junction
 		(at 154.94 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "40bbbb2e-b753-5f4a-8f15-e1f7deb04df0")
 	)
 	(junction
-		(at 45.72 55.88)
+		(at 68.58 63.5)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "51c6e8d3-96ff-559b-92a9-0272002090e9")
+		(uuid "57e1b54b-f0e2-44b0-8d85-3b0559a0ebd3")
 	)
 	(junction
 		(at 114.3 162.56)
@@ -1888,10 +1743,10 @@
 		(uuid "5efebd14-db2b-5eba-9e51-8df8981411dc")
 	)
 	(junction
-		(at 38.1 40.64)
+		(at 54.61 59.69)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "93e018c2-812f-5908-9b90-8bf3768c37fd")
+		(uuid "8d45750d-9541-4031-ada1-f1e975a8d5b0")
 	)
 	(junction
 		(at 213.36 66.04)
@@ -1900,28 +1755,16 @@
 		(uuid "98affb12-0358-57d1-b43d-e436a677e888")
 	)
 	(junction
-		(at 73.66 40.64)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9b856c5e-e308-51dc-a531-e2472c8fa2a8")
-	)
-	(junction
-		(at 60.96 40.64)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a16865e2-5c0f-5cd7-903b-5f6356ef68a5")
-	)
-	(junction
 		(at 124.46 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a448e1cc-8af9-5a61-8a22-bacf124343c7")
 	)
 	(junction
-		(at 20.32 60.96)
+		(at 68.58 55.88)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "a6723afd-79fe-58d2-b0ae-1132fd42981e")
+		(uuid "bc0f48eb-45f8-4cd0-911e-c41d01089445")
 	)
 	(junction
 		(at 236.22 40.64)
@@ -1934,12 +1777,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cbd437ec-d0b8-5e32-b2a4-071d50007bfd")
-	)
-	(junction
-		(at 50.8 55.88)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d6966f48-8dc9-5028-8dea-c56d1c88e9f7")
 	)
 	(junction
 		(at 190.5 40.64)
@@ -2053,13 +1890,13 @@
 	)
 	(wire
 		(pts
-			(xy 73.66 38.1) (xy 73.66 40.64)
+			(xy 76.2 60.96) (xy 83.82 60.96)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "05ca569c-39bd-5e3a-bb07-91f07fad5116")
+		(uuid "08aec182-c89c-4862-a224-2eabfa01a030")
 	)
 	(wire
 		(pts
@@ -2083,7 +1920,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 44.45) (xy 38.1 40.64)
+			(xy 66.04 55.88) (xy 68.58 55.88)
 		)
 		(stroke
 			(width 0)
@@ -2093,23 +1930,13 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 44.45) (xy 60.96 40.64)
+			(xy 66.04 63.5) (xy 68.58 63.5)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "290d2eb1-2530-5ab6-b164-0a2312d4ae0c")
-	)
-	(wire
-		(pts
-			(xy 20.32 40.64) (xy 26.67 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2a1aa2c4-1bba-56a9-a61b-ef1fd4ebd6c6")
 	)
 	(wire
 		(pts
@@ -2153,16 +1980,6 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 45.72) (xy 45.72 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4d81a456-9b12-5f94-a8e8-c71b99dbc44f")
-	)
-	(wire
-		(pts
 			(xy 55.88 96.52) (xy 55.88 100.33)
 		)
 		(stroke
@@ -2180,6 +1997,16 @@
 			(type default)
 		)
 		(uuid "549d3b9a-3c25-5026-93a8-d58021ac366c")
+	)
+	(wire
+		(pts
+			(xy 54.61 59.69) (xy 54.61 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a80f6f1-25e7-42ba-82ed-1184641a9ab0")
 	)
 	(wire
 		(pts
@@ -2203,13 +2030,13 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 55.88) (xy 60.96 55.88)
+			(xy 68.58 55.88) (xy 76.2 55.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6283a512-12d1-5b9e-8014-32612d164e99")
+		(uuid "6907eacb-f389-4008-b6f0-d46208f88bfa")
 	)
 	(wire
 		(pts
@@ -2223,13 +2050,13 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 58.42) (xy 73.66 58.42)
+			(xy 54.61 59.69) (xy 54.61 55.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "702a4aac-e79f-552f-95a6-8bcd90d87407")
+		(uuid "6dc1f2ab-d704-496e-a9a0-0c1c254a2122")
 	)
 	(wire
 		(pts
@@ -2243,7 +2070,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 52.07) (xy 38.1 55.88)
+			(xy 58.42 55.88) (xy 54.61 55.88)
 		)
 		(stroke
 			(width 0)
@@ -2283,16 +2110,6 @@
 	)
 	(wire
 		(pts
-			(xy 20.32 60.96) (xy 20.32 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "934ec256-32be-5fa8-929c-85cec7bfe3f4")
-	)
-	(wire
-		(pts
 			(xy 104.14 157.48) (xy 104.14 162.56)
 		)
 		(stroke
@@ -2310,16 +2127,6 @@
 			(type default)
 		)
 		(uuid "a5461b4f-00cd-5777-a89d-ebc4984dc0b2")
-	)
-	(wire
-		(pts
-			(xy 83.82 60.96) (xy 20.32 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a8abfc1a-8955-5e13-9582-5c3a7fdeead3")
 	)
 	(wire
 		(pts
@@ -2373,6 +2180,26 @@
 	)
 	(wire
 		(pts
+			(xy 76.2 55.88) (xy 76.2 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0f20431-a183-4e7c-9dd7-c26742e0d99c")
+	)
+	(wire
+		(pts
+			(xy 54.61 59.69) (xy 63.5 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b4feeaa3-d86e-4a15-8fff-25aea8b2bcbd")
+	)
+	(wire
+		(pts
 			(xy 259.08 49.53) (xy 259.08 40.64)
 		)
 		(stroke
@@ -2403,16 +2230,6 @@
 	)
 	(wire
 		(pts
-			(xy 73.66 40.64) (xy 49.53 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b95d7486-77ed-5da9-ae16-d3790595c4a7")
-	)
-	(wire
-		(pts
 			(xy 190.5 57.15) (xy 190.5 66.04)
 		)
 		(stroke
@@ -2433,17 +2250,7 @@
 	)
 	(wire
 		(pts
-			(xy 34.29 40.64) (xy 41.91 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c0558357-17e2-5c1b-8d68-4a23af341e0b")
-	)
-	(wire
-		(pts
-			(xy 60.96 52.07) (xy 60.96 55.88)
+			(xy 58.42 63.5) (xy 54.61 63.5)
 		)
 		(stroke
 			(width 0)
@@ -2473,6 +2280,16 @@
 	)
 	(wire
 		(pts
+			(xy 76.2 63.5) (xy 76.2 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc262cbd-2e15-44ce-a29e-0eeceb4a5644")
+	)
+	(wire
+		(pts
 			(xy 83.82 83.82) (xy 30.48 83.82)
 		)
 		(stroke
@@ -2480,16 +2297,6 @@
 			(type default)
 		)
 		(uuid "ce625ffb-a11d-56e7-9be4-b1822dd9fcc6")
-	)
-	(wire
-		(pts
-			(xy 20.32 60.96) (xy 20.32 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7301a67-dc07-5698-843c-336417b2fe3e")
 	)
 	(wire
 		(pts
@@ -2503,13 +2310,23 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 39.37) (xy 35.56 40.64)
+			(xy 52.07 59.69) (xy 54.61 59.69)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "dd9f6247-e54c-5593-9794-975a1d3f2509")
+		(uuid "e17c03dd-7595-43c6-96da-e3509d2e34ff")
+	)
+	(wire
+		(pts
+			(xy 76.2 58.42) (xy 83.82 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e56e93d8-1a27-4b03-8b72-e0f30c939a83")
 	)
 	(wire
 		(pts
@@ -2520,16 +2337,6 @@
 			(type default)
 		)
 		(uuid "e57c19a8-49b7-5003-b429-97eab6a61156")
-	)
-	(wire
-		(pts
-			(xy 73.66 58.42) (xy 73.66 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e88bee16-0bfb-5ef1-a543-02914f0c0d35")
 	)
 	(wire
 		(pts
@@ -2553,6 +2360,16 @@
 	)
 	(wire
 		(pts
+			(xy 68.58 63.5) (xy 76.2 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f1195d3e-6b5a-4846-9cf1-33f4870b5dca")
+	)
+	(wire
+		(pts
 			(xy 154.94 40.64) (xy 154.94 35.56)
 		)
 		(stroke
@@ -2571,16 +2388,6 @@
 		)
 		(uuid "f9235071-4550-5333-8e2b-957c6e4d8f94")
 	)
-	(label "HSE_X"
-		(at 35.56 39.37 0)
-		(effects
-			(font
-				(size 0.95 0.95)
-			)
-			(justify left)
-		)
-		(uuid "31131263-6f8a-5c29-ad86-a5d5e12026af")
-	)
 	(label "MCU_VCAP"
 		(at 58.42 96.52 0)
 		(effects
@@ -2590,26 +2397,6 @@
 			(justify left)
 		)
 		(uuid "378c5b9f-6923-52df-9cd6-0e374a19e414")
-	)
-	(label "HSE_IN"
-		(at 73.66 38.1 0)
-		(effects
-			(font
-				(size 0.95 0.95)
-			)
-			(justify left)
-		)
-		(uuid "8064ecaf-47a6-56c9-bac0-bc5f97828a4c")
-	)
-	(label "HSE_OUT"
-		(at 20.32 63.5 0)
-		(effects
-			(font
-				(size 0.95 0.95)
-			)
-			(justify left)
-		)
-		(uuid "e46a015c-14e1-5cdf-8587-d8caa99692bb")
 	)
 	(global_label "MCU_NRST"
 		(shape bidirectional)
@@ -2854,86 +2641,8 @@
 		)
 	)
 	(symbol
-		(lib_id "SSD:R")
-		(at 30.48 40.64 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "0ae3b4b7-a49e-5263-a712-6469d0664c16")
-		(property "Reference" "R401"
-			(at 30.48 33.02 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Value" "0R"
-			(at 30.48 35.56 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Footprint" "SSD:Resistor_SMD__R_0603_1608Metric"
-			(at 30.48 40.64 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 30.48 40.64 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 30.48 40.64 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "31a1006f-26d0-577b-b82e-02323e789420")
-		)
-		(pin "2"
-			(uuid "fb3a359d-b444-5136-809b-04ac917c8fca")
-		)
-		(instances
-			(project "ssd"
-				(path "/705b2912-fdff-4251-818e-e4be0e7e0a1c/005e51cc-8ae2-51a1-89f5-1b9a7e62560b"
-					(reference "R401")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "SSD:C")
-		(at 60.96 48.26 0)
+		(at 62.23 63.5 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2943,7 +2652,7 @@
 		(dnp no)
 		(uuid "0bc42d5b-4a54-5c5a-a7eb-6e3cb3c85356")
 		(property "Reference" "C408"
-			(at 66.04 46.99 0)
+			(at 58.42 64.77 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2952,8 +2661,8 @@
 				)
 			)
 		)
-		(property "Value" "12p / C0G"
-			(at 67.31 50.8 0)
+		(property "Value" "6.8p / C0G"
+			(at 62.23 66.802 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2963,7 +2672,7 @@
 			)
 		)
 		(property "Footprint" "SSD:Capacitor_SMD__C_0603_1608Metric"
-			(at 60.96 48.26 0)
+			(at 62.23 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2974,7 +2683,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 60.96 48.26 0)
+			(at 62.23 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2985,7 +2694,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 60.96 48.26 0)
+			(at 62.23 63.5 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3085,7 +2794,7 @@
 	)
 	(symbol
 		(lib_id "SSD:GND")
-		(at 50.8 55.88 0)
+		(at 52.07 59.69 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3095,7 +2804,7 @@
 		(dnp no)
 		(uuid "21bbc8d7-1c94-5754-b238-d99f565cde87")
 		(property "Reference" "#PWR15013"
-			(at 50.8 55.88 0)
+			(at 52.07 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3106,7 +2815,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 66.04 55.88 0)
+			(at 52.832 58.674 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3116,7 +2825,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 50.8 55.88 0)
+			(at 52.07 59.69 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3126,7 +2835,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 50.8 55.88 0)
+			(at 52.07 59.69 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3136,7 +2845,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 50.8 55.88 0)
+			(at 52.07 59.69 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3827,7 +3536,7 @@
 	)
 	(symbol
 		(lib_id "SSD:C")
-		(at 38.1 48.26 0)
+		(at 62.23 55.88 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3837,7 +3546,7 @@
 		(dnp no)
 		(uuid "a97cd3ae-8cd2-5335-930e-91b440a2707a")
 		(property "Reference" "C407"
-			(at 31.75 46.99 0)
+			(at 58.928 54.864 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3846,8 +3555,8 @@
 				)
 			)
 		)
-		(property "Value" "12p / C0G"
-			(at 30.48 50.8 0)
+		(property "Value" "6.8p / C0G"
+			(at 62.23 52.07 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3857,7 +3566,7 @@
 			)
 		)
 		(property "Footprint" "SSD:Capacitor_SMD__C_0603_1608Metric"
-			(at 38.1 48.26 0)
+			(at 62.23 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3868,7 +3577,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 38.1 48.26 0)
+			(at 62.23 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3879,7 +3588,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 38.1 48.26 0)
+			(at 62.23 55.88 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3905,7 +3614,7 @@
 	)
 	(symbol
 		(lib_id "SSD:Crystal_GND24")
-		(at 45.72 40.64 0)
+		(at 68.58 59.69 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3915,7 +3624,7 @@
 		(dnp no)
 		(uuid "bc6d16dc-7aae-55f9-84d5-e68d5c1cd161")
 		(property "Reference" "Y401"
-			(at 45.72 31.75 0)
+			(at 68.58 52.07 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3925,7 +3634,7 @@
 			)
 		)
 		(property "Value" "24MHz / CL=10pF"
-			(at 45.72 34.29 0)
+			(at 73.914 59.69 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3935,29 +3644,30 @@
 			)
 		)
 		(property "Footprint" "SSD:Abracon_ABM8_3.2x2.5mm"
-			(at 45.72 40.64 0)
+			(at 68.58 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1 1)
+					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" "docs/reference/Abracon_ABM8_Rev20200729.pdf"
-			(at 45.72 40.64 0)
+			(at 68.58 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1 1)
+					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Description" ""
-			(at 45.72 40.64 0)
+		(property "Description" "Four pin crystal; crystal terminals on pins 1 and 3, grounded case on pins 2 and 4"
+			(at 68.58 59.69 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3967,7 +3677,7 @@
 			)
 		)
 		(property "制造商型号" "ABM8-24.000MHZ-10-D2Y-T"
-			(at 45.72 40.64 0)
+			(at 68.58 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3981,13 +3691,13 @@
 			(uuid "db13705b-2ee7-5aee-84b7-2521e73f081f")
 		)
 		(pin "2"
-			(uuid "36d93d71-6561-5b32-bc10-e6ed9f8b5da7")
+			(uuid "56a412f3-c4f4-49ce-a2b0-26100195b622")
 		)
 		(pin "3"
-			(uuid "aee70640-b5bc-529b-8ed5-b15ef9a0c2f4")
+			(uuid "36d93d71-6561-5b32-bc10-e6ed9f8b5da7")
 		)
 		(pin "4"
-			(uuid "c50af00d-e89d-5598-a5eb-693f7fad0dd8")
+			(uuid "61b48f3e-508f-41bc-a42c-3c25178cf199")
 		)
 		(instances
 			(project "ssd"

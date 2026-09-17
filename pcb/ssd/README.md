@@ -1,10 +1,10 @@
-# STM32 温度 / 流量显示板 · A2
+# STM32 温度 / 流量显示板 A2
 
-本版主控为 **STM32C562CET6**：Cortex-M33、最高 144MHz、512KB 闪存、128KB SRAM，LQFP48（7×7mm、0.5mm 脚距）。已经完成主控更换、最小系统绘制、封装绑定和 PCB 网络更新。
+主控为 STM32C562CET6：Cortex-M33、最高 144MHz、512KB 闪存、128KB SRAM，LQFP48（7×7mm、0.5mm 脚距）。当前工程包含完整原理图、项目库以及已经布局布线的 PCB。
 
-MCU 焊盘采用 ST 图42的 **1.20×0.30mm**、0.50mm 脚距；圆屏焊盘已减至 **1.8mm**，钻孔仍为1.0mm。
+MCU 焊盘采用 ST 图42的 1.20×0.30mm、0.50mm 脚距；圆屏焊盘直径为 1.8mm，钻孔为 1.0mm。
 
-全部电阻、电容采用 **0603 英制 / 1608 公制**，原理图注释为中文。主导航页保留模块关系连线；外围独立分页，页内用实际导线连接。旧 `code/` 未作为本版设计依据。
+电阻、电容统一采用 0603 英制 / 1608 公制，原理图注释使用中文。主导航页只表示模块关系，各功能电路放在独立子页中。
 
 ## 打开与查看
 
@@ -18,7 +18,7 @@ MCU 焊盘采用 ST 图42的 **1.20×0.30mm**、0.50mm 脚距；圆屏焊盘已�
 | [display.kicad_sch](display.kicad_sch) | HT16K33、I²C 电平转换、显示屏 |
 | [sensors.kicad_sch](sensors.kicad_sch) | 温度、流量、用户按键 |
 | [原理图 PDF](review/ssd_schematic.pdf) | 五页完整预览，第五页为新版最小系统 |
-| [ssd.kicad_pcb](ssd.kicad_pcb) | 61 个已绑定封装及其网络，按功能暂放 |
+| [ssd.kicad_pcb](ssd.kicad_pcb) | 59 个封装、板框和当前走线 |
 | [封装预览](review/footprints_staged.pdf) | 包含 MCU、去耦电容与新增 24MHz 晶振电路 |
 | [BOM.csv](docs/BOM.csv) | 本版器件、采购规格及封装 |
 | [设计说明](docs/DESIGN_NOTES.md) | 接口、屏幕映射、机械核对事项 |
@@ -27,9 +27,9 @@ MCU 焊盘采用 ST 图42的 **1.20×0.30mm**、0.50mm 脚距；圆屏焊盘已�
 | [MCU 尺寸图](review/mcu_footprint_dimensioned.pdf) | 48 脚编号、焊盘尺寸及 1:1 对位 |
 | [圆屏 1:1 对位图](review/display_footprint_1to1.pdf) | 1.8mm 焊盘 / 1.0mm 钻孔 |
 
-PCB 尚未绘制板框或布线，也未生成生产文件。本次修订保留已有 57 个器件的位置和旋转角度；新增晶振、串联电阻和两只负载电容位于右侧暂放区。
+PCB 已有板框、布局和走线，但当前版本尚未重新运行完整 DRC，也没有生成生产文件。现有 59 个封装都已绑定 3D 模型。
 
-## 最小系统已经接好的内容
+## 最小系统
 
 | 器件 / 引脚 | 连接 |
 | --- | --- |
@@ -45,11 +45,11 @@ PCB 尚未绘制板框或布线，也未生成生产文件。本次修订保留�
 
 C405 在 3MHz 时 ESR 必须小于 20mΩ，须检查所购型号的阻抗曲线。每个 VDD 去耦、VCAP 电容和 VREF 旁路必须在最终 PCB 布局中靠近相应引脚；当前暂放位置不是最终电源布局。
 
-本版已安装 24MHz HSE 无源晶振，接 PH0 / PH1（5 / 6 脚），供应用程序启用；ROM USB DFU 仍使用内部 HSI / CRS。晶振为 ABM8-24.000MHZ-10-D2Y-T，CL=10pF；两只负载电容初值12pF / C0G，串联电阻初值0Ω。未用引脚以空接标记注明；固件应将未用 GPIO 配置为确定电平并关闭未用时钟。SWD 保留用于断点调试和首次选项字节配置。
+板上安装 24MHz HSE 无源晶振，直接连接 PH0 / PH1（5 / 6 脚），供应用程序启用；ROM USB DFU 仍使用内部 HSI / CRS。晶振型号为 ABM8-24.000MHZ-10-D2Y-T，CL=10pF，两只负载电容初值为 12pF / C0G。未用引脚在原理图中标为空接。PA13 / PA14 保留 SWD 功能，但当前 PCB 没有专用调试连接器。
 
 ## 外围信号映射
 
-以下映射已按 DS14927 Rev2 图5、引脚表及表14复用功能核对。
+下表按 DS14927 Rev2 图5、引脚表和表14复用功能整理。
 
 | 外围网络 | MCU 引脚 | LQFP48 脚号 | 用途 |
 | --- | --- | --- | --- |
@@ -71,20 +71,19 @@ STM32C562 支持出厂 ROM Bootloader 的 USB DFU。AN2606 Rev70 **第11章、�
 
 USB-C 的 CC1、CC2 各有 5.1kΩ 下拉，同一个接口负责 5V 供电与 USB 数据。使用支持数据传输的 USB 线：
 
-1. 首次调试用 SWD 和 STM32CubeProgrammer 检查选项字节；使用启动按键时，将 **BOOT_SEL=1**，由外部 BOOT0 引脚选择启动模式。
+1. 在 STM32CubeProgrammer 中确认启动相关选项字节。使用启动按键时，将 BOOT_SEL=1，由外部 BOOT0 引脚选择启动模式。若需通过 SWD 修改选项字节，需临时引出调试信号。
 2. 按住启动键，按下并释放复位键，再释放启动键。
 3. 在 STM32CubeProgrammer 中选择 USB，连接 DFU 设备，下载并校验程序。
 4. 释放启动键并复位，从用户闪存启动。
 
-空片进入 ROM 还受 Pattern19 中的 BOOT0、BOOT_SEL 和 EMPTY 状态影响；并非任何启动选项下都会自动进入 DFU。首次调试保留 SWD，不锁定启动选项。SWD 的 3.3V 为目标板电压参考，避免调试器与板上 LDO 同时向该网供电。
+空片进入 ROM 还受 Pattern19 中 BOOT0、BOOT_SEL 和 EMPTY 状态影响，并非所有启动配置都会自动进入 DFU。使用 SWD 时，3.3V 只作为目标板电压参考，避免调试器和板上 LDO 同时向该网络供电。
 
-## 验证结果与范围
+## 检查状态
 
-- KiCad 10.0.6 原理图 ERC：**0 错误、0 警告**。
-- [网络核对](review/netlist_checks.json)：61 个器件、204 个已连接引脚、54 个独立网络；24 个电阻、19 个电容全部为 0603。
-- [PCB 核对](review/pcb_checks.json)：61 个封装、253 个焊盘，焊盘网络、器件参数、封装名称和原理图 UUID 一致，暂放几何不重叠。
-- [主控引脚核对](review/mcu_pinout_checks.json)：48 个符号引脚与资料包 CSV 一致，LQFP48 焊盘编号完整，关键电源及接口映射一致。
-- [PCB DRC](review/drc_unrouted.json)：原理图一致性问题为 0。未布线、未画板框的提示仍保留；原 USB-C 推荐封装的 4 条孔到铜间距错误仍待结合制板工艺处理，未通过放宽规则隐藏。
-- 屏幕孔径与安装方向、接插件配套、实际亮度、USB 涌入电流仍需最终布局和样机验证，详见设计说明。
+- 当前原理图和 PCB 各有 59 个器件；23 个电阻和 19 个电容均为 0603。
+- PCB 含 246 个焊盘、305 段走线和 6 个过孔，59 个封装均有 3D 模型绑定。
+- [主控引脚核对](review/mcu_pinout_checks.json)记录了 C562 的 48 脚映射和封装焊盘检查。
+- `review/` 中的 ERC、网表和 DRC 文件来自较早的 A2 检查点。删除 R401、J102 并重新布局后尚未重新生成，不能作为当前版本的放行依据。
+- 屏幕孔径与安装方向、接插件配套、亮度和 USB 涌入电流仍需样机验证。
 
-本次修改前备份为 [before_hse_footprint_revision.zip](review/before_hse_footprint_revision.zip)。C562 迁移前完整工程保存在 [before_c562_migration.zip](review/before_c562_migration.zip)。参考资料优先采用你提供的 [官方资料包](../../docs/STM32C562CET6_官方资料包_2026-09-16/00_README_中文.md)，原始 PDF 未修改。
+历史快照包括 [HSE 与封装修订前版本](review/before_hse_footprint_revision.zip) 和 [C562 迁移前版本](review/before_c562_migration.zip)。主控参考资料集中在 [STM32C562CET6 官方资料包](../../docs/STM32C562CET6_官方资料包_2026-09-16/00_README_中文.md)，其中的原始 PDF 未改动。

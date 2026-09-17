@@ -190,4 +190,12 @@
     (effects
       (font
         (face "Noto Sans CJK SC")
-        (size 1.2 1.2)))))
+        (size 1.2 1.2))))
+  (model
+    "${KIPRJMOD}/libraries/SSD.3dshapes/ALS5858_1DRWB_10.step"
+    (offset
+      (xyz 0 0 0))
+    (scale
+      (xyz 1 1 1))
+    (rotate
+      (xyz 0 0 0))))

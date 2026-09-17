@@ -1,8 +1,8 @@
 # STM32 Sensor Display
 
-基于 **STM32C562CET6** 的温度与流量显示板，连接 NTC 温度探头、霍尔流量传感器和 58mm 圆形 LED 屏。USB-C 提供 5V 电源，并支持芯片出厂 ROM Bootloader 的 USB DFU 下载。
+这是一个基于 STM32C562CET6 的温度与流量显示板，外接 NTC 温度探头、霍尔流量传感器和 58 mm 圆形 LED 屏。USB-C 同时提供 5 V 电源和 USB DFU 下载通道。
 
-当前硬件版本为 **A2**：原理图、项目符号库、封装绑定和 PCB 网络已完成；PCB 仍处于封装暂放阶段，尚未布局布线或打样验证。固件目录仅保留占位结构，旧 STM32F103 程序已移出当前版本，可在 Git 历史中查看。
+仓库中的硬件版本为 A2。原理图、项目库和 PCB 已更新到当前器件方案，PCB 中已有板框、布局和走线。现阶段仍需重新运行 ERC / DRC，并通过样板确认电气和机械尺寸。`code/` 只保留固件目录结构；旧 STM32F103 程序可从 Git 历史查阅。
 
 ## 硬件方案
 
@@ -16,14 +16,14 @@
 | 流量输入 | BTL-004A 霍尔传感器，5V供电；经滤波与3.3V施密特缓冲后接 MCU |
 | 显示屏 | 5858-1DRWB-10，58mm共阴圆屏，6个公共端、10条段线 |
 | 显示驱动 U201 | Holtek HT16K33，28脚SOP、两侧各14脚；I²C经BSS138进行3.3V/5V电平转换 |
-| 下载与调试 | USB DFU、启动/复位按键、SWD接口 |
+| 下载与调试 | USB DFU、启动/复位按键；PA13 / PA14 保留 SWD 信号，板上暂未放专用 SWD 接口 |
 | 电阻与电容 | 全部采用 **0603英制 / 1608公制** |
 
 HSE 为应用程序提供外部时钟参考；ROM USB DFU 仍按官方 Bootloader 设计使用内部 HSI 配合 CRS。无需为 USB DFU 额外安装32.768kHz晶振。
 
 ## 文件树
 
-保留 `code/`、`docs/`、`pcb/` 三个主目录：
+仓库分为 `code/`、`docs/` 和 `pcb/`：
 
 ```text
 STM32-Sensor-Display/
@@ -53,11 +53,11 @@ STM32-Sensor-Display/
         ├── ssd.kicad_pcb
         ├── libraries/           # 项目内符号、封装与部分STEP模型
         ├── docs/                # 硬件说明、BOM、引用资料
-        ├── review/              # PDF预览、检查报告、修改前快照
+        ├── review/              # PDF 预览、阶段性检查报告和历史快照
         └── tools/               # 网表与PCB核对脚本
 ```
 
-空目录使用 `.gitkeep` 纳入版本管理。编辑器缓存、KiCad 锁文件和个人界面状态不提交；硬件工程、原始资料和检视文件保留原路径。
+空目录用 `.gitkeep` 保留。编辑器缓存、KiCad 锁文件和个人界面状态不提交。
 
 ## 打开工程
 
@@ -70,9 +70,9 @@ STM32-Sensor-Display/
 
 2. 使用 **KiCad 10** 打开 [pcb/ssd/ssd.kicad_pro](pcb/ssd/ssd.kicad_pro)。
 3. 打开原理图，在主导航页双击模块进入对应子页。
-4. 打开 PCB 可查看61个已绑定封装及其网络；当前暂放位置不代表最终布局。
+4. 打开 PCB 可查看当前的 59 个封装、板框和走线。
 
-符号和封装通过工程内 `SSD` 库引用，MCU与晶振模型使用 `${KIPRJMOD}` 相对路径。克隆后请保留 `pcb/ssd/` 内部结构。无需先安装 STM32 开发环境即可查看硬件。
+符号和封装通过工程内 `SSD` 库引用；项目自建的 3D 模型使用 `${KIPRJMOD}` 相对路径。克隆后应保留 `pcb/ssd/` 内部目录结构。查看硬件工程不需要 STM32 开发环境。
 
 ## 文档与预览
 
@@ -81,7 +81,7 @@ STM32-Sensor-Display/
 | [硬件工程说明](pcb/ssd/README.md) | 供电、最小系统、信号分配及USB下载说明 |
 | [完整原理图 PDF](pcb/ssd/review/ssd_schematic.pdf) | 五页原理图，第五页为MCU最小系统 |
 | [PCB 封装暂放预览](pcb/ssd/review/footprints_staged.pdf) | 当前器件封装集合 |
-| [BOM](pcb/ssd/docs/BOM.csv) | 61个器件的规格、封装和采购核对事项 |
+| [BOM](pcb/ssd/docs/BOM.csv) | 器件规格、封装和采购核对事项；下单前应与当前原理图复核 |
 | [设计依据与待验证项](pcb/ssd/docs/DESIGN_NOTES.md) | 传感器接口、显示映射、机械尺寸和样机验证 |
 | [C562 迁移说明](pcb/ssd/docs/C562_MIGRATION.md) | 官方资料依据、供电与相关勘误 |
 | [A2 晶振与封装修订](pcb/ssd/docs/HSE_FOOTPRINT_A2.md) | HSE选型、MCU专用焊盘及圆屏焊盘调整 |
@@ -106,14 +106,14 @@ STM32-Sensor-Display/
 
 固件尚未实现，没有可直接编译的 CubeMX、CMake 或 IDE 工程。后续应使用适配 STM32C5 的设备支持包，按当前原理图重新建立工程，详见 [code/README.md](code/README.md)。
 
-## 当前验证状态
+## 当前状态
 
-A2保存的检查结果：
+A2 阶段曾保存过 ERC、网表和封装检查报告。此后原理图删去了 R401 和 J102，PCB 也已重新布局，因此 `review/` 中的旧报告只能作为过程记录。
 
-- 原理图 ERC：**0错误、0警告**。
-- 网表：61个器件、204个已连接引脚、54个独立网络；24个电阻和19个电容均为0603。
-- PCB：61个封装、253个焊盘；封装、网络与原理图一致性检查通过。
-- MCU：48个引脚名称、编号、焊盘几何及网络已核对。
+- 当前原理图包含 59 个器件，其中 23 个电阻、19 个电容，阻容封装均为 0603。
+- 当前 PCB 包含 59 个封装、246 个焊盘、305 段走线和 6 个过孔。
+- 59 个 PCB 封装都已绑定 3D 模型；DS201 使用项目内 STEP 模型。
+- MCU 的 48 个引脚名称、编号和封装焊盘已按资料核对。
 
 检查报告位于 [pcb/ssd/review/](pcb/ssd/review/)。原理图改动后，可在 `pcb/ssd/` 目录重新导出网表并检查：
 
@@ -123,13 +123,13 @@ kicad-cli sch erc --format json -o review/erc.json ssd.kicad_sch
 python3 tools/check_netlist.py
 ```
 
-`tools/check_pcb.py` 需在能够导入 KiCad `pcbnew` 模块的 Python 环境中运行。历史报告不替代修改后的重新检查。
+`tools/check_pcb.py` 需要 KiCad 的 `pcbnew` Python 模块。提交制造文件前，应重新生成网表并运行 ERC、DRC 和项目检查脚本。
 
 ## 尚未完成
 
-- 最终板框、布局、布线和整板DRC；现有USB-C封装的4项孔到铜间距问题仍待处理。
+- 当前版本的整板 ERC / DRC、丝印和制造文件检查；USB-C 封装的孔到铜间距还需按制板能力确认。
 - 显示屏针径、连接器配套和机械空间的实物核对。
 - 晶振起振、负载电容、USB涌入电流、显示电流及传感器测量的样机验证。
 - STM32C562固件、USB应用枚举、传感器校准与显示逻辑。
 
-本仓库当前不包含可直接投产的制造文件或已验证的固件。厂商资料、KiCad库和STEP模型保留其原有版权及许可信息，来源见硬件设计说明和对应文件。
+仓库目前不提供可直接投产的制造文件或经过样机验证的固件。厂商资料、KiCad 库和 STEP 模型沿用各自的版权及许可，来源记录在硬件设计说明中。

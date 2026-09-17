@@ -617,240 +617,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "SSD:Conn_01x05"
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
-				(at 0 7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_01x05"
-				(at 0 -7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Conn_01x05_1_1"
-				(rectangle
-					(start -1.27 6.35)
-					(end 1.27 -6.35)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(rectangle
-					(start -1.27 5.207)
-					(end 0 4.953)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -4.953)
-					(end 0 -5.207)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 5.08 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 0)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 3.81)
-					(name "Pin_5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "SSD:GND"
 			(power global)
 			(pin_numbers
@@ -2683,7 +2449,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "BOOT_SEL=1：按住启动键，按下并释放复位键，再释放启动键。\n使用 STM32CubeProgrammer 的 USB DFU 下载；保留 SWD 调试接口。"
+	(text "BOOT_SEL=1：按住启动键，按下并释放复位键，再释放启动键。\n使用 STM32CubeProgrammer 的 USB DFU 下载"
 		(exclude_from_sim no)
 		(at 19.05 190.5 0)
 		(effects
@@ -2841,16 +2607,6 @@
 	)
 	(wire
 		(pts
-			(xy 246.38 135.89) (xy 210.82 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "011957ab-70bd-595a-813e-b37bc2710550")
-	)
-	(wire
-		(pts
 			(xy 205.74 55.88) (xy 205.74 78.74)
 		)
 		(stroke
@@ -2958,16 +2714,6 @@
 			(type default)
 		)
 		(uuid "2c142631-d844-5ed5-aeca-2e75a69b554a")
-	)
-	(wire
-		(pts
-			(xy 243.84 130.81) (xy 243.84 149.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "31ad3bba-fd4a-533f-bc2e-abde58eb55c5")
 	)
 	(wire
 		(pts
@@ -3091,16 +2837,6 @@
 	)
 	(wire
 		(pts
-			(xy 246.38 125.73) (xy 238.76 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "69ff427f-47af-52f9-b44e-a9f494e57c97")
-	)
-	(wire
-		(pts
 			(xy 64.77 66.04) (xy 64.77 63.5)
 		)
 		(stroke
@@ -3211,16 +2947,6 @@
 	)
 	(wire
 		(pts
-			(xy 246.38 128.27) (xy 210.82 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "af7cf2d7-4e8b-50fd-bb48-61f7ebc5baa4")
-	)
-	(wire
-		(pts
 			(xy 63.5 163.83) (xy 63.5 171.45)
 		)
 		(stroke
@@ -3261,16 +2987,6 @@
 	)
 	(wire
 		(pts
-			(xy 238.76 125.73) (xy 238.76 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c8929ea2-494c-5280-82fb-c387a3fe1f35")
-	)
-	(wire
-		(pts
 			(xy 149.86 66.04) (xy 149.86 78.74)
 		)
 		(stroke
@@ -3301,16 +3017,6 @@
 	)
 	(wire
 		(pts
-			(xy 246.38 133.35) (xy 210.82 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "df117abb-aa78-5c20-a62d-6b2f9def7ff0")
-	)
-	(wire
-		(pts
 			(xy 248.92 66.04) (xy 248.92 78.74)
 		)
 		(stroke
@@ -3328,16 +3034,6 @@
 			(type default)
 		)
 		(uuid "e2684732-0d9a-501a-87e9-46b46405d117")
-	)
-	(wire
-		(pts
-			(xy 246.38 130.81) (xy 243.84 130.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e76d02cc-8d93-5e46-857a-3a2310ac6847")
 	)
 	(wire
 		(pts
@@ -3421,28 +3117,6 @@
 			)
 		)
 	)
-	(global_label "SWCLK"
-		(shape bidirectional)
-		(at 210.82 133.35 180)
-		(effects
-			(font
-				(size 0.95 0.95)
-			)
-			(justify right)
-		)
-		(uuid "1015f9c4-6e15-550c-8a91-5275ea6798f9")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 210.82 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
 	(global_label "MCU_BOOT0"
 		(shape bidirectional)
 		(at 83.82 144.78 0)
@@ -3465,28 +3139,6 @@
 			)
 		)
 	)
-	(global_label "MCU_NRST"
-		(shape bidirectional)
-		(at 210.82 135.89 180)
-		(effects
-			(font
-				(size 0.95 0.95)
-			)
-			(justify right)
-		)
-		(uuid "adfd9ef8-4f82-5b14-9772-9470dcc67a22")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 210.82 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
 	(global_label "USB_DM"
 		(shape bidirectional)
 		(at 132.08 60.96 0)
@@ -3499,28 +3151,6 @@
 		(uuid "ae99c4da-315c-5df6-a4d4-71ab002de633")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 132.08 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "SWDIO"
-		(shape bidirectional)
-		(at 210.82 128.27 180)
-		(effects
-			(font
-				(size 0.95 0.95)
-			)
-			(justify right)
-		)
-		(uuid "d2cfb74b-7267-5454-b15a-72af8f7feed2")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 210.82 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3622,94 +3252,6 @@
 			(project "ssd"
 				(path "/705b2912-fdff-4251-818e-e4be0e7e0a1c/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c"
 					(reference "#PWR2051")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "SSD:Conn_01x05")
-		(at 251.46 130.81 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "16fba6b9-36aa-5007-a7a8-2c7247bbb313")
-		(property "Reference" "J102"
-			(at 251.46 117.46 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Value" "SWD / 电压参考"
-			(at 251.46 120.46 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Noto Sans CJK SC")
-					(size 1 1)
-				)
-			)
-		)
-		(property "Footprint" "SSD:Connector_PinHeader_2.54mm__PinHeader_1x05_P2.54mm_Vertical"
-			(at 251.46 130.81 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 251.46 130.81 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 251.46 130.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "dd7943c5-1b20-4b1d-8246-529a52affda1")
-		)
-		(pin "2"
-			(uuid "10df0464-1295-4a7c-a2c3-eb6006326ede")
-		)
-		(pin "3"
-			(uuid "560e4fe6-9791-41a4-9918-26227b0b6cc0")
-		)
-		(pin "4"
-			(uuid "58094fa5-b4d0-422c-b48d-50a05e080422")
-		)
-		(pin "5"
-			(uuid "1abe6d6e-b7ef-423e-ad73-4f0c94186754")
-		)
-		(instances
-			(project "ssd"
-				(path "/705b2912-fdff-4251-818e-e4be0e7e0a1c/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c"
-					(reference "J102")
 					(unit 1)
 				)
 			)
@@ -4064,80 +3606,6 @@
 			(project "ssd"
 				(path "/705b2912-fdff-4251-818e-e4be0e7e0a1c/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c"
 					(reference "#PWR2040")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "SSD:+3V3")
-		(at 238.76 116.84 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "63dfccc0-ab19-56dc-93f5-aadcc25cd9ff")
-		(property "Reference" "#PWR2066"
-			(at 238.76 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 238.76 111.84 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 238.76 116.84 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 238.76 116.84 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 238.76 116.84 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "dfcd440c-f793-44d1-8059-f687af9c4faa")
-		)
-		(instances
-			(project "ssd"
-				(path "/705b2912-fdff-4251-818e-e4be0e7e0a1c/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c"
-					(reference "#PWR2066")
 					(unit 1)
 				)
 			)
@@ -5443,80 +4911,6 @@
 			(project "ssd"
 				(path "/705b2912-fdff-4251-818e-e4be0e7e0a1c/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c"
 					(reference "R103")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "SSD:GND")
-		(at 243.84 149.86 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "eee9cf18-be66-54b2-9b01-c21687697a2b")
-		(property "Reference" "#PWR2069"
-			(at 243.84 149.86 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 243.84 154.86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 243.84 149.86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 243.84 149.86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 243.84 149.86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1a27c261-3616-4928-b305-2d0d5dcecc8f")
-		)
-		(instances
-			(project "ssd"
-				(path "/705b2912-fdff-4251-818e-e4be0e7e0a1c/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c"
-					(reference "#PWR2069")
 					(unit 1)
 				)
 			)
