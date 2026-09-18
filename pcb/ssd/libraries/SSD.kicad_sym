@@ -5386,4 +5386,315 @@
           "4"
           (effects
             (font
-              (size 1.27 1.27))))))))
+              (size 1.27 1.27)))))))
+  (symbol
+    "AP6320x"
+    (pin_names
+      (offset 0.254))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
+    (symbol
+      "AP6320x_0_1"
+      (rectangle
+        (start -5.08 6.35)
+        (end 5.08 -6.35)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol
+      "AP6320x_1_1"
+      (pin
+        input
+        line
+        (at 7.62 -5.08 180)
+        (length 2.54)
+        (name
+          "FB"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number
+          "1"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin
+        input
+        line
+        (at -7.62 2.54 0)
+        (length 2.54)
+        (name
+          "EN"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number
+          "2"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin
+        power_in
+        line
+        (at -7.62 5.08 0)
+        (length 2.54)
+        (name
+          "VIN"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number
+          "3"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin
+        power_in
+        line
+        (at 0 -8.89 90)
+        (length 2.54)
+        (name
+          "GND"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number
+          "4"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin
+        power_out
+        line
+        (at 7.62 0 180)
+        (length 2.54)
+        (name
+          "SW"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number
+          "5"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin
+        passive
+        line
+        (at 7.62 5.08 180)
+        (length 2.54)
+        (name
+          "BST"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number
+          "6"
+          (effects
+            (font
+              (size 1.27 1.27))))))
+    (property
+      "Reference"
+      "U"
+      (at -5.08 7.62 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property
+      "Value"
+      "AP6320x"
+      (at 0 7.62 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property
+      "Footprint"
+      "Package_TO_SOT_SMD:SOT-23-6"
+      (at 0 10.16 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property
+      "Datasheet"
+      "https://www.diodes.com/datasheet/download/AP63200-AP63201-AP63203-AP63205.pdf"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property
+      "Description"
+      "AP63203/AP63205 fixed-output 2A synchronous buck converter family with spread spectrum, TSOT26"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property
+      "ki_keywords"
+      "buck regulator dcdc fixed synchronous"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)))))
+  (symbol
+    "L"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
+    (symbol
+      "L_0_1"
+      (arc
+        (start -2.54 0)
+        (mid -1.905 -0.635)
+        (end -1.27 0)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start -1.27 0)
+        (mid -0.635 -0.635)
+        (end 0 0)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 0 0)
+        (mid 0.635 -0.635)
+        (end 1.27 0)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 1.27 0)
+        (mid 1.905 -0.635)
+        (end 2.54 0)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type none))))
+    (symbol
+      "L_1_1"
+      (pin
+        passive
+        line
+        (at -5.08 0 0)
+        (length 2.54)
+        (name
+          "1"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number
+          "1"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin
+        passive
+        line
+        (at 5.08 0 180)
+        (length 2.54)
+        (name
+          "2"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number
+          "2"
+          (effects
+            (font
+              (size 1.27 1.27))))))
+    (property
+      "Reference"
+      "L"
+      (at 0 2.54 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property
+      "Value"
+      "L"
+      (at 0 -2.54 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property
+      "Footprint"
+      ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property
+      "Datasheet"
+      ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property
+      "Description"
+      "Inductor"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property
+      "ki_keywords"
+      "inductor choke coil"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27))))))

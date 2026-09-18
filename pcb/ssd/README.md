@@ -1,10 +1,10 @@
-# STM32 温度 / 流量显示板 A2
+# STM32 温度 / 流量显示板 A3 原理图
 
-主控为 STM32C562CET6：Cortex-M33、最高 144MHz、512KB 闪存、128KB SRAM，LQFP48（7×7mm、0.5mm 脚距）。当前工程包含完整原理图、项目库以及已经布局布线的 PCB。
+主控为 STM32C562CET6：Cortex-M33、最高 144MHz、512KB 闪存、128KB SRAM，LQFP48（7×7mm、0.5mm 脚距）。当前工程包含 A3 原理图和项目库；已经布局布线的 PCB 仍是 A2 供电方案，尚未同步新增 DCDC 器件。
 
 MCU 焊盘采用 ST 图42的 1.20×0.30mm、0.50mm 脚距；圆屏焊盘直径为 1.8mm，钻孔为 1.0mm。
 
-电阻、电容统一采用 0603 英制 / 1608 公制，原理图注释使用中文。主导航页只表示模块关系，各功能电路放在独立子页中。
+常规电阻、电容采用 0603 英制 / 1608 公制，DCDC 的 10µF / 22µF 储能电容采用 1206。原理图注释使用中文；主导航页只表示模块关系，各功能电路放在独立子页中。
 
 ## 打开与查看
 
@@ -17,9 +17,9 @@ MCU 焊盘采用 ST 图42的 1.20×0.30mm、0.50mm 脚距；圆屏焊盘直径�
 | [usb_power.kicad_sch](usb_power.kicad_sch) | USB-C、电源、ESD、启动 / 复位按键、SWD |
 | [display.kicad_sch](display.kicad_sch) | HT16K33、I²C 电平转换、显示屏 |
 | [sensors.kicad_sch](sensors.kicad_sch) | 温度、流量、用户按键 |
-| [原理图 PDF](review/ssd_schematic.pdf) | 五页完整预览，第五页为新版最小系统 |
-| [ssd.kicad_pcb](ssd.kicad_pcb) | 59 个封装、板框和当前走线 |
-| [封装预览](review/footprints_staged.pdf) | 包含 MCU、去耦电容与新增 24MHz 晶振电路 |
+| [A2 原理图 PDF](review/ssd_schematic.pdf) | 历史预览，尚未包含 A3 宽压 DCDC |
+| [ssd.kicad_pcb](ssd.kicad_pcb) | A2 的 59 个封装、板框和当前走线；尚未同步 A3 电源 |
+| [A2 封装预览](review/footprints_staged.pdf) | 历史预览，包含 MCU、去耦电容与 24MHz 晶振电路 |
 | [BOM.csv](docs/BOM.csv) | 本版器件、采购规格及封装 |
 | [设计说明](docs/DESIGN_NOTES.md) | 接口、屏幕映射、机械核对事项 |
 | [C562 迁移核对](docs/C562_MIGRATION.md) | 官方资料依据、最小系统清单、勘误说明 |
@@ -27,7 +27,7 @@ MCU 焊盘采用 ST 图42的 1.20×0.30mm、0.50mm 脚距；圆屏焊盘直径�
 | [MCU 尺寸图](review/mcu_footprint_dimensioned.pdf) | 48 脚编号、焊盘尺寸及 1:1 对位 |
 | [圆屏 1:1 对位图](review/display_footprint_1to1.pdf) | 1.8mm 焊盘 / 1.0mm 钻孔 |
 
-PCB 已有板框、布局和走线，但当前版本尚未重新运行完整 DRC，也没有生成生产文件。现有 59 个封装都已绑定 3D 模型。
+A2 PCB 已有板框、布局和走线，但不能直接用于 A3 制造。更新电源器件、布局和走线后还需重新运行完整 ERC / DRC；当前没有可放行的生产文件。
 
 ## 最小系统
 
@@ -69,21 +69,22 @@ C405 在 3MHz 时 ESR 必须小于 20mΩ，须检查所购型号的阻抗曲线�
 
 STM32C562 支持出厂 ROM Bootloader 的 USB DFU。AN2606 Rev70 **第11章、表23** 确认 PA11 / PA12 和 HSI÷3 的 48MHz 时钟，DFU 启用 CRS，不要求 HSE 晶振。芯片内置 USB 匹配阻抗及 D+ 上拉，无需另加 22Ω 或 1.5kΩ 电阻。
 
-USB-C 的 CC1、CC2 各有 5.1kΩ 下拉，同一个接口负责 5V 供电与 USB 数据。使用支持数据传输的 USB 线：
+USB-C 的 CC1、CC2 各有 5.1kΩ 下拉。标准 USB-C 电源在没有 PD 协商时只提供 5V，本板不包含 PD 协商控制器；12V 只允许来自外部已经切换好的电源路径，不能依靠本板向普通 PD 适配器申请。连接电脑进行 USB 数据和 DFU 时，VBUS 应为标准 5V。使用支持数据传输的 USB 线：
 
 1. 在 STM32CubeProgrammer 中确认启动相关选项字节。使用启动按键时，将 BOOT_SEL=1，由外部 BOOT0 引脚选择启动模式。若需通过 SWD 修改选项字节，需临时引出调试信号。
 2. 按住启动键，按下并释放复位键，再释放启动键。
 3. 在 STM32CubeProgrammer 中选择 USB，连接 DFU 设备，下载并校验程序。
 4. 释放启动键并复位，从用户闪存启动。
 
-空片进入 ROM 还受 Pattern19 中 BOOT0、BOOT_SEL 和 EMPTY 状态影响，并非所有启动配置都会自动进入 DFU。使用 SWD 时，3.3V 只作为目标板电压参考，避免调试器和板上 LDO 同时向该网络供电。
+空片进入 ROM 还受 Pattern19 中 BOOT0、BOOT_SEL 和 EMPTY 状态影响，并非所有启动配置都会自动进入 DFU。使用 SWD 时，3.3V 只作为目标板电压参考，避免调试器和板上 DCDC 同时向该网络供电。
 
 ## 检查状态
 
-- 当前原理图和 PCB 各有 59 个器件；23 个电阻和 19 个电容均为 0603。
-- PCB 含 246 个焊盘、305 段走线和 6 个过孔，59 个封装均有 3D 模型绑定。
+- A3 原理图和 BOM 包含 68 个器件；3.3V / 5V 分别由 AP63203 / AP63205 从 5～12V 输入独立降压。
+- A2 PCB 仍含 59 个封装、246 个焊盘、305 段走线和 6 个过孔，59 个封装均有 3D 模型绑定；A3 电源尚未同步。
 - [主控引脚核对](review/mcu_pinout_checks.json)记录了 C562 的 48 脚映射和封装焊盘检查。
-- `review/` 中的 ERC、网表和 DRC 文件来自较早的 A2 检查点。删除 R401、J102 并重新布局后尚未重新生成，不能作为当前版本的放行依据。
+- `review/` 中的 PDF、ERC、网表和 DRC 文件来自较早的 A2 检查点，不能作为 A3 的放行依据。
+- 更新 PCB 后需在 5V / 12V 输入和最大负载下确认 MCU 端 3.3V 为 3.3V±3%，启动单调，纹波建议小于 50mVpp；5V 输入时还要确认外设 5V 不低于 4.5V。
 - 屏幕孔径与安装方向、接插件配套、亮度和 USB 涌入电流仍需样机验证。
 
 历史快照包括 [HSE 与封装修订前版本](review/before_hse_footprint_revision.zip) 和 [C562 迁移前版本](review/before_c562_migration.zip)。主控参考资料集中在 [STM32C562CET6 官方资料包](../../docs/STM32C562CET6_官方资料包_2026-09-16/00_README_中文.md)，其中的原始 PDF 未改动。

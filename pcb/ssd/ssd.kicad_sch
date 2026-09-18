@@ -6,10 +6,10 @@
 	(paper "A4")
 	(title_block
 		(title "STM32C562 温度与流量显示系统")
-		(date "2026-09-16")
-		(rev "A2")
+		(date "2026-09-18")
+		(rev "A3")
 		(company "温度与流量显示项目")
-		(comment 1 "STM32C562 最小系统与外围电路；全部电阻、电容采用 0603")
+		(comment 1 "常规阻容采用 0603；DCDC 储能电容采用 1206")
 	)
 	(lib_symbols)
 	(polyline
@@ -186,7 +186,7 @@
 		)
 		(uuid "500033e1-7b75-58af-9a63-bed134f84c3f")
 	)
-	(text "主控：STM32C562CET6，LQFP48，512KB 闪存 / 128KB 运行内存。\nUSB-C 同时用于 5V 供电和出厂引导程序 USB DFU 烧录。"
+	(text "主控：STM32C562CET6，LQFP48，512KB 闪存 / 128KB 运行内存。\nVBUS 按外部 5～12V 输入设计；标准 5V USB 连接可用于 ROM DFU。"
 		(exclude_from_sim no)
 		(at 20 33 0)
 		(effects
@@ -258,7 +258,7 @@
 		)
 		(uuid "d01acd53-9178-5976-a914-48742f15e134")
 	)
-	(text "USB-C 接口与电源\n5V 输入、3.3V 稳压"
+	(text "USB-C 接口与电源\n5～12V 输入、5V / 3.3V DCDC"
 		(exclude_from_sim no)
 		(at 31.75 78.74 0)
 		(effects
