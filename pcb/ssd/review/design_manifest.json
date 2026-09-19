@@ -2,27 +2,19 @@
   "parts": [
     {
       "ref": "J101",
-      "value": "GCT USB4105-GF-A",
-      "footprint": "SSD:Connector_USB__USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal",
+      "value": "SHOU HAN TYPE-C 6P(073)",
+      "footprint": "SSD:Connector_USB__SHOU_HAN_TYPE-C-6P-073_C668623",
       "uuid": "1a107c6f-d137-5883-97e0-04c53eed6621",
       "sheet": "usb_power",
       "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c",
       "nets": {
-        "A1": "GND",
         "A12": "GND",
-        "B1": "GND",
         "B12": "GND",
         "SH": "GND",
-        "A4": "VBUS_RAW",
         "A9": "VBUS_RAW",
-        "B4": "VBUS_RAW",
         "B9": "VBUS_RAW",
         "A5": "CC1",
-        "B5": "CC2",
-        "A6": "USB_DP_CONN",
-        "B6": "USB_DP_CONN",
-        "A7": "USB_DM_CONN",
-        "B7": "USB_DM_CONN"
+        "B5": "CC2"
       },
       "fields": {}
     },
@@ -94,23 +86,6 @@
       "fields": {}
     },
     {
-      "ref": "D101",
-      "value": "USBLC6-2SC6",
-      "footprint": "SSD:Package_TO_SOT_SMD__SOT-23-6",
-      "uuid": "f3e4d92f-37ac-5349-b91e-4b5f0e98cc72",
-      "sheet": "usb_power",
-      "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c",
-      "nets": {
-        "1": "USB_DM_CONN",
-        "6": "USB_DM",
-        "3": "USB_DP_CONN",
-        "4": "USB_DP",
-        "2": "GND",
-        "5": "VBUS_RAW"
-      },
-      "fields": {}
-    },
-    {
       "ref": "R101",
       "value": "5.1k 1%",
       "footprint": "SSD:Resistor_SMD__R_0603_1608Metric",
@@ -139,7 +114,7 @@
     {
       "ref": "SW101",
       "value": "启动（BOOT）",
-      "footprint": "SSD:Button_Switch_SMD__SW_SPST_TL3342",
+      "footprint": "SSD:Button_Switch_SMD__SW_SPST_B3U-1000P",
       "uuid": "acfecba5-41dd-5814-b686-a738dcdb8888",
       "sheet": "usb_power",
       "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c",
@@ -165,7 +140,7 @@
     {
       "ref": "SW102",
       "value": "复位（RESET）",
-      "footprint": "SSD:Button_Switch_SMD__SW_SPST_TL3342",
+      "footprint": "SSD:Button_Switch_SMD__SW_SPST_B3U-1000P",
       "uuid": "2967ebb6-0f15-5a97-a012-d296d7afc854",
       "sheet": "usb_power",
       "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c",
@@ -203,17 +178,16 @@
     },
     {
       "ref": "J102",
-      "value": "SWD / 电压参考",
-      "footprint": "SSD:Connector_PinHeader_2.54mm__PinHeader_1x05_P2.54mm_Vertical",
-      "uuid": "16fba6b9-36aa-5007-a7a8-2c7247bbb313",
+      "value": "SWD / XH 2.50mm",
+      "footprint": "SSD:Connector_JST__JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+      "uuid": "cc8fb25f-3613-4cd8-b9ec-75894ba4dfbc",
       "sheet": "usb_power",
       "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/13ed9c95-4fee-5d34-9d3a-b307ed0bc91c",
       "nets": {
         "1": "+3V3",
         "2": "SWDIO",
-        "3": "GND",
-        "4": "SWCLK",
-        "5": "MCU_NRST"
+        "3": "SWCLK",
+        "4": "GND"
       },
       "fields": {}
     },
@@ -674,7 +648,7 @@
     {
       "ref": "SW301",
       "value": "单位切换",
-      "footprint": "SSD:Button_Switch_SMD__SW_SPST_TL3342",
+      "footprint": "SSD:Button_Switch_SMD__SW_SPST_B3U-1000P",
       "uuid": "b45a2040-834b-5c43-bda5-020cc3e64727",
       "sheet": "sensors",
       "path": "/705b2912-fdff-4251-818e-e4be0e7e0a1c/c1d2dc5f-32da-56ee-a1aa-5ae62eef34a6",
@@ -720,8 +694,6 @@
       "nets": {
         "10": "NTC_ADC",
         "11": "FLOW_PULSE",
-        "32": "USB_DM",
-        "33": "USB_DP",
         "42": "I2C_SCL",
         "43": "I2C_SDA",
         "2": "USER_KEY",
@@ -892,16 +864,16 @@
       "TIM2_CH2 / EXTI"
     ],
     [
-      "USB_DM",
+      "NC",
       "PA11",
       32,
-      "USB D-"
+      "Not connected"
     ],
     [
-      "USB_DP",
+      "NC",
       "PA12",
       33,
-      "USB D+"
+      "Not connected"
     ],
     [
       "I2C_SCL",
@@ -949,14 +921,14 @@
   "footprints": {
     "Package_QFP__LQFP-48_7x7mm_P0.5mm": "Package_QFP:LQFP-48_7x7mm_P0.5mm",
     "Package_SO__SOIC-28W_7.5x17.9mm_P1.27mm": "Package_SO:SOIC-28W_7.5x17.9mm_P1.27mm",
-    "Connector_USB__USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal": "Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal",
+    "Connector_USB__SHOU_HAN_TYPE-C-6P-073_C668623": "SHOU HAN TYPE-C 6P(073) / LCSC C668623；供应商焊盘数据；四个外侧镀铜椭圆槽；无中间圆形定位孔",
     "Fuse__Fuse_1206_3216Metric": "Fuse:Fuse_1206_3216Metric",
     "Package_TO_SOT_SMD__SOT-23-5": "Package_TO_SOT_SMD:SOT-23-5",
     "Capacitor_SMD__C_0603_1608Metric": "Capacitor_SMD:C_0603_1608Metric",
     "Package_TO_SOT_SMD__SOT-23-6": "Package_TO_SOT_SMD:SOT-23-6",
     "Resistor_SMD__R_0603_1608Metric": "Resistor_SMD:R_0603_1608Metric",
-    "Button_Switch_SMD__SW_SPST_TL3342": "Button_Switch_SMD:SW_SPST_TL3342",
-    "Connector_PinHeader_2.54mm__PinHeader_1x05_P2.54mm_Vertical": "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical",
+    "Button_Switch_SMD__SW_SPST_B3U-1000P": "Button_Switch_SMD:SW_SPST_B3U-1000P；Omron B3U-1000P / LCSC C231329",
+    "Connector_JST__JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical": "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
     "Package_TO_SOT_SMD__SOT-23": "Package_TO_SOT_SMD:SOT-23",
     "Connector_JST__JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical": "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
     "Connector_JST__JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical": "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
@@ -975,7 +947,7 @@
     "pinout_page": 37,
     "power_figure": 13,
     "power_page": 55,
-    "usb_bootloader": "AN2606 Rev70 chapter 11 table 23",
+    "usb_bootloader": "MCU supports ROM USB DFU, but current board has no D+/D- connection; use J-Link SWD",
     "application_clock": "24MHz HSE；ABM8-24.000MHZ-10-D2Y-T；C407/C408 初值12pF C0G"
   },
   "revision": "A2"

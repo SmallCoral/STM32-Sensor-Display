@@ -29,7 +29,7 @@ MCU 和新增晶振的 STEP 模型保存在 `libraries/SSD.3dshapes/`，通过 `
 
 ## 24MHz 外部晶振
 
-C562 的 ROM USB DFU 不要求外部晶振。板上的 24MHz HSE 供应用程序使用；ROM DFU 仍按 AN2606 第11章表23使用内部时钟。
+C562 的 ROM USB DFU 本身不要求外部晶振，但当前 A3 已取消 USB 数据线路，PA11/PA12 空接；板上的 24MHz HSE 仅供应用程序使用。
 
 | 器件 | 参数 / 连接 |
 | --- | --- |
@@ -55,6 +55,6 @@ DS201 的16个铜焊盘从 **2.0mm 改为1.8mm**，1脚仍以方形识别，其�
 
 ## 验证与打开方式
 
-A2 原理图和 PCB 曾各有 59 个器件。当前 A3 原理图及 BOM 已因宽压双路 DCDC 增至 68 个器件，PCB 仍是 A2 的 59 个封装。`review/` 中的 ERC、网表和 DRC 文件早于 A3 修改；同步新电源并完成布局布线后需要重新生成检查报告。
+A2 原理图和 PCB 曾各有 59 个器件。当前 A3 原理图及 BOM 已因宽压双路 DCDC、J102 与 J101 6P 供电接口调整为 68 个器件，PCB 仍是 A2 的 59 个封装。`review/` 中的 ERC、网表和 DRC 文件早于 A3 修改；同步新电源和调试接口并完成布局布线后需要重新生成检查报告。
 
 修改前备份见 [before_hse_footprint_revision.zip](../review/before_hse_footprint_revision.zip)。若 KiCad 仍显示旧封装，关闭相关窗口后重新打开工程；重载前先处理尚未保存的本地改动。

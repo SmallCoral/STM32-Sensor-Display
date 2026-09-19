@@ -1518,7 +1518,6 @@
 		(at 20.32 19.05 0)
 		(effects
 			(font
-				(face "Noto Sans CJK SC")
 				(size 2.54 2.54)
 			)
 			(justify left)
@@ -1530,7 +1529,6 @@
 		(at 109.22 191.77 0)
 		(effects
 			(font
-				(face "Noto Sans CJK SC")
 				(size 2.54 2.54)
 			)
 			(justify left)
@@ -1542,7 +1540,6 @@
 		(at 19.05 104.14 0)
 		(effects
 			(font
-				(face "Noto Sans CJK SC")
 				(size 2.54 2.54)
 			)
 			(justify left)
@@ -1554,7 +1551,6 @@
 		(at 19.05 95.25 0)
 		(effects
 			(font
-				(face "Noto Sans CJK SC")
 				(size 2.54 2.54)
 			)
 			(justify left)
@@ -3531,7 +3527,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SSD:Button_Switch_SMD__SW_SPST_TL3342"
+		(property "Footprint" "SSD:Button_Switch_SMD__SW_SPST_B3U-1000P"
 			(at 25.4 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -3542,7 +3538,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://components.omron.com/us-en/sites/components.omron.com.us/files/datasheet_pdf/A162-E1.pdf"
 			(at 25.4 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -3553,8 +3549,8 @@
 				)
 			)
 		)
-		(property "Description" ""
-			(at 25.4 180.34 0)
+		(property "Description" "Omron B3U-1000P ultra-small 3.0x2.5mm top-actuated SPST-NO tactile switch"
+			(at 60.452 168.148 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

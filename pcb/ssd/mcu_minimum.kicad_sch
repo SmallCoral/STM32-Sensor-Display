@@ -1628,7 +1628,7 @@
 		)
 		(uuid "00dab21f-9886-5f7e-883d-38f7cd451cae")
 	)
-	(text "外围接口保持原引脚：\nPA0：温度 ADC；PA1：流量计数；\nPA11 / PA12：USB；PB6 / PB7：I²C；\nPA13 / PA14：SWD；PC13：用户按键。"
+	(text "外围接口引脚：\nPA0：温度 ADC；PA1：流量计数；\nPA11 / PA12：空接；PB6 / PB7：I²C；\nPA13 / PA14：SWD；PC13：用户按键。"
 		(exclude_from_sim no)
 		(at 193.04 114.3 0)
 		(effects
@@ -1640,7 +1640,7 @@
 		)
 		(uuid "06949554-1233-5109-aaa2-636437b00487")
 	)
-	(text "启动与复位按键、上下拉和 SWD 接口已在 USB 页绘制。\nBOOT_SEL=1 时：按住启动键，按下并释放复位键，再释放启动键。\n未用 GPIO 在固件中配置为确定电平；保留 SWD 调试。\n本页电阻、电容为 0603；未使用引脚标记为空接。"
+	(text "启动与复位按键、上下拉和 J102 SWD 接口已在电源页绘制。\n下载与在线调试统一使用 J-Link；J101 不含 USB 数据。\n未用 GPIO 在固件中配置为确定电平；保留 SWD 调试。\n本页电阻、电容为 0603；未使用引脚标记为空接。"
 		(exclude_from_sim no)
 		(at 19.05 184.15 0)
 		(effects
@@ -1652,7 +1652,7 @@
 		)
 		(uuid "4da37958-0e97-5c25-9bd7-38a2ebdc7069")
 	)
-	(text "24MHz 外部晶振；负载电容初值 12pF\n应用程序启用 HSE；ROM DFU 仍由内部 HSI / CRS 驱动"
+	(text "24MHz 外部晶振；负载电容初值 12pF\n应用程序启用 HSE；PA11/PA12 当前空接，下载调试使用 J-Link SWD"
 		(exclude_from_sim no)
 		(at 19.05 26.67 0)
 		(effects
@@ -1829,6 +1829,10 @@
 		(uuid "48a2a1ae-ce27-5841-ba34-a1cba92c79b2")
 	)
 	(no_connect
+		(at 144.78 86.36)
+		(uuid "4d5f7f79-3be0-4f33-8ed2-7d9baf7c3bb0")
+	)
+	(no_connect
 		(at 144.78 114.3)
 		(uuid "56f33f7a-eddf-5c56-9922-43e8dd351f55")
 	)
@@ -1855,6 +1859,10 @@
 	(no_connect
 		(at 144.78 124.46)
 		(uuid "85711ab1-52c0-5609-8774-8d83bc2c3732")
+	)
+	(no_connect
+		(at 144.78 88.9)
+		(uuid "96c43a2d-3b8a-4f72-9a77-26f6b8cc4c21")
 	)
 	(no_connect
 		(at 144.78 83.82)
@@ -1897,16 +1905,6 @@
 			(type default)
 		)
 		(uuid "08aec182-c89c-4862-a224-2eabfa01a030")
-	)
-	(wire
-		(pts
-			(xy 144.78 86.36) (xy 172.72 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1083de66-2e2c-5f00-9ac7-9513628be579")
 	)
 	(wire
 		(pts
@@ -2037,16 +2035,6 @@
 			(type default)
 		)
 		(uuid "6907eacb-f389-4008-b6f0-d46208f88bfa")
-	)
-	(wire
-		(pts
-			(xy 144.78 88.9) (xy 172.72 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6c55c4cf-67e5-5129-b64f-6ca401a5c7c3")
 	)
 	(wire
 		(pts
@@ -2420,28 +2408,6 @@
 			)
 		)
 	)
-	(global_label "USB_DM"
-		(shape bidirectional)
-		(at 172.72 86.36 0)
-		(effects
-			(font
-				(size 0.95 0.95)
-			)
-			(justify left)
-		)
-		(uuid "1a2e8b4f-8f3c-509a-98d3-6b29f0385eec")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 172.72 86.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
 	(global_label "I2C_SCL"
 		(shape bidirectional)
 		(at 172.72 116.84 0)
@@ -2608,28 +2574,6 @@
 		(uuid "d1556b78-1393-5e1b-9e8e-689c1688caa7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 60.96 139.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "USB_DP"
-		(shape bidirectional)
-		(at 172.72 88.9 0)
-		(effects
-			(font
-				(size 0.95 0.95)
-			)
-			(justify left)
-		)
-		(uuid "d64d2bbf-db7b-5bea-9983-bcfa5ee2362a")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 172.72 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

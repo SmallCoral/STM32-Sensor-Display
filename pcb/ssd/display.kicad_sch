@@ -1939,7 +1939,6 @@
 		(at 19.05 165.1 0)
 		(effects
 			(font
-				(face "Noto Sans CJK SC")
 				(size 2.54 2.54)
 			)
 			(justify left)
@@ -1951,7 +1950,6 @@
 		(at 16.764 17.272 0)
 		(effects
 			(font
-				(face "Noto Sans CJK SC")
 				(size 2.54 2.54)
 			)
 			(justify left)
@@ -1963,7 +1961,6 @@
 		(at 19.05 190.5 0)
 		(effects
 			(font
-				(face "Noto Sans CJK SC")
 				(size 2.54 2.54)
 			)
 			(justify left)

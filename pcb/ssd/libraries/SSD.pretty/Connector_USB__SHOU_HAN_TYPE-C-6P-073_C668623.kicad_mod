@@ -1,0 +1,179 @@
+(footprint "Connector_USB__SHOU_HAN_TYPE-C-6P-073_C668623"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "SHOU HAN TYPE-C 6P(073), LCSC C668623; power-only USB Type-C receptacle")
+	(tags "USB C Type-C power only 6P C668623")
+	(property "Reference" "REF**"
+		(at 0 -6.125 0)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SHOU_HAN_TYPE-C-6P-073_C668623"
+		(at 0 6.125 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://jlcpcb.com/partdetail/TYPE-C%206P(073)/C668623"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "6-pin Type-C power-only receptacle; four plated oval shell tabs; no center locating holes"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC Part" "C668623")
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -4.5 -2.08)
+		(end -3.33 -2.08)
+		(stroke (width 0.25) (type default))
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start -3.33 -2.08)
+		(end -3.33 -2.28)
+		(stroke (width 0.25) (type default))
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start 3.33 -2.08)
+		(end 4.5 -2.08)
+		(stroke (width 0.25) (type default))
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start -4.5 -0.48)
+		(end -4.5 0.97)
+		(stroke (width 0.25) (type default))
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start 4.5 -0.53)
+		(end 4.5 0.92)
+		(stroke (width 0.25) (type default))
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start -4.5 3.3)
+		(end -4.5 4.73)
+		(stroke (width 0.25) (type default))
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start -4.5 4.73)
+		(end 4.5 4.73)
+		(stroke (width 0.25) (type default))
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start 4.5 3.33)
+		(end 4.5 4.73)
+		(stroke (width 0.25) (type default))
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start -4.47 -2.08)
+		(end 4.47 -2.08)
+		(stroke (width 0.05) (type default))
+		(layer "F.CrtYd")
+	)
+	(fp_line
+		(start 4.47 -2.08)
+		(end 4.47 4.72)
+		(stroke (width 0.05) (type default))
+		(layer "F.CrtYd")
+	)
+	(fp_line
+		(start 4.47 4.72)
+		(end -4.47 4.72)
+		(stroke (width 0.05) (type default))
+		(layer "F.CrtYd")
+	)
+	(fp_line
+		(start -4.47 4.72)
+		(end -4.47 -2.08)
+		(stroke (width 0.05) (type default))
+		(layer "F.CrtYd")
+	)
+	(pad "A12" smd rect
+		(at 2.75 -2.13)
+		(size 0.8 1.2)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+	)
+	(pad "A9" smd rect
+		(at 1.52 -2.13)
+		(size 0.7 1.2)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+	)
+	(pad "B5" smd rect
+		(at 0.5 -2.13)
+		(size 0.7 1.2)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+	)
+	(pad "A5" smd rect
+		(at -0.5 -2.13)
+		(size 0.7 1.2)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+	)
+	(pad "B9" smd rect
+		(at -1.52 -2.13)
+		(size 0.7 1.2)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+	)
+	(pad "B12" smd rect
+		(at -2.75 -2.13)
+		(size 0.8 1.2)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+	)
+	(pad "SH" thru_hole oval
+		(at -4.32 -1.68)
+		(size 1 1.7)
+		(drill oval 0.5 1.2)
+		(layers "*.Cu" "*.Mask")
+	)
+	(pad "SH" thru_hole oval
+		(at 4.32 -1.68)
+		(size 1 1.7)
+		(drill oval 0.5 1.2)
+		(layers "*.Cu" "*.Mask")
+	)
+	(pad "SH" thru_hole oval
+		(at -4.32 2.13)
+		(size 1 1.7)
+		(drill oval 0.5 1.2)
+		(layers "*.Cu" "*.Mask")
+	)
+	(pad "SH" thru_hole oval
+		(at 4.32 2.13)
+		(size 1 1.7)
+		(drill oval 0.5 1.2)
+		(layers "*.Cu" "*.Mask")
+	)
+)

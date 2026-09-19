@@ -60,13 +60,13 @@
           "hatch_smoothing_level": 0,
           "hatch_smoothing_value": 0.1,
           "hatch_thickness": 1.0,
-          "min_clearance": 0.5,
+          "min_clearance": 0.2,
           "min_island_area": 10.0,
-          "min_thickness": 0.25,
-          "pad_connection": 1,
+          "min_thickness": 0.2,
+          "pad_connection": 2,
           "remove_islands": 0,
-          "thermal_relief_gap": 0.5,
-          "thermal_relief_spoke_width": 0.5
+          "thermal_relief_gap": 0.2,
+          "thermal_relief_spoke_width": 0.2
         }
       },
       "diff_pair_dimensions": [],
@@ -671,7 +671,7 @@
     ],
     [
       "13ed9c95-4fee-5d34-9d3a-b307ed0bc91c",
-      "USB-C 供电、原生 USB 烧录与调试"
+      "Type-C 6P 供电与 J-Link SWD 调试"
     ],
     [
       "fce32a2b-0192-5769-a779-d47880dd735c",

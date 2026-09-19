@@ -1,6 +1,6 @@
 # A3 设计依据与待验证项
 
-主控为 STM32C562CET6。A3 原理图包含 68 个器件；PCB 仍是 A2 的 59 个封装，宽压 DCDC 尚未同步布局布线，不能直接投板。供电与芯片勘误记录在 [C562 迁移核对](C562_MIGRATION.md)，晶振和封装尺寸记录在 [A2 修订](HSE_FOOTPRINT_A2.md)。
+主控为 STM32C562CET6。A3 原理图包含 68 个器件；PCB 仍是 A2 的 59 个封装，宽压 DCDC、J101 6P 接口与 J102 尚未同步布局布线，不能直接投板。供电与芯片勘误记录在 [C562 迁移核对](C562_MIGRATION.md)，晶振和封装尺寸记录在 [A2 修订](HSE_FOOTPRINT_A2.md)。
 
 ## 原始器件文档
 
@@ -55,21 +55,23 @@ R201～R210 初值为 330Ω，用来限制首次点亮时的峰值电流。HT16K
 
 A2 的焊盘直径为 1.8mm，钻孔 1.0mm，标称单边焊环 0.40mm。供应商只给了针径公差，没有标称针径，所以孔径仍是暂定值。打样前应测量实物针径，并将 [1:1 对位图](../review/display_footprint_1to1.pdf) 按 100% 比例打印检查；打印时关闭“适合页面”，先测量图中的 20mm 标尺。封装的 58mm 轮廓不是 PCB 板框。
 
-当前 PCB 是 A2 供电方案，尚未同步 A3 的宽压 DCDC。更新 PCB 时，USB ESD 应紧靠接口，D+/D− 从接口到 MCU 保持连续成对，并按实际叠层计算 90Ω 差分阻抗。两路 DCDC 的输入电容、自举电容、芯片 GND 和功率电感必须形成最小热回路，SW 铜皮要短小并远离 USB 差分线、晶振和 NTC_ADC。传感器模拟地与 LED COM 回流不要共用狭窄路径；屏幕下方的器件高度仍需用实物核对。
+当前 PCB 是 A2 供电方案，尚未同步 A3 的宽压 DCDC 与 J101/J102。J101 已取消 D+/D−，布局时只需保证 VBUS、GND 有足够铜宽，并让 CC1/CC2 的 5.1kΩ 下拉靠近接口。两路 DCDC 的输入电容、自举电容、芯片 GND 和功率电感必须形成最小热回路，SW 铜皮要短小并远离晶振和 NTC_ADC。传感器模拟地与 LED COM 回流不要共用狭窄路径；屏幕下方的器件高度仍需用实物核对。
 
 ## USB 电源与器件采购
 
-VBUS 作为外部已经提供的 **5～12V 输入**，本板不包含 USB PD 协商控制器；连接标准 USB-C 电源时，没有协商就只应得到 5V，不能依靠本电路向 PD 适配器申请 12V。F101 选 Littelfuse `1206L050/24WR` 或等效 1206 自恢复保险丝，保持电流 0.5A、最大工作电压至少 24V，为 12V 输入保留额定电压余量。
+后级 `VIN_SYS`、F101 与两路 DCDC 仍按 **5～12V** 设计，但 J101 采用的 C668623 产品资料标称 5V/3A，因此 **不得从 J101 输入 12V**。本板不包含 USB PD 协商控制器，连接标准 USB-C 电源时只能按 5V 使用；如要从同一接口输入 12V，必须更换为厂商明确标注额定电压不低于 12V 的连接器。F101 选 Littelfuse `1206L050/24WR` 或等效 1206 自恢复保险丝，保持电流 0.5A、最大工作电压至少 24V。
 
-保险丝后的 `VIN_SYS` 同时输入 U101/AP63203 和 U102/AP63205。U101 用 3.9µH 生成独立 +3V3，直接供 MCU、VREF、NTC 分压和 3.3V 逻辑；U102 用 4.7µH 生成 +5V，供 HT16K33 和流量传感器。两路都不级联，因此 5V 显示负载变化不会先经过 MCU 电源。D101/USBLC6-2SC6 的 VBUS 脚接稳压后的 +5V，禁止接可能为 12V 的原始 VBUS。
+J101 改用 SHOU HAN `TYPE-C 6P(073)`（LCSC `C668623`）。它是仅供电接口，六个信号焊盘为 A9/B9 VBUS、A12/B12 GND、A5 CC1、B5 CC2；没有 D+/D−，所以原理图已删除 USB 数据网络、D101/USBLC6-2SC6，并将 MCU 的 PA11/PA12 标为空接。封装按供应商数据建立，只有四个外侧镀铜椭圆屏蔽壳固定槽，没有妨碍 VBUS 出线的中间圆形定位孔。程序下载与调试统一使用 J102 / J-Link SWD。
+
+保险丝后的 `VIN_SYS` 同时输入 U101/AP63203 和 U102/AP63205。U101 用 3.9µH 生成独立 +3V3，直接供 MCU、VREF、NTC 分压和 3.3V 逻辑；U102 用 4.7µH 生成 +5V，供 HT16K33 和流量传感器。两路都不级联，因此 5V 显示负载变化不会先经过 MCU 电源。
 
 C101 为 100nF / 25V 高频旁路；C102、C110 是 U101、U102 各自就近的 10µF / 35V 输入电容，输入总标称电容约 20.1µF。C103/C105 与 C107/C108 分别构成两路 2×22µF 输出电容，使用 1206 以保证直流偏压后的有效容量；C106/C109 为 100nF 自举电容。完整样机仍需在 5V 和 12V 输入下测量插入浪涌、输出纹波和负载瞬态。
 
 C401～C403 分别为三个 VDD 的 100nF 去耦，C404 为 4.7µF / 10V 总去耦，C406 为 VREF 的 100nF 旁路。**C405 是 VCAP 专用的 2.2µF 电容**，仅连接 U401-22 与地；额定电压至少 10V，3MHz 时 ESR＜20mΩ，采购时需核对阻抗曲线。上述电容全部为 0603，最终布局必须靠近对应供电脚。
 
-整机输入仍以 0.5A 自恢复保险丝限流，平均和峰值电流留待样机测量。5V 输入时 U102 工作在低压差模式，必须在最大显示亮度和流量传感器负载下确认 +5V 不低于 HT16K33 的 4.5V 下限；首次点屏从低亮度开始。U101 的 +3V3 在 5～12V 输入范围内都有足够压差，样机验收应确认 MCU 端为 3.3V±3%、启动单调、满负载纹波建议小于 50mVpp，并检查 USB DFU 与 ADC 读数。
+整机输入仍以 0.5A 自恢复保险丝限流，平均和峰值电流留待样机测量。5V 输入时 U102 工作在低压差模式，必须在最大显示亮度和流量传感器负载下确认 +5V 不低于 HT16K33 的 4.5V 下限；首次点屏从低亮度开始。U101 的 +3V3 在后级 5～12V 输入范围内都有足够压差，样机验收应确认 MCU 端为 3.3V±3%、启动单调、满负载纹波建议小于 50mVpp，并检查 J-Link SWD 与 ADC 读数。
 
-SW101、SW102、SW301 使用 TL3342 系列贴片封装，采购前核对本体尺寸和触点排列。PA13 / PA14 上仍保留 SWD 信号，但当前 PCB 没有专用 J102 调试连接器；调试时需要另行引出 SWDIO、SWCLK、NRST、3.3V 和 GND。
+SW101、SW102、SW301 改用 Omron `B3U-1000P`（LCSC `C231329`）顶按常开贴片轻触开关；本体约 3.0×2.5mm、高 1.6mm，无定位柱，两端焊盘分别对应开关的 1、2 脚。按帽直径约 1.5mm，裸板适合用指甲按压；如配外壳，应给三个按键设计小顶杆并核对装配行程。J102 改用与 J-Link 插线一致的 JST XH `B4B-XH-A` 立式 4P 接口，标准间距为 2.50mm；线序定义为 1=VREF（板上 +3V3）、2=SWDIO（PA13）、3=SWCLK（PA14）、4=GND。VREF 只用于让 J-Link 检测目标电平，不作为给整板供电的输入；该 4 芯接口不含 NRST，需要连接状态下复位时使用板上 SW102。
 
 ## 参考资料与库来源
 
@@ -82,6 +84,8 @@ SW101、SW102、SW301 使用 TL3342 系列贴片封装，采购前核对本体�
 - [AP63203 / AP63205](https://www.diodes.com/datasheet/download/AP63200-AP63201-AP63203-AP63205.pdf)：Diodes Incorporated，3.8～32V、固定 3.3V / 5V 同步降压，推荐 3.9µH / 4.7µH、10µF 输入、2×22µF 输出和 100nF 自举电容。
 - [Littelfuse 1206L 系列](https://www.littelfuse.com/assetdocs/littelfuse-ptc-1206l-datasheet?assetguid=2b6a1515-d4ee-4c83-8bd4-152b4901b8f5)：F101 的 0.5A 保持电流、24V 最大工作电压和 1206 封装依据。
 - [Sunlord SWPA 系列](https://www.sunlordinc.com/uploads/files/20221122/SWPA%20series%20of%20SMD%20Power%20Inductor.pdf)：L101/L102 的电感、电流和官方焊盘尺寸依据。
+- [SHOU HAN TYPE-C 6P(073) / C668623](https://jlcpcb.com/partdetail/TYPE-C%206P(073)/C668623)：J101 的 6P 仅供电 Type-C 接口、5V/3A 资料额定与机械焊盘依据；项目封装按供应商数据建立。
+- [Omron B3U](https://components.omron.com/us-en/sites/components.omron.com.us/files/datasheet_pdf/A162-E1.pdf)：SW101、SW102、SW301 的 3.0×2.5mm 顶按轻触开关尺寸、额定值和推荐焊盘。
 - [SN74LVC1G17](reference/SN74LVC1G17.pdf)：Texas Instruments，`https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf`。
 - [BAV199 文本摘录](reference/BAV199_reference.txt)：Nexperia，2023-04-01 数据手册；原文 `https://assets.nexperia.com/documents/data-sheet/BAV199.pdf`。
 - 标准符号和焊盘来自 KiCad 10.0.6，并复制到项目内的 `libraries/`。标准封装引用 `${KICAD10_3DMODEL_DIR}` 下的 STEP 模型；MCU、晶振和 5858 屏幕使用项目内 STEP。C562、HT16K33 和屏幕符号，以及屏幕封装均为项目自建。库许可见 `https://www.kicad.org/libraries/license/`，文件来源与本地名称映射记录在 `review/design_manifest.json`。
