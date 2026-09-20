@@ -35,3 +35,6 @@ __pycache__/
 .env.*
 *.pem
 *.key
+
+# KiCad 将 Windows 绝对导出路径误作相对目录时产生的文件
+pcb/ssd/C:/

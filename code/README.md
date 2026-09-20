@@ -1,18 +1,30 @@
-# STM32C562 固件占位目录
+# STM32C562 固件
 
-目标芯片为 STM32C562CET6，接口定义以 [KiCad 工程](../pcb/ssd/README.md) 为准。STM32F103 的旧代码不再放在当前文件树中，可从 Git 历史查阅。
+本目录用于 STM32C562CET6 固件。外设连接以 [KiCad 工程说明](../pcb/ssd/README.md) 为准。
 
-这里目前只有目录结构，没有启动代码、HAL、构建系统或应用程序，因而不能直接编译或烧录。空目录使用 `.gitkeep` 保留。
+## 目录
 
-| 目录 | 后续用途 |
+| 目录 | 内容 |
 | --- | --- |
-| `Core/Inc/` | 芯片初始化与中断等头文件 |
-| `Core/Src/` | 芯片初始化、中断与程序入口 |
-| `Core/Startup/` | 与 STM32C562 匹配的启动文件 |
-| `Drivers/` | 适配 STM32C5 的 CMSIS、HAL / LL 等依赖 |
-| `App/` | 温度与流量计算、校准、显示和按键逻辑 |
+| `Core/Inc/` | 系统初始化、中断和应用头文件 |
+| `Core/Src/` | 程序入口、系统初始化和中断处理 |
+| `Core/Startup/` | STM32C562 启动文件 |
+| `Drivers/` | CMSIS、HAL/LL 和器件驱动 |
+| `App/` | 温度换算、流量统计、显示和按键逻辑 |
 | `BSP/` | HT16K33、NTC、流量输入等板级接口 |
 
-建立固件工程时，按 [当前引脚分配](../pcb/ssd/README.md#外围信号映射) 配置 ADC、定时器和 I²C。PA11/PA12 当前空接，不配置 USB 数据；下载与调试使用 J-Link SWD。使用 24 MHz HSE 时需要在时钟树中显式启用，板上没有 LSE。
+## 外设配置
 
-固件应从 STM32C5 工程开始，旧 F1 工程的启动文件、链接脚本和引脚映射均不适用。
+| 功能 | 引脚 | 外设 |
+| --- | --- | --- |
+| NTC 温度采样 | PA0 | ADC1_IN0 |
+| 流量脉冲计数 | PA1 | TIM2_CH2 / EXTI |
+| 显示 I²C | PB6 / PB7 | I2C1 SCL / SDA |
+| 用户按键 | PC13 | GPIO / EXTI |
+| J-Link 调试 | PA13 / PA14 | SWDIO / SWCLK |
+| 启动按键 | PH2-BOOT0 | BOOT0 |
+| 外部晶振 | PH0 / PH1 | 24MHz HSE |
+
+PA11、PA12 在硬件上空接，不配置 USB。板上没有 32.768kHz LSE，时钟树使用内部时钟或 24MHz HSE。
+
+显示驱动 HT16K33 使用 7 位地址 `0x70`。流量传感器标称关系为 `F = 11Q`，其中 F 的单位为 Hz，Q 的单位为 L/min；温度换算使用 NTC 厂商提供的 R-T 表或 B 值公式。

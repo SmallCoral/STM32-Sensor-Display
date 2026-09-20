@@ -1,85 +1,131 @@
-# STM32 温度 / 流量显示板 A3 原理图
+# STM32 温度与流量显示板
 
-主控为 STM32C562CET6：Cortex-M33、最高 144MHz、512KB 闪存、128KB SRAM，LQFP48（7×7mm、0.5mm 脚距）。当前工程包含 A3 原理图和项目库；已经布局布线的 PCB 仍是 A2 供电方案，尚未同步新增 DCDC 器件。
+这是 STM32 Sensor Display 的 KiCad 硬件工程。电路由电源、MCU 最小系统、传感器接口和 LED 显示驱动四部分组成。
 
-MCU 焊盘采用 ST 图42的 1.20×0.30mm、0.50mm 脚距；圆屏焊盘直径为 1.8mm，钻孔为 1.0mm。
-
-常规电阻、电容采用 0603 英制 / 1608 公制，DCDC 的 10µF / 22µF 储能电容采用 1206。原理图注释使用中文；主导航页只表示模块关系，各功能电路放在独立子页中。
-
-## 打开与查看
-
-用 KiCad 10 打开 [ssd.kicad_pro](ssd.kicad_pro)。所有使用的符号与封装通过项目内 `SSD` 库绑定，无需另外安装元件库。
+## 工程文件
 
 | 文件 | 内容 |
 | --- | --- |
-| [ssd.kicad_sch](ssd.kicad_sch) | 四个功能模块的关系导航 |
-| [mcu_minimum.kicad_sch](mcu_minimum.kicad_sch) | U401：STM32C562CET6，完整供电、VCAP、VREF 与接口连接 |
-| [usb_power.kicad_sch](usb_power.kicad_sch) | 6P Type-C 供电、启动 / 复位按键、J-Link SWD |
-| [display.kicad_sch](display.kicad_sch) | HT16K33、I²C 电平转换、显示屏 |
-| [sensors.kicad_sch](sensors.kicad_sch) | 温度、流量、用户按键 |
-| [A2 原理图 PDF](review/ssd_schematic.pdf) | 历史预览，尚未包含 A3 宽压 DCDC |
-| [ssd.kicad_pcb](ssd.kicad_pcb) | A2 的 59 个封装、板框和当前走线；尚未同步 A3 电源 |
-| [A2 封装预览](review/footprints_staged.pdf) | 历史预览，包含 MCU、去耦电容与 24MHz 晶振电路 |
-| [BOM.csv](docs/BOM.csv) | 本版器件、采购规格及封装 |
-| [设计说明](docs/DESIGN_NOTES.md) | 接口、屏幕映射、机械核对事项 |
-| [C562 迁移核对](docs/C562_MIGRATION.md) | 官方资料依据、最小系统清单、勘误说明 |
-| [A2 晶振与封装修订](docs/HSE_FOOTPRINT_A2.md) | 晶振选型、ST 专用焊盘及圆屏焊盘修改 |
-| [MCU 尺寸图](review/mcu_footprint_dimensioned.pdf) | 48 脚编号、焊盘尺寸及 1:1 对位 |
-| [圆屏 1:1 对位图](review/display_footprint_1to1.pdf) | 1.8mm 焊盘 / 1.0mm 钻孔 |
+| [ssd.kicad_pro](ssd.kicad_pro) | KiCad 10 工程入口 |
+| [ssd.kicad_sch](ssd.kicad_sch) | 原理图主页面 |
+| [mcu_minimum.kicad_sch](mcu_minimum.kicad_sch) | STM32C562 最小系统和 24MHz HSE |
+| [usb_power.kicad_sch](usb_power.kicad_sch) | Type-C 电源、双路 DCDC、BOOT、RESET 和 SWD |
+| [display.kicad_sch](display.kicad_sch) | HT16K33、I²C 电平转换和圆屏 |
+| [sensors.kicad_sch](sensors.kicad_sch) | NTC、霍尔流量传感器和用户按键 |
+| [ssd.kicad_pcb](ssd.kicad_pcb) | PCB 布局与布线 |
+| [libraries/](libraries/) | 项目符号、封装和 3D 模型 |
+| [docs/BOM.csv](docs/BOM.csv) | 器件清单 |
 
-A2 PCB 已有板框、布局和走线，但不能直接用于 A3 制造。更新电源器件、布局和走线后还需重新运行完整 ERC / DRC；当前没有可放行的生产文件。
+使用 KiCad 10 打开 `ssd.kicad_pro`。工程内自建库名为 `SSD`，3D 模型通过 `${KIPRJMOD}` 相对路径引用。
 
-## 最小系统
+## 电路结构
 
-| 器件 / 引脚 | 连接 |
+```text
+5V Type-C
+    │
+  F101
+    │ VIN_SYS
+    ├── AP63203 ── +3V3 ── STM32C562 / NTC / 3.3V 逻辑
+    └── AP63205 ── +5V  ── HT16K33 / 流量传感器
+
+STM32C562 ── I²C 电平转换 ── HT16K33 ── 58mm LED 圆屏
+     ├──── ADC ──── NTC
+     ├──── PA1 ──── 流量脉冲缓冲器
+     └──── SWD ──── J-Link
+```
+
+## 电源接口
+
+J101 为 SHOU HAN TYPE-C 6P(073)，LCSC `C668623`。接口没有 USB 数据焊盘，仅连接 VBUS、GND、CC1 和 CC2。
+
+| 网络 | 内容 |
 | --- | --- |
-| U401 | `SSD:STM32C562CET6`，封装 `SSD:STM32C562CET6_LQFP48_ST` |
-| VDD 24 / 36 / 48 | 全部接 +3V3；C401 / C402 / C403 各 100nF |
-| VSS 23 / 35 / 47 | 全部接 GND |
-| C404 | 4.7µF / 10V，MCU 总去耦 |
-| VCAP 22、C405 | 专用 2.2µF / ≥10V 陶瓷电容到地；不接 3.3V 或外部负载 |
-| VREF+ 9、C406 | 接 +3V3，100nF 旁路至 VREF− |
-| VREF− 8 | 接 GND |
-| NRST 7 | 接 USB 页的 R104、C104 和 SW102；J102 不含 NRST |
-| PH2-BOOT0 44 | 接 USB 页的 R103 下拉与 SW101 启动按键 |
+| VBUS | J101 的 A9/B9，5V 输入 |
+| CC1/CC2 | 各使用 5.1kΩ 下拉 |
+| F101 | 0.5A/24V 自恢复保险丝 |
+| VIN_SYS | 保险丝后电源，连接两路 DCDC |
+| +3V3 | AP63203WU-7 固定输出 |
+| +5V | AP63205WU-7 固定输出 |
 
-C405 在 3MHz 时 ESR 必须小于 20mΩ，须检查所购型号的阻抗曲线。每个 VDD 去耦、VCAP 电容和 VREF 旁路必须在最终 PCB 布局中靠近相应引脚；当前暂放位置不是最终电源布局。
+C668623 的额定电压为 5V，因此 J101 只用于 5V 供电。AP63203/AP63205 本身支持更高输入电压，但 12V 需要从额定电压合适的独立接口接入。
 
-板上安装 24MHz HSE 无源晶振，直接连接 PH0 / PH1（5 / 6 脚），供应用程序启用。晶振型号为 ABM8-24.000MHZ-10-D2Y-T，CL=10pF，两只负载电容初值为 12pF / C0G。未用引脚在原理图中标为空接；PA11 / PA12 未连接 USB 数据。PA13 / PA14 通过 J102 引出为 SWDIO / SWCLK。
+## MCU 最小系统
 
-## 外围信号映射
+| 项目 | 参数 |
+| --- | --- |
+| MCU | STM32C562CET6 |
+| 封装 | LQFP48，7×7mm，0.5mm 脚距 |
+| VDD | 3 组 +3V3，每组 100nF 去耦 |
+| 总去耦 | 4.7µF/10V |
+| VCAP | 2.2µF/10V，低 ESR |
+| VREF | +3V3，100nF 旁路至 VREF− |
+| HSE | 24MHz ABM8 晶振，6.8pF C0G 负载电容 |
+| LSE | 未安装 |
 
-下表按 DS14927 Rev2 图5、引脚表和表14复用功能整理。
+## MCU 信号
 
-| 外围网络 | MCU 引脚 | LQFP48 脚号 | 用途 |
-| --- | --- | --- | --- |
+| 网络 | MCU 引脚 | 脚号 | 用途 |
+| --- | --- | ---: | --- |
+| USER_KEY | PC13 | 2 | 用户按键，低电平有效 |
 | NTC_ADC | PA0 | 10 | ADC1_IN0 |
-| FLOW_PULSE | PA1 | 11 | TIM2_CH2 / AF1，或 EXTI |
-| 未使用 | PA11 | 32 | 空接 |
-| 未使用 | PA12 | 33 | 空接 |
-| I2C_SCL | PB6 | 42 | I2C1_SCL / AF4 |
-| I2C_SDA | PB7 | 43 | I2C1_SDA / AF4 |
-| USER_KEY | PC13 | 2 | 低电平按下 |
+| FLOW_PULSE | PA1 | 11 | TIM2_CH2 / EXTI |
 | SWDIO | PA13 | 34 | 调试数据 |
 | SWCLK | PA14 | 37 | 调试时钟 |
-| MCU_BOOT0 | PH2-BOOT0 | 44 | 启动模式选择 |
-| MCU_NRST | NRST | 7 | 复位 |
+| I2C_SCL | PB6 | 42 | I2C1_SCL / AF4 |
+| I2C_SDA | PB7 | 43 | I2C1_SDA / AF4 |
+| MCU_BOOT0 | PH2 | 44 | 启动模式选择 |
+| HSE | PH0/PH1 | 5/6 | 外部晶振 |
 
-## Type-C 供电与 J-Link 烧录
+PA11、PA12 空接，不使用 USB 枚举和 DFU。
 
-J101 使用 SHOU HAN `TYPE-C 6P(073)`（LCSC `C668623`），只连接 VBUS、GND、CC1、CC2；CC1、CC2 各有 5.1kΩ 下拉。接口没有 D+/D−，USBLC6-2SC6 数据 ESD 器件也已删除，因此不能进行 USB 枚举或 DFU。
+## SWD 接口
 
-C668623 的产品资料标称 5V/3A，J101 只能作为 5V 输入。后级 `VIN_SYS`、F101 和两路 DCDC 仍按 5～12V 设计；若要输入 12V，必须另选额定电压不低于 12V 的连接器，不能直接给当前 J101 加 12V。
+J102 使用 JST XH `B4B-XH-A` 4P 立式连接器，间距 2.50mm。
 
-下载与在线调试使用 J102 和 J-Link。J102 为 JST XH 4P，线序为 1=VREF/+3V3、2=SWDIO、3=SWCLK、4=GND。VREF 仅用于检测目标电平，不能给整板供电；接口不含 NRST，需要复位时使用板上 SW102。
+| 引脚 | 定义 |
+| --- | --- |
+| 1 | VREF / +3V3 |
+| 2 | SWDIO |
+| 3 | SWCLK |
+| 4 | GND |
 
-## 检查状态
+VREF 是目标电平参考，不用于给整板供电。复位使用板上的 SW102。
 
-- A3 原理图和 BOM 包含 68 个器件；3.3V / 5V 分别由 AP63203 / AP63205 从 5～12V 输入独立降压。
-- A2 PCB 仍含 59 个封装、246 个焊盘、305 段走线和 6 个过孔，59 个封装均有 3D 模型绑定；A3 电源尚未同步。
-- [主控引脚核对](review/mcu_pinout_checks.json)记录了 C562 的 48 脚映射和封装焊盘检查。
-- `review/` 中的 PDF、ERC、网表和 DRC 文件来自较早的 A2 检查点，不能作为 A3 的放行依据。
-- 更新 PCB 后需在合规输入连接器接入 5V / 12V 和最大负载下确认 MCU 端 3.3V 为 3.3V±3%，启动单调，纹波建议小于 50mVpp；当前 C668623 的 J101 只允许 5V。
-- 屏幕孔径与安装方向、接插件配套、亮度和 Type-C 5V 插入浪涌仍需样机验证。
+## 传感器接口
 
-历史快照包括 [HSE 与封装修订前版本](review/before_hse_footprint_revision.zip) 和 [C562 迁移前版本](review/before_c562_migration.zip)。主控参考资料集中在 [STM32C562CET6 官方资料包](../../docs/STM32C562CET6_官方资料包_2026-09-16/00_README_中文.md)，其中的原始 PDF 未改动。
+J301 连接 50kΩ NTC，1 脚为 +3V3，2 脚为信号。板上使用 49.9kΩ/0.1% 分压电阻、1kΩ 串联电阻、100nF 滤波电容和 BAV199 钳位二极管。
+
+J302 连接 BTL-004A 霍尔流量传感器：1=+5V/红线，2=信号/黄线，3=GND/白线。传感器输出经 RC 滤波和 SN74LVC1G17 施密特缓冲后连接 MCU。
+
+## 显示
+
+U201 使用 HT16K33 驱动 5858-1DRWB-10 圆形 LED 屏。HT16K33 工作在 5V，MCU I²C 工作在 3.3V，两侧通过 BSS138 转换电平。
+
+- I²C 地址：`0x70`
+- COM：使用 COM0～COM5
+- ROW：使用 ROW0～ROW9
+- 段电阻：R201～R210，330Ω
+- 显示屏：16 针，2.54mm 针距，两排间距 35.08mm
+
+## PCB 参数
+
+| 项目 | 参数 |
+| --- | --- |
+| 板层 | 2 层 |
+| 板厚 | 1.6mm |
+| 最小常用线宽/间距 | 0.20mm / 0.20mm |
+| +3V3 | 分支 0.20mm，主干 0.80mm |
+| +5V | 0.60mm，局部主干 0.80mm |
+| VIN_SYS / SW | 0.80mm |
+| 普通过孔 | 0.60mm / 0.30mm 钻孔 |
+| 常规阻容 | 0603 |
+| DCDC 储能电容 | 1206 |
+
+## 相关文档
+
+- [硬件设计说明](docs/DESIGN_NOTES.md)
+- [STM32C562 最小系统](docs/C562_MIGRATION.md)
+- [晶振与封装](docs/HSE_FOOTPRINT_A2.md)
+- [MCU 封装尺寸图](review/mcu_footprint_dimensioned.pdf)
+- [圆屏 1:1 对位图](review/display_footprint_1to1.pdf)
+- [STM32C562 官方资料包](../../docs/STM32C562CET6_官方资料包_2026-09-16/00_README_中文.md)
