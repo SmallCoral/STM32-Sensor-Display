@@ -19,8 +19,12 @@ U401 使用 `SSD:STM32C562CET6_LQFP48_ST`，尺寸依据 ST DS14927 的 LQFP48 �
 
 顶视图脚号排列：1～12 沿左侧向下，13～24 沿下侧向右，25～36 沿右侧向上，37～48 沿上侧向左。
 
+<p align="center">
+  <img src="../review/mcu_footprint_3d.png" width="560" alt="STM32C562CET6 LQFP48 封装 3D 模型">
+</p>
+
 - [MCU 尺寸图与 1:1 对位图](../review/mcu_footprint_dimensioned.pdf)
-- [MCU 3D 模型图](../review/mcu_footprint_3d.png)
+- [MCU 3D 模型原图](../review/mcu_footprint_3d.png)
 - [焊盘引脚与坐标](../review/STM32C562CET6_焊盘引脚核对.csv)
 
 MCU STEP 模型位于 `libraries/SSD.3dshapes/`，通过 `${KIPRJMOD}` 相对路径引用。
@@ -58,7 +62,13 @@ DS201 使用 `SSD:ALS5858_1DRWB_10`。
 
 1 脚使用方形焊盘，位于正视图左上角。左排由上到下为 1～8，右排由下到上为 9～16。
 
+<p align="center">
+  <img src="../../../docs/media/reference/display-spec-mechanics-and-matrix.png" width="560" alt="5858-1DRWB-10 外形尺寸和 LED 矩阵">
+</p>
+
 - [圆屏 1:1 对位图](../review/display_footprint_1to1.pdf)
 - [显示屏规格书](../../../docs/20250303远帆5858-1DRWB-10%281%29.pdf)
+- [显示屏光电参数预览](../../../docs/media/reference/display-spec-optical-electrical.png)
+- [圆屏实物点亮照片](../../../docs/media/photos/display-lit-dark.jpg)
 
 显示屏 STEP 模型位于 `libraries/SSD.3dshapes/ALS5858_1DRWB_10.step`。

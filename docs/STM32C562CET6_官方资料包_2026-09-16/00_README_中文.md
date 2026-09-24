@@ -2,6 +2,8 @@
 
 本目录保存 STM32C562CET6 的 ST 官方文档、LQFP48 引脚表和最小系统器件表，供原理图、PCB 和固件开发查阅。
 
+> 本目录以保存上游资料原貌和校验信息为主。项目实物照片、演示视频及设计说明位于 [项目总览](../../README.md)、[硬件资料说明](../DESIGN_NOTES.md) 和 [媒体索引](../media/README.md)，不计入本资料包的官方文件校验范围。
+
 ## 文件索引
 
 | 文件 | 内容 |
@@ -63,3 +65,12 @@ STM32C562 支持内部 HSI/PSI、4～50MHz HSE 和 32.768kHz LSE。本项目使�
 - [STM32CubeProgrammer](https://www.st.com/en/development-tools/stm32cubeprog.html)
 
 目录中的 PDF 保持原始内容，文件名前的编号仅用于排序。
+
+## 在本项目中的落地位置
+
+- MCU 电源、VCAP、复位、BOOT 和 HSE：[`pcb/ssd/mcu_minimum.kicad_sch`](../../pcb/ssd/mcu_minimum.kicad_sch)
+- MCU 引脚与最小系统说明：[STM32C562CET6 最小系统](../../pcb/ssd/docs/C562_MIGRATION.md)
+- 24MHz HSE 与 LQFP48 封装：[晶振与封装说明](../../pcb/ssd/docs/HSE_FOOTPRINT_A2.md)
+- 144MHz 时钟初始化：[`code/Core/Src/system_clock.c`](../../code/Core/Src/system_clock.c)
+
+`SHA256SUMS.txt` 只覆盖资料包中的原始官方文件；编辑或新增项目文档时不要改写其中的校验值。

@@ -2,6 +2,10 @@
 
 本项目使用 STM32C562CET6，LQFP48 封装。器件基于 Arm Cortex-M33，最高主频 144MHz，片上 512KB Flash 和 128KB SRAM。
 
+<p align="center">
+  <img src="../review/mcu_footprint_3d.png" width="560" alt="STM32C562CET6 LQFP48 封装 3D 预览">
+</p>
+
 ## 参考资料
 
 | 文档 | 用途 |
@@ -71,3 +75,12 @@ PA11、PA12 空接。Type-C 接口不包含 D+、D−，固件不启用 USB 数�
 - LSE 低驱动模式受勘误限制；本项目不使用 LSE。
 - USB 接收缓冲区相关限制只适用于 USB 数据功能，本项目 PA11/PA12 空接。
 - PB6 在本项目中分配给 I2C1_SCL，不使用 FDCAN。
+
+## 实物与固件对应
+
+- 实物板 MCU 与周边布局见[焊接完成的 PCB 照片](../../../docs/media/photos/assembled-board-front.jpg)。
+- 24MHz HSE 到 144MHz PSIS 的初始化见 [`code/Core/Src/system_clock.c`](../../../code/Core/Src/system_clock.c)。
+- PB6/PB7 的 I2C1 初始化见 [`code/BSP/Src/board_i2c.c`](../../../code/BSP/Src/board_i2c.c)。
+- 显示与按键实机运行效果见[演示视频](../../../docs/media/video/display-demo.mp4)。
+
+当前样板已验证 HSE、SWD、I²C、按键和显示链路；ADC 温度采样与流量计数尚未在演示固件中启用。

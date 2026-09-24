@@ -9,5 +9,8 @@
 *-lib-table text eol=lf
 *.pdf binary
 *.png binary
+*.jpg binary
+*.jpeg binary
+*.mp4 binary
 *.zip binary
 *.step binary

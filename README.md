@@ -4,6 +4,37 @@
 
 硬件工程使用 KiCad 10，项目符号、封装和 3D 模型随仓库保存。
 
+<p align="center">
+  <img src="docs/media/photos/assembled-board-powered.jpg" width="680" alt="STM32 Sensor Display 成品板点亮效果">
+</p>
+
+## 当前状态
+
+- 硬件已完成制板、焊接和点亮验证。
+- `code/` 中的 LL 固件可编译运行，当前提供 HT16K33 全屏动态演示和摄氏/华氏切换。
+- NTC 与流量传感器的硬件接口已经布置；当前演示固件显示的是测试动画，尚未接入真实传感器采样与换算。
+- KiCad 工程、项目库、器件资料、交互式 BOM、实物照片和演示视频均随仓库保存。
+
+## 演示
+
+点击下面的封面可播放约 25 秒的 H.264 演示视频。视频展示 `00 → 100 → 00` 数值往返、环形进度、热水/告警区域以及按键切换温标。
+
+<p align="center">
+  <a href="docs/media/video/display-demo.mp4">
+    <img src="docs/media/video/display-demo-poster.jpg" width="360" alt="点击播放显示演示视频">
+  </a>
+</p>
+
+<p align="center">
+  <a href="docs/media/video/display-demo.mp4">播放兼容版 MP4</a>
+  ·
+  <a href="docs/media/video/display-demo-original-hevc.mp4">下载原始 HEVC 视频</a>
+</p>
+
+| 未安装圆屏的 PCB 正面 | 暗环境显示效果 |
+| --- | --- |
+| <img src="docs/media/photos/assembled-board-front.jpg" width="420" alt="焊接完成的 PCB 正面"> | <img src="docs/media/photos/display-lit-dark.jpg" width="420" alt="暗环境下的圆形 LED 显示效果"> |
+
 ## 硬件组成
 
 | 模块 | 器件与参数 |
@@ -75,7 +106,8 @@ PA11、PA12 未连接 USB 数据线路。
 STM32-Sensor-Display/
 ├── README.md
 ├── code/                         # STM32C562 固件目录
-├── docs/                         # 器件规格书、BOM 和 MCU 官方资料
+├── docs/                         # 设计资料、器件规格书、媒体和 MCU 官方资料
+│   └── media/                    # 实物照片、演示视频和资料页图片
 └── pcb/ssd/
     ├── ssd.kicad_pro             # KiCad 工程入口
     ├── ssd.kicad_sch             # 原理图主页面
@@ -85,6 +117,7 @@ STM32-Sensor-Display/
     ├── sensors.kicad_sch         # 温度与流量接口
     ├── ssd.kicad_pcb             # PCB
     ├── libraries/                # 项目符号、封装和 3D 模型
+    ├── bom/                      # 交互式 HTML BOM
     ├── docs/                     # 硬件设计说明
     ├── review/                   # 封装图、引脚表和设计资料
     └── tools/                    # 网表与 PCB 检查脚本
@@ -99,13 +132,25 @@ cd STM32-Sensor-Display
 
 使用 KiCad 10 打开 [pcb/ssd/ssd.kicad_pro](pcb/ssd/ssd.kicad_pro)。项目自建库通过相对路径引用，克隆仓库后无需单独安装符号库或封装库。
 
+固件使用 GNU Arm Embedded 工具链构建：
+
+```bash
+cd code
+make -j
+```
+
+更完整的行为说明、构建输出和烧录提示见 [固件说明](code/README.md)。
+
 ## 文档
 
+- [固件说明](code/README.md)
 - [KiCad 工程说明](pcb/ssd/README.md)
 - [硬件设计说明](pcb/ssd/docs/DESIGN_NOTES.md)
 - [STM32C562 最小系统](pcb/ssd/docs/C562_MIGRATION.md)
 - [晶振与封装说明](pcb/ssd/docs/HSE_FOOTPRINT_A2.md)
 - [器件清单](docs/BOM.csv)
+- [交互式 BOM](pcb/ssd/bom/ibom.html)
 - [STM32C562 官方资料包](docs/STM32C562CET6_官方资料包_2026-09-16/00_README_中文.md)
+- [照片与视频索引](docs/media/README.md)
 - [圆屏 1:1 对位图](pcb/ssd/review/display_footprint_1to1.pdf)
 - [MCU 封装尺寸图](pcb/ssd/review/mcu_footprint_dimensioned.pdf)

@@ -2,6 +2,12 @@
 
 本项目是一块 STM32C562CET6 温度与流量显示板。MCU 采集 NTC 温度和霍尔流量脉冲，通过 HT16K33 驱动 58mm 圆形 LED 屏。
 
+<p align="center">
+  <img src="../../../docs/media/photos/assembled-board-powered.jpg" width="620" alt="安装圆屏并点亮的 STM32 Sensor Display 样板">
+</p>
+
+实物已经验证供电、MCU、时钟、SWD、I²C、按键与显示链路。当前仓库固件运行的是显示测试动画，照片中的数值不代表真实温度或流量。
+
 ## 系统组成
 
 | 功能 | 器件 |
@@ -136,8 +142,23 @@ VREF 只用于调试器检测目标电平。J102 不含 NRST，复位由板上 S
 
 显示屏封装 `SSD:ALS5858_1DRWB_10` 外径 58mm，两排各 8 脚，排距 35.08mm，同排针距 2.54mm。焊盘直径 1.8mm，钻孔 1.0mm，1 脚使用方形焊盘标识。
 
+## 实物检查入口
+
+| 检查对象 | 资料 |
+| --- | --- |
+| 元件位置与焊接外观 | [未安装圆屏的 PCB 正面](../../../docs/media/photos/assembled-board-front.jpg) |
+| 圆屏安装与整板点亮 | [成品板点亮照片](../../../docs/media/photos/assembled-board-powered.jpg) |
+| 发光区域、颜色和可读性 | [暗环境显示照片](../../../docs/media/photos/display-lit-dark.jpg) |
+| 数字、图标、环形段与按键 | [动态演示视频](../../../docs/media/video/display-demo.mp4) |
+| 元件定位与 BOM 核对 | [交互式 BOM](../bom/ibom.html) |
+
+媒体用于记录样板状态和辅助装配检查，不作为尺寸测量依据；封装尺寸仍以规格书、KiCad 封装和 1:1 对位图为准。
+
 ## 参考资料
 
+- [项目照片与视频](../../../docs/media/README.md)
+- [5858-1DRWB-10 外形与矩阵预览](../../../docs/media/reference/display-spec-mechanics-and-matrix.png)
+- [5858-1DRWB-10 光电参数预览](../../../docs/media/reference/display-spec-optical-electrical.png)
 - [STM32C562xx DS14927](reference/STM32C562xx_DS14927_Rev2.pdf)
 - [STM32C5 硬件设计指南 AN6274](reference/AN6274_STM32C5_Hardware_Rev1.pdf)
 - [STM32 系统 Bootloader AN2606](reference/AN2606_Rev70.pdf)

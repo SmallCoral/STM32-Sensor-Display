@@ -2,6 +2,12 @@
 
 这是 STM32 Sensor Display 的 KiCad 硬件工程。电路由电源、MCU 最小系统、传感器接口和 LED 显示驱动四部分组成。
 
+<p align="center">
+  <img src="../../docs/media/photos/assembled-board-front.jpg" width="620" alt="STM32 温度与流量显示板焊接实物">
+</p>
+
+样板已经完成焊接和显示演示验证。上图为未安装圆屏时的 PCB 正面，可看到 HT16K33、STM32C562、双路 DCDC、按键及接口；[点亮照片](../../docs/media/photos/assembled-board-powered.jpg)和[演示视频](../../docs/media/video/display-demo.mp4)位于项目媒体目录。
+
 ## 工程文件
 
 | 文件 | 内容 |
@@ -15,6 +21,7 @@
 | [ssd.kicad_pcb](ssd.kicad_pcb) | PCB 布局与布线 |
 | [libraries/](libraries/) | 项目符号、封装和 3D 模型 |
 | [docs/BOM.csv](docs/BOM.csv) | 器件清单 |
+| [bom/ibom.html](bom/ibom.html) | 可在浏览器中打开的交互式 BOM |
 
 使用 KiCad 10 打开 `ssd.kicad_pro`。工程内自建库名为 `SSD`，3D 模型通过 `${KIPRJMOD}` 相对路径引用。
 
@@ -121,11 +128,31 @@ U201 使用 HT16K33 驱动 5858-1DRWB-10 圆形 LED 屏。HT16K33 工作在 5V�
 | 常规阻容 | 0603 |
 | DCDC 储能电容 | 1206 |
 
+## 样板验证范围
+
+已通过实物确认：
+
+- Type-C 5V 上电及 3.3V/5V 双路电源工作。
+- 24MHz HSE 启动，STM32C562 运行在 144MHz。
+- J-Link SWD 下载与调试。
+- I2C1、HT16K33、圆屏各数字/图标/环形段和用户按键。
+
+尚未在当前演示固件中完成：
+
+- 50kΩ NTC 的 ADC 采样、滤波和温度换算。
+- BTL-004A 流量脉冲计数、瞬时流量和累计流量换算。
+
+这里的“验证”描述的是当前仓库媒体可见的样板状态，不替代量产前的电气、温升、EMC 和长期可靠性测试。
+
 ## 相关文档
 
+- [项目总览](../../README.md)
+- [固件说明](../../code/README.md)
 - [硬件设计说明](docs/DESIGN_NOTES.md)
 - [STM32C562 最小系统](docs/C562_MIGRATION.md)
 - [晶振与封装](docs/HSE_FOOTPRINT_A2.md)
 - [MCU 封装尺寸图](review/mcu_footprint_dimensioned.pdf)
 - [圆屏 1:1 对位图](review/display_footprint_1to1.pdf)
+- [交互式 BOM](bom/ibom.html)
+- [照片与视频索引](../../docs/media/README.md)
 - [STM32C562 官方资料包](../../docs/STM32C562CET6_官方资料包_2026-09-16/00_README_中文.md)
