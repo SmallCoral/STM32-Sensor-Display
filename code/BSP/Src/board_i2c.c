@@ -1,4 +1,5 @@
 #include "board_i2c.h"
+#include "board_time.h"
 
 #include "stm32c5xx_ll_bus.h"
 #include "stm32c5xx_ll_gpio.h"
@@ -45,43 +46,29 @@ static void Board_I2C1_ClearFlags(void)
 
 static bool Board_I2C1_WaitForFlag(uint32_t flag, bool active)
 {
-  uint32_t timeout_ms = I2C_TIMEOUT_MS;
-
-  (void)SysTick->CTRL;
+  const uint32_t start = Board_Time_Millis();
 
   for (;;)
   {
     const uint32_t status = LL_I2C_READ_REG(I2C1, ISR);
     const bool flag_is_active = ((status & flag) != 0U);
 
-    if (flag_is_active == active)
-    {
-      return true;
-    }
-
     if ((status & I2C_ERROR_FLAGS) != 0U)
     {
       return false;
     }
 
-    if ((SysTick->CTRL & SysTick_CTRL_COUNTFLAG_Msk) != 0U)
+    if (flag_is_active == active)
     {
-      if (timeout_ms == 0U)
-      {
-        return false;
-      }
-      --timeout_ms;
+      return true;
     }
+    if ((uint32_t)(Board_Time_Millis() - start) >= I2C_TIMEOUT_MS) { return false; }
   }
 }
 
 static void Board_I2C1_Recover(void)
 {
-  LL_I2C_Disable(I2C1);
-  LL_APB1_GRP1_ForceReset(LL_APB1_GRP1_PERIPH_I2C1);
-  LL_APB1_GRP1_ReleaseReset(LL_APB1_GRP1_PERIPH_I2C1);
-  Board_I2C1_ConfigurePeripheral();
-  Board_I2C1_ClearFlags();
+  Board_I2C1_Init();
 }
 
 void Board_I2C1_Init(void)
@@ -89,8 +76,27 @@ void Board_I2C1_Init(void)
   LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_GPIOB);
   LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_I2C1);
   LL_RCC_SetI2CClockSource(LL_RCC_I2C1_CLKSOURCE_PCLK1);
+  LL_I2C_Disable(I2C1);
 
   LL_GPIO_SetPinOutputType(GPIOB, LL_GPIO_PIN_6 | LL_GPIO_PIN_7, LL_GPIO_OUTPUT_OPENDRAIN);
+  LL_GPIO_SetOutputPin(GPIOB, LL_GPIO_PIN_6 | LL_GPIO_PIN_7);
+  LL_GPIO_SetPinMode(GPIOB, LL_GPIO_PIN_6, LL_GPIO_MODE_OUTPUT);
+  LL_GPIO_SetPinMode(GPIOB, LL_GPIO_PIN_7, LL_GPIO_MODE_OUTPUT);
+  /* Release a slave interrupted mid-byte, then issue a STOP condition. */
+  for (uint32_t pulse = 0U; pulse < 9U; ++pulse)
+  {
+    if (LL_GPIO_IsInputPinSet(GPIOB, LL_GPIO_PIN_7) != 0U) { break; }
+    LL_GPIO_ResetOutputPin(GPIOB, LL_GPIO_PIN_6);
+    Board_Time_DelayUs(10U);
+    LL_GPIO_SetOutputPin(GPIOB, LL_GPIO_PIN_6);
+    Board_Time_DelayUs(10U);
+  }
+  LL_GPIO_ResetOutputPin(GPIOB, LL_GPIO_PIN_6 | LL_GPIO_PIN_7);
+  Board_Time_DelayUs(10U);
+  LL_GPIO_SetOutputPin(GPIOB, LL_GPIO_PIN_6);
+  Board_Time_DelayUs(10U);
+  LL_GPIO_SetOutputPin(GPIOB, LL_GPIO_PIN_7);
+  Board_Time_DelayUs(10U);
   LL_GPIO_SetPinPull(GPIOB, LL_GPIO_PIN_6, LL_GPIO_PULL_NO);
   LL_GPIO_SetPinPull(GPIOB, LL_GPIO_PIN_7, LL_GPIO_PULL_NO);
   LL_GPIO_SetPinSpeed(GPIOB, LL_GPIO_PIN_6, LL_GPIO_SPEED_FREQ_LOW);

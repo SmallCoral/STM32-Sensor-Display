@@ -1,0 +1,30 @@
+name: Firmware
+on:
+  push:
+    paths: ['code/**', '.github/workflows/firmware.yml']
+  pull_request:
+    paths: ['code/**', '.github/workflows/firmware.yml']
+permissions:
+  contents: read
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test sensor calculations and display frames
+        run: make -C code test
+      - name: Install Arm GNU Toolchain 14.3.Rel1
+        run: |
+          curl --fail --location --retry 3 https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi.tar.xz -o /tmp/arm-gnu.tar.xz
+          mkdir -p /tmp/arm-gnu
+          tar -xJf /tmp/arm-gnu.tar.xz -C /tmp/arm-gnu --strip-components=1
+          echo /tmp/arm-gnu/bin >> "$GITHUB_PATH"
+      - name: Build STM32C562 firmware
+        run: make -C code -j4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: stm32-sensor-display
+          path: |
+            code/build/stm32_sensor_display.elf
+            code/build/stm32_sensor_display.hex
+            code/build/stm32_sensor_display.bin

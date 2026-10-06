@@ -6,7 +6,7 @@
   <img src="../../../docs/media/photos/assembled-board-powered.jpg" width="620" alt="安装圆屏并点亮的 STM32 Sensor Display 样板">
 </p>
 
-实物已经验证供电、MCU、时钟、SWD、I²C、按键与显示链路。当前仓库固件运行的是显示测试动画，照片中的数值不代表真实温度或流量。
+实物已经验证供电、MCU、时钟、SWD、I²C、按键与显示链路。照片中的数值来自早期显示测试动画。当前产品固件已接入真实传感器，验证范围见 [固件验证记录](../../../code/docs/VALIDATION.md)。
 
 ## 系统组成
 

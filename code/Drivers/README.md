@@ -17,3 +17,5 @@
 - [STM32C5 Drivers](https://github.com/STMicroelectronics/stm32c5xx-drivers)
 - [STM32C5 Device Family Pack](https://github.com/STMicroelectronics/stm32c5xx-dfp)
 - [ST CMSIS Core 镜像](https://github.com/STMicroelectronics/cmsis-core)
+
+2026-10-06：从上述同一 STM32C5 Drivers 固定提交的 `ll/` 目录补入 `stm32c5xx_ll_adc.h`、`stm32c5xx_ll_exti.h`、`stm32c5xx_ll_tim.h` 和 `stm32c5xx_ll_iwdg.h`，用于产品固件传感器采样及看门狗。

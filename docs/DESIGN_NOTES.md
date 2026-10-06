@@ -6,7 +6,7 @@
   <img src="media/photos/assembled-board-front.jpg" width="620" alt="STM32 Sensor Display 焊接实物正面">
 </p>
 
-当前样板已经完成供电、MCU、I²C、HT16K33、按键和圆屏点亮验证。照片与视频反映的是显示演示固件运行效果；NTC 和流量传感器的真实采集功能仍待固件接入。
+当前样板已经完成供电、MCU、I²C、HT16K33、按键和圆屏点亮验证。照片与视频反映的是显示演示固件运行效果；产品固件已接入 NTC 和流量采集；NTC 实际采样及温标切换已验证，流量的实际通水验证仍待完成，见 [验证记录](../code/docs/VALIDATION.md)。
 
 ## 主要器件资料
 

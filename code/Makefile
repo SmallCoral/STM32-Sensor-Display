@@ -23,8 +23,11 @@ SOURCES := \
 	Core/Startup/startup_stm32c562xx.c \
 	BSP/Src/board_i2c.c \
 	BSP/Src/board_user_button.c \
+	BSP/Src/board_time.c \
+	BSP/Src/board_sensors.c \
 	BSP/Src/ht16k33.c \
-	App/Src/display_demo.c
+	App/Src/sensor_model.c \
+	App/Src/product_display.c
 
 OBJECTS := $(addprefix $(BUILD_DIR)/,$(SOURCES:.c=.o))
 DEPS := $(OBJECTS:.o=.d)
@@ -40,7 +43,8 @@ LDFLAGS := $(CPU_FLAGS) -T$(LDSCRIPT) \
 	-Wl,--gc-sections -Wl,--print-memory-usage \
 	--specs=nano.specs --specs=nosys.specs -static
 
-.PHONY: all clean size
+HOST_CC ?= cc
+.PHONY: all clean size test
 
 all: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).bin $(BUILD_DIR)/$(TARGET).hex
 
@@ -60,6 +64,13 @@ $(BUILD_DIR)/%.o: %.c
 
 size: $(BUILD_DIR)/$(TARGET).elf
 	$(SIZE) $<
+
+test:
+	@mkdir -p $(BUILD_DIR)
+	$(HOST_CC) -std=c11 -Wall -Wextra -Werror -IApp/Inc -IBSP/Inc \
+		tests/test_product.c App/Src/sensor_model.c App/Src/product_display.c \
+		-o $(BUILD_DIR)/test_product
+	./$(BUILD_DIR)/test_product
 
 clean:
 	rm -rf $(BUILD_DIR)
