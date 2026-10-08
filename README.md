@@ -154,5 +154,3 @@ make -j
 - [照片与视频索引](docs/media/README.md)
 - [圆屏 1:1 对位图](pcb/ssd/review/display_footprint_1to1.pdf)
 - [MCU 封装尺寸图](pcb/ssd/review/mcu_footprint_dimensioned.pdf)
-## 友链
-[LINUX DO 社区](https://linux.do/)
